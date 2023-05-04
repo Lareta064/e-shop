@@ -44,6 +44,15 @@
 		font-family: sans-serif;
 		}
 }
+.container-dashboard__content{
+	.dark-wrapper{
+		padding-top: 15px;
+		padding-bottom: 15px;
+		background-color: blue;
+		color: #fff;
+		margin-bottom: 10px;
+	}
+}
 .body-dashboard{
 	padding-left: 320px;
 	padding-top: 50px;
