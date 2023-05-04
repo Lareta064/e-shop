@@ -1,0 +1,8 @@
+mixin mySelect(arr)
+	.mySelect(class=" "+ arr.addClass)&attributes(attributes)
+		.mySelect-input
+			input.selectValue.form-input(type='text' readonly='' value=''+ arr.val)
+			
+		.mySelect-drop.scroll-vertical
+			each item in arr.itemsArr
+				input.mySelect-options(type='text' readonly='' value=''+ item)
