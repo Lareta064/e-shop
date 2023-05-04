@@ -1,7 +1,8 @@
 .mySelect-input{position: relative;
 }
 /*галочка в выпадашке*/
-.mySelect-input:after{
+.mySelect-input:after,
+.switch-currency__val:after{
 	content:'';
 	width: 16px;
 	height: 16px;
@@ -15,7 +16,7 @@
 	right: 12px;
 	transition:.3s;
 }
-.mySelect-input.open:after{
+.switch-currency.open .switch-currency__val:after, .mySelect-input.open:after{
 	transform: translateY(-50%) rotate(180deg);
 }
 .mySelect-drop{
@@ -65,8 +66,12 @@
 }
 
 .switch-currency{
-	&__value{
+	&__val{
 		display: flex;
+		font-size: 13px;
+		position: relative;
+		
+		strong{padding-right: 8px;}
 
 	}
 	&__drop{
@@ -77,10 +82,16 @@
 		box-shadow: 6px 6px 19px rgba(0, 0, 0, 0.06);
 		padding: 15px 20px;
 		margin: 5px 0 0;
+		font-size: 12px;
 		&>*{display: block;}
 
 	}
 	&.open &__drop{
 		display: block;
 	}
+}
+
+.switch-currency__val:after{
+	width: 10px;
+	height: 10px;
 }
