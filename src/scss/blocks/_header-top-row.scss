@@ -1,0 +1,22 @@
+.header-top{
+	height: 40px;
+	background: #fff;
+
+    border-bottom: 1px solid #D8D8D8;
+	.header-top-links{
+		display: flex;
+		align-items: center;
+		height: 28px;
+		&>*{
+			height: 28px;
+			line-height: 28px;
+			padding-left: 8px;
+			padding-right: 8px;
+			font-size: 13px;
+			transition: .3s;
+			&:hover{
+				background-color: #f8f9fa;
+			}
+		}
+	}
+}

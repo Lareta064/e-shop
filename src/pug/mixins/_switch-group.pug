@@ -1,0 +1,16 @@
+mixin switch-group
+	.switch-group
+		//====== switch-lang =======
+		.switch-lang
+			a(href="#!").switch-lang-item.active Ru
+			a(href="#!").switch-lang-item En
+
+		//====== .switch-currency =======
+		.switch-currency
+			.switch-currency__val
+				strong.currency-type €
+				span Валюта
+			.switch-currency__drop
+				.switch-currency__item( data-currency="€") Euro €
+				.switch-currency__item( data-currency="$") US Dollar $
+				.switch-currency__item( data-currency="грн") Гривна грн

@@ -3,9 +3,9 @@
 /*галочка в выпадашке*/
 .mySelect-input:after{
 	content:'';
-	width: 16px;
-	height: 16px;
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L7 6.29289L12.6464 0.646447C12.8417 0.451184 13.1583 0.451184 13.3536 0.646447C13.5488 0.841709 13.5488 1.15829 13.3536 1.35355L7.35355 7.35355C7.15829 7.54882 6.84171 7.54882 6.64645 7.35355L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z' fill='%235757F6'/%3e%3c/svg%3e");
+	width: 9px;
+	height: 7px;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L7 6.29289L12.6464 0.646447C12.8417 0.451184 13.1583 0.451184 13.3536 0.646447C13.5488 0.841709 13.5488 1.15829 13.3536 1.35355L7.35355 7.35355C7.15829 7.54882 6.84171 7.54882 6.64645 7.35355L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z' fill='%23444444'/%3e%3c/svg%3e");
 	background-size: auto;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -25,17 +25,18 @@
 	-webkit-box-shadow: 6px 6px 19px rgba(0, 0, 0, 0.06);
 	box-shadow: 6px 6px 19px rgba(0, 0, 0, 0.06);
 	padding: 15px 20px;
-	margin: 5px 0 0;
-	font-size: 13px;
-	color: #444;
-	&>*{display: block;}
+	background-color: #fff;
 }
 .mySelect-options{
 	height: 30px;
-	font-size: 14px;
+	line-height: 30px;
+	font-size: 13px;
+	padding-left: 12px;
+	padding-right: 12px;
 	display: block;
 	width: 100%;
 	color: #444;
+	border-radius: 3px;
 	cursor:pointer;
 	&:hover{
 		background-color: #f8f9fa;

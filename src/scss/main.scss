@@ -1,6 +1,6 @@
 @import "base/_var";
 @import "base/_base";
-@import "base/_classes";
+
 @import "base/_typography.scss";
 @import "base/_icons.scss";
 @import "base/_form.scss";
@@ -11,5 +11,7 @@
 @import "blocks/_switch-currency.scss"; 
 @import "blocks/_switch-group.scss"; 
 @import "blocks/_custom-select.scss"; 
+
+@import "blocks/_header-top-row.scss"; 
   //ui
  @import "ui/_ui-navigation";

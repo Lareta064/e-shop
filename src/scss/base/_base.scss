@@ -98,3 +98,10 @@ input[type="submit"] {
 	-webkit-appearance: none;
 }
 
+.flex-wrapper, .flex-jystify{
+	display: flex;
+	align-items: center;
+}
+.flex-jystify{
+	justify-content: space-between;
+}

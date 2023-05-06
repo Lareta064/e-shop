@@ -32,9 +32,11 @@ html(lang="ru")
 								.switch-lang
 									a(href="#!").switch-lang-item.active Ru
 									a(href="#!").switch-lang-item En
+						hr
 						li
 							+mySelect({addClass: 'mySelect--absolute', val:'Услуга', itemsArr:['€ Euro', '$ US Dollar','₽ Рубль', '₴ Гривна']})
 
+						hr
 						li
 							.switch-currency
 								.switch-currency__val
@@ -55,6 +57,7 @@ html(lang="ru")
 										.switch-currency__item( data-currency="$") US Dollar $
 										.switch-currency__item( data-currency="грн") Гривна грн							
 
+						hr
 						li
 							
 							.switch-group
