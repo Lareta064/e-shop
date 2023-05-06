@@ -1,8 +1,7 @@
 .mySelect-input{position: relative;
 }
 /*галочка в выпадашке*/
-.mySelect-input:after,
-.switch-currency__val:after{
+.mySelect-input:after{
 	content:'';
 	width: 16px;
 	height: 16px;
@@ -16,35 +15,30 @@
 	right: 12px;
 	transition:.3s;
 }
-.switch-currency.open .switch-currency__val:after, .mySelect-input.open:after{
+ .mySelect-input.open:after{
 	transform: translateY(-50%) rotate(180deg);
 }
 .mySelect-drop{
-	display: flex;
-	padding-left: 16px;
-	padding-right: 16px;
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	background: #FFFFFF;
-	box-shadow: 0px 4px 16px rgba(87, 141, 246, 0.2);
-	border-radius: 4px;
 	display: none;
-	margin-top: 8px;
-	max-height: 220px;
+	border: 0px;
+	border-radius: 10px;
+	-webkit-box-shadow: 6px 6px 19px rgba(0, 0, 0, 0.06);
+	box-shadow: 6px 6px 19px rgba(0, 0, 0, 0.06);
+	padding: 15px 20px;
+	margin: 5px 0 0;
+	font-size: 13px;
+	color: #444;
+	&>*{display: block;}
 }
 .mySelect-options{
-	height: 52px;
+	height: 30px;
 	font-size: 14px;
 	display: block;
 	width: 100%;
-	color: $text;
+	color: #444;
 	cursor:pointer;
 	&:hover{
-		color:red;
-	}
-	&+ .mySelect-options{
-		border-top: 1px solid red;
+		background-color: #f8f9fa;
 	}
 }
 
@@ -65,33 +59,5 @@
 	}
 }
 
-.switch-currency{
-	&__val{
-		display: flex;
-		font-size: 13px;
-		position: relative;
-		
-		strong{padding-right: 8px;}
 
-	}
-	&__drop{
-		display: none;
-		border: 0px;
-		border-radius: 10px;
-		-webkit-box-shadow: 6px 6px 19px rgba(0, 0, 0, 0.06);
-		box-shadow: 6px 6px 19px rgba(0, 0, 0, 0.06);
-		padding: 15px 20px;
-		margin: 5px 0 0;
-		font-size: 12px;
-		&>*{display: block;}
 
-	}
-	&.open &__drop{
-		display: block;
-	}
-}
-
-.switch-currency__val:after{
-	width: 10px;
-	height: 10px;
-}

@@ -32,8 +32,8 @@ html(lang="ru")
 								.switch-lang
 									a(href="#!").switch-lang-item.active Ru
 									a(href="#!").switch-lang-item En
-						//- li
-						//- 	+mySelect({addClass: 'mySelect--absolute', val:'Услуга', itemsArr:['€ Euro', '$ US Dollar','₽ Рубль', '₴ Гривна']})
+						li
+							+mySelect({addClass: 'mySelect--absolute', val:'Услуга', itemsArr:['€ Euro', '$ US Dollar','₽ Рубль', '₴ Гривна']})
 
 						li
 							.switch-currency
@@ -41,7 +41,36 @@ html(lang="ru")
 									strong.currency-type €
 									span Валюта
 								.switch-currency__drop
-									button(type="button" data-currency="€") Euro €
-									button(type="button" data-currency="$") US Dollar $
-									button(type="button" data-currency="грн") Гривна грн
+									.switch-currency__item( data-currency="€") Euro €
+									.switch-currency__item( data-currency="$") US Dollar $
+									.switch-currency__item( data-currency="грн") Гривна грн
 
+							pre.
+								.switch-currency
+									.switch-currency__val
+										strong.currency-type €
+										span Валюта
+									.switch-currency__drop
+										.switch-currency__item( data-currency="€") Euro €
+										.switch-currency__item( data-currency="$") US Dollar $
+										.switch-currency__item( data-currency="грн") Гривна грн							
+
+						li
+							
+							.switch-group
+								//====== switch-lang =======
+								.switch-lang
+									a(href="#!").switch-lang-item.active Ru
+									a(href="#!").switch-lang-item En
+
+								//====== .switch-currency =======
+								.switch-currency
+									.switch-currency__val
+										strong.currency-type €
+										span Валюта
+									.switch-currency__drop
+										.switch-currency__item( data-currency="€") Euro €
+										.switch-currency__item( data-currency="$") US Dollar $
+										.switch-currency__item( data-currency="грн") Гривна грн
+							pre.
+								+switch-group
