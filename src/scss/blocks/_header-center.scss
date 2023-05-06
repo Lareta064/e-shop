@@ -1,14 +1,25 @@
 .logo{
 	width: 170px;
 	height: 37px;
+	margin-right: 40px;
 	img{
 		width: 100%;
 		height: 100%;
 		object-fit: contain;
 	}
 }
+.header-center{
+	background-color: #fff;
+}
 .header-center__content{
 	display: flex;
+	height: 74px;
+	align-items: center;
+}
+.main-menu{
+	margin-left: auto;
+	padding-right: 20px;
+	
 }
 .main-menu>ul{
 	display: flex;
@@ -47,8 +58,12 @@
    color: #000000;
     background-color: #FFFD10;
 }
+.header-center__box{
+
+}
 .header-contacts{
 	position: relative;
+	padding-left: 40px;
 	
 	.header-contacts-tel{
 		position: relative;
@@ -57,7 +72,7 @@
 		a{
 			display: block;
 			width: fit-content;
-			font-weight: 600;
+			font-weight: 700;
 			font-size: 16px;
 			color: #222;
 			padding-top: 3px;
@@ -66,6 +81,13 @@
 	}
 	&:hover .mySelect-drop{
 		display: block;
+	}
+	.mySelect-drop{
+		position: absolute;
+		left: 40px;
+		bottom: 0;
+		transform: translateY(100%);
+		z-index: 3;
 	}
 }
 .header-contacts-tel:after,
