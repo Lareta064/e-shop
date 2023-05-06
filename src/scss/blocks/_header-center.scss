@@ -1,0 +1,85 @@
+.logo{
+	width: 170px;
+	height: 37px;
+	img{
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+.header-center__content{
+	display: flex;
+}
+.main-menu>ul{
+	display: flex;
+	align-items: center;
+	
+	li{
+		position: relative;
+		
+		.badge-item{
+			left: 50%;
+			top:0;
+			transform: translate(-50%, -100%);
+		}
+		
+	}
+	&>li{
+		white-space: nowrap;
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	
+}
+
+.badge-item{
+	display: inline-block;
+	position: absolute;
+	font-size: 11px;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.25);
+    font-weight: 400;
+    border-radius: 13px;
+    line-height: 1;
+    padding: 3px 7px;
+   
+    z-index: 1;
+   color: #000000;
+    background-color: #FFFD10;
+}
+.header-contacts{
+	position: relative;
+	
+	.header-contacts-tel{
+		position: relative;
+		padding-right: 16px;
+	
+		a{
+			display: block;
+			width: fit-content;
+			font-weight: 600;
+			font-size: 16px;
+			color: #222;
+			padding-top: 3px;
+			padding-bottom: 3px;
+		}
+	}
+	&:hover .mySelect-drop{
+		display: block;
+	}
+}
+.header-contacts-tel:after,
+.sub-menu:after{
+		content:'';
+		width: 9px;
+		height: 7px;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L7 6.29289L12.6464 0.646447C12.8417 0.451184 13.1583 0.451184 13.3536 0.646447C13.5488 0.841709 13.5488 1.15829 13.3536 1.35355L7.35355 7.35355C7.15829 7.54882 6.84171 7.54882 6.64645 7.35355L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z' fill='%23444444'/%3e%3c/svg%3e");
+		background-size: auto;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: absolute;
+		top:50%;
+		transform: translateY(-50%) rotate(0deg);
+		right: 0;
+		transition:.3s;
+	}
