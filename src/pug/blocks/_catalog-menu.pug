@@ -1,6 +1,7 @@
 mixin catalog-menu(obj)
 	.catalog-menu
 		p Каталог
+		//==== меню Уровень #1 =====
 		ul.catalog-menu-drop
 			each item in obj
 				li
@@ -9,16 +10,19 @@ mixin catalog-menu(obj)
 							use(href="../img/svgSprite.svg#svg-"+ item.svg +"")
 						span !{item.text}
 					if item.menuArr
+						//==== меню Уровень #2 =====
 						ul.catalog-menu-submenu
 							each menuEl in item.menuArr
 								li 
 									a(href="#!"+ menuEl.link) !{ menuEl.text}
 									if menuEl.subMenu
+										//==== меню Уровень #3 =====
 										ul.catalog-menu-submenu
 											each menuElSub in menuEl.subMenu
 												li 
 													a(href="#!"+  menuElSub.link) !{ menuElSub.text}
 													if menuElSub.subMenu
+														//==== меню Уровень #4 =====
 														ul.catalog-menu-submenu
 															each menuItem in  menuElSub.subMenu
 																li
@@ -113,5 +117,21 @@ mixin catalog-menu(obj)
 				{link:'', text:'Электроотвертки'},
 			]},
 		]
+	},
+	{
+		link:'', text: 'Гаджеты', svg:'location',
+		menuArr: [
+			{link:'', text: 'Авто-техника'},
+			{link:'', text: 'Аксессуары для квдрокоптеров'},
+			{link:'', text: 'Гироборды, гироскутеры, моноколеса'}, 
+			{link:'', text: 'Квадрокоптеры'},
+			{link:'', text: 'Радио и видеоняни'},
+			{link:'', text: 'Смарт-камеры'},
+			{link:'', text: 'Смарт-часы',
+			subMenu: [
+			{link:'', text: 'Аксессуары для смарт-часов'},
+			{link:'', text: 'Смарт-часы и фитнес-трекеры'}]},
+			{link:'', text: 'Умный дом'}
+			]
 	}
 ])
