@@ -28,11 +28,11 @@
 
 	position: absolute;
 	width: 1450px;
-	left: 50%;
-	bottom:0;
-	transform:translate(-50%, 100%);
+	left: 0;
+	bottom:10px;
+	transform:translateY(100%);
 	display: none;
-	padding-top: 16px;
+	padding-top: 0px;
 	z-index: 2;
 	
 	.products-cards-grid{
@@ -59,11 +59,11 @@
 	}
 	@media(max-width: 1499px){
 		width: 1170px;
-		transform:translate(-43%, 100%);
+		
 	}
 	@media(max-width: 1199px){
 		width: 940px;
-		transform:translate(-37%, 100%);
+		
 	}
 	@media(max-width: 991px){
 		width: 720px;

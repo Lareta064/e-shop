@@ -24,6 +24,8 @@
 	display: flex;
 	height: 74px;
 	align-items: center;
+	position: relative;
+	
 }
 .main-menu{
 	margin-left: auto;
@@ -34,9 +36,11 @@
 	display: flex;
 	align-items: center;
 	
+	
 	li{
 		position: relative;
-		
+		padding-top: 28px;
+		padding-bottom: 28px;
 		.badge-item{
 			left: 50%;
 			top:0;
@@ -48,9 +52,12 @@
 		white-space: nowrap;
 		padding-left: 16px;
 		padding-right: 16px;
+		
 		&.sub-menu{
 			margin-right: 10px;
 			padding-right: 14px;
+			position: static;
+			
 		}
 		@media (max-width: 1199px) {
 			padding-left: 10px;
