@@ -18,6 +18,11 @@ mixin catalog-menu(obj)
 											each menuElSub in menuEl.subMenu
 												li 
 													a(href="#!"+  menuElSub.link) !{ menuElSub.text}
+													if menuElSub.subMenu
+														ul.catalog-menu-submenu
+															each menuItem in  menuElSub.subMenu
+																li
+																	a(href="#!"+   menuItem.link) !{  menuItem.text}
 
 +catalog-menu([
 	{
@@ -75,11 +80,27 @@ mixin catalog-menu(obj)
 			]},
 			{link:'', text:'Посуда',
 			subMenu:[
-				{link:'', text:'Столовые приборы'},
-				{link:'', text:'Кухонные инструменты'},
-				{link:'', text:'Кухонная посуда'},
+				{link:'', text:'Столовые приборы',
+					subMenu:[{link:'', text:'Ложки'}]
+					},
+				{link:'', text:'Кухонные инструменты',
+					subMenu:[
+					{link:'', text:'Шумовки, ложки'}]
+				},
+				{link:'', text:'Кухонная посуда',
+					subMenu:[
+						{link:'', text:'Чайники'},
+						{link:'', text:'Чашки, кружки, бокалы'},
+						{link:'', text:'Заварочные чайники, кофейники'},
+						{link:'', text:'Миски'},
+						{link:'', text:'Сковороды, воки, сотейники, овалы'},
+					]
+				},
 				{link:'', text:'Распродажа посуды'},
-				{link:'', text:'Аксессуары'}
+				{link:'', text:'Аксессуары',
+					subMenu:[
+						{link:'', text:'Мельницы, солонки, наборы для масла и уксуса'}]
+				}
 			]},
 			{link:'', text:'Тонометры'},
 			{link:'', text:'Электроинструмент',
