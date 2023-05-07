@@ -139,8 +139,10 @@
 		}
 	}
 }
+.sub-menu>a{position: relative;
+}
 .header-contacts-tel:after,
-.sub-menu:after{
+.sub-menu>a:after{
 		content:'';
 		width: 9px;
 		height: 7px;
@@ -154,4 +156,5 @@
 		right: 0;
 		transition:.3s;
 	}
+	.sub-menu>a:after{right: -13px;}
 

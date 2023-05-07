@@ -1,0 +1,96 @@
+mixin catalog-menu(obj)
+	.catalog-menu
+		p Каталог
+		ul.catalog-menu-drop
+			each item in obj
+				li
+					a(href="#!"+ item.link) 
+						svg(class="svg-"+ item.svg)
+							use(href="../img/svgSprite.svg#svg-"+ item.svg +"")
+						span !{item.text}
+					if item.menuArr
+						ul.catalog-menu-submenu
+							each menuEl in item.menuArr
+								li 
+									a(href="#!"+ menuEl.link) !{ menuEl.text}
+									if menuEl.subMenu
+										ul.catalog-menu-submenu
+											each menuElSub in menuEl.subMenu
+												li 
+													a(href="#!"+  menuElSub.link) !{ menuElSub.text}
+
++catalog-menu([
+	{
+		link:'', text:'Аудио техника', svg:'location',
+		menuArr: [
+			{link:'', text: 'AV ресиверы'},
+			{link:'', text: 'MP3 плееры'},
+			{link:'', text: 'Акустические системы (колонки)'}, 
+			{link:'', text: 'Музыкальные центры'},
+			{link:'', text: 'Наушники и гарнитуры'},
+			{link:'', text: 'Системы домашнего кинотеатра'},
+			{link:'', text: 'Усилители'},
+			]
+	}, 
+	{
+		link:'', text:'Бытовая техника',svg:'location',
+		menuArr:[
+			{link:'', text:'Встраиваемая техника',
+			subMenu:[
+				{link:'', text:'Вытяжки'},
+				{link:'', text:'Варочные поверхности'},
+				{link:'', text:'Духовые шкафы'},
+				{link:'', text:'Посудомоечные машины'},
+				{link:'', text:'Подогреватели посуды'},
+			]
+			},
+			{link:'', text:'Для дачи и сада'},
+			{link:'', text:'Климатическая техника',
+			subMenu:[
+				{link:'', text:'Обогреватели'},
+				{link:'', text:'Вентиляторы'},
+				{link:'', text:'Увлажнители воздуха'},
+				{link:'', text:'Очистители воздуха'},
+				{link:'', text:'Осушители воздуха'},
+				{link:'', text:'Кондинционеры'},
+			]},
+			{link:'', text:'Крупная бытовая техника',
+			subMenu:[
+				{link:'', text:'Холодильники'},
+				{link:'', text:'Стиральные машины'},
+				{link:'', text:'Газовые и электроплиты'},
+				{link:'', text:'Морозильные камеры'},
+				{link:'', text:'Сушильные машины'},
+				{link:'', text:'Стирально-сушильные машины'},
+			]
+			},
+			{link:'', text:'Мелкая бытовая техника',
+			subMenu:[
+				{link:'', text:'Соковыжималки'},
+				{link:'', text:'Минимойки'},
+				{link:'', text:'Ломтерезки'},
+				{link:'', text:'Швейные машинки и оверлоки'},
+				{link:'', text:'Фритюрницы'},
+				{link:'', text:'Кухонные комбайны'},
+			]},
+			{link:'', text:'Посуда',
+			subMenu:[
+				{link:'', text:'Столовые приборы'},
+				{link:'', text:'Кухонные инструменты'},
+				{link:'', text:'Кухонная посуда'},
+				{link:'', text:'Распродажа посуды'},
+				{link:'', text:'Аксессуары'}
+			]},
+			{link:'', text:'Тонометры'},
+			{link:'', text:'Электроинструмент',
+			subMenu:[
+				{link:'', text:'Измерительный инструмент'},
+				{link:'', text:'Аксессуары для электроинструментов'},
+				{link:'', text:'Дрели'},
+				{link:'', text:'Технические фены'},
+				{link:'', text:'Шуруповерты'},
+				{link:'', text:'Электроотвертки'},
+			]},
+		]
+	}
+])
