@@ -67,7 +67,7 @@
 	
 	.header-contacts-tel{
 		position: relative;
-		padding-right: 16px;
+		padding-right: 24px;
 	
 		a{
 			display: block;
@@ -84,10 +84,28 @@
 	}
 	.mySelect-drop{
 		position: absolute;
-		left: 40px;
+		right: 0;
 		bottom: 0;
 		transform: translateY(100%);
 		z-index: 3;
+		min-width: 100%;
+	}
+	.mySelect-options {height: auto;
+	min-height: 30px;}
+	.mySelect-options a{
+		display: flex;
+		align-items: center;
+		span{white-space: nowrap;}
+		p{line-height: 1.2;}
+		// 
+		span:first-child{
+			width: 16px;
+			height: 20px;
+			display: flex;
+			align-items: center;
+			margin-right: 10px;
+			flex-shrink: 0;
+		}
 	}
 }
 .header-contacts-tel:after,

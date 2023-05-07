@@ -22,7 +22,7 @@ body {
 	padding: 0;
 	color: $text;
 	font-family: $reg;
-	font-size: 16px;
+	font-size: 14px;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -98,10 +98,17 @@ input[type="submit"] {
 	-webkit-appearance: none;
 }
 
-.flex-wrapper, .flex-jystify{
+.flex-wrapper, .flex-justify{
 	display: flex;
 	align-items: center;
 }
-.flex-jystify{
+.flex-justify{
 	justify-content: space-between;
+}
+.container{
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 1200px;
 }

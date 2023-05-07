@@ -1,8 +1,18 @@
+//==== header top ======
+.header-top
+	.container
+		.flex-justify
+			.header-top-links
+				a(href="") Доставка
+				a(href="") Оплата
+			
+			+switch-group
+
 .header-center
 	.container
 		.header-center__content
 			a(href="#!").logo
-				img(src="../img/logo.svg", alt="logo")
+				img(src="./img/logo.svg", alt="logo")
 
 			//====main menu =====
 			.main-menu
@@ -29,23 +39,31 @@
 					.mySelect-options
 						a(href="#!")
 							span
-								svg.svg-call
-									use(href="../img/svgSprite.svg#svg-call")
-							span Telegram
-					.mySelect-options
-						a(href="#!")
-							span
-								svg.svg-call
-									use(href="../img/svgSprite.svg#svg-call")
-							span Telegram
-					.mySelect-options
-						a(href="#!")
-							span
 								+svg('tg')
-							span Telegram
+							span +7 (495) 124-45-01
 					.mySelect-options
 						a(href="#!")
 							span
-								+svg('tg')
-							span Telegram
-
+								+svg('wa')
+							span +7 (495) 124-45-02
+					.mySelect-options
+						a(href="#!")
+							span
+								+svg('mail')
+							span mail@mail.com
+					.mySelect-options
+						a(href="#!")
+							span
+								+svg('location')
+							p г. Москва, ул.Чаянова, 6
+					
+					.mySelect-options
+						a(href="#!")
+							span
+								+svg('fb')
+							span группа ВКонтакте
+					.mySelect-options
+						a(href="#!")
+							span
+								+svg('fb')
+							span канал Youtube
