@@ -110,5 +110,17 @@ input[type="submit"] {
 	margin-right: auto;
 	padding-left: 15px;
 	padding-right: 15px;
-	width: 1200px;
+	width: 1470px;
+	@media(max-width: 1499px){
+		width: 1200px;
+	}
+	@media(max-width: 1199px){
+		width: 970px;
+	}
+	@media(max-width: 991px){
+		width: 750px;
+	}
+	@media(max-width: 767px){
+		width: 100%;
+	}
 }

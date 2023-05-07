@@ -1,0 +1,43 @@
+.card-light{
+	display: block;
+	width: 220px;
+	padding: 10px 10px;
+	text-align: center;
+	cursor:pointer;
+	&__img{
+		margin-bottom: 10px;
+		display: flex;
+		justify-content: center;
+		img{
+			width: 100px;
+			height: 100px;
+			object-fit: contain;
+
+		}
+	}
+	&__text{
+		white-space: normal;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;  
+		overflow: hidden;
+		margin-bottom: 5px;
+		text-decoration: none;
+		padding: 0px;
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 20px;
+		color: #444;
+
+	}
+	&:hover &__text{
+		text-decoration: underline;
+	}
+}
+.price-box{
+	color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    line-height: 18px;
+}

@@ -2,12 +2,21 @@
 	width: 170px;
 	height: 37px;
 	margin-right: 40px;
+	@media (max-width: 1199px) {
+		width: 120px;
+		margin-right: 25px;
+	}
 	img{
 		width: 100%;
 		height: 100%;
 		object-fit: contain;
 	}
 }
+.header-center__box{
+	font-size: 12px;
+}
+
+
 .header-center{
 	background-color: #fff;
 }
@@ -39,9 +48,23 @@
 		white-space: nowrap;
 		padding-left: 16px;
 		padding-right: 16px;
+		&.sub-menu{
+			margin-right: 10px;
+			padding-right: 14px;
+		}
+		@media (max-width: 1199px) {
+			padding-left: 10px;
+			padding-right: 10px;
+			
+			a{
+				font-size: 12px;
+			}
+		}
 	}
 
-	
+	a:hover{
+		color: $accent;
+	}
 }
 
 .badge-item{
@@ -58,9 +81,7 @@
    color: #000000;
     background-color: #FFFD10;
 }
-.header-center__box{
 
-}
 .header-contacts{
 	position: relative;
 	padding-left: 40px;
@@ -77,6 +98,9 @@
 			color: #222;
 			padding-top: 3px;
 			padding-bottom: 3px;
+			@media (max-width: 1199px) {
+				font-size: 12px;
+			}
 		}
 	}
 	&:hover .mySelect-drop{
@@ -123,3 +147,4 @@
 		right: 0;
 		transition:.3s;
 	}
+
