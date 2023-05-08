@@ -24,7 +24,7 @@
 		column-gap: 12px;
 		svg{flex-shrink: 0;}
 	}
-	li:hover > ul{display: block;}
+	
 	}
 	li+li{
 		border-top: 1px dashed #e9e9e9;
@@ -47,6 +47,14 @@
 		width: 100%;
 		display: none;
 		
+	}
+	li:hover> &-submenu{display: block;}
+	li{
+		padding: 5px 8px;
+		a{border-radius: 3px;}
+	}
+	a:hover{
+		background-color: $dropHover;
 	}
 	ul{
 		
