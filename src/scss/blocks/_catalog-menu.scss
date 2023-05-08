@@ -9,13 +9,15 @@
 		column-gap: 10px;
 		span{flex-grow: 1;}
 		min-width: 197px;
+		.svg-down{stroke: #fff; width: 10px;
+		height: 17px;}
 	}
 	
 	&:hover>&-drop{display: block;}
 
 	&-drop{
 	position: absolute;
-    top: 100%;
+    top: calc(15px + 100%);
     left: 0px;
     box-shadow: 6px 6px 19px rgba(0, 0, 0, 0.06);
     display: none;
@@ -65,7 +67,8 @@
 	}
 	li:hover> &-submenu{display: block;}
 	li{
-		padding: 5px 8px;
+		padding: 4px 8px;
+		min-height: 40px;
 		
 	}
 	.li-submemu>a{
