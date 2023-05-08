@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", function (){
-	
+	/**====задать класс для пунктов меню каталога, у которых есть выпадашки */
+	const catalogMenu = this.getElementById('cat-menu');
+	if(catalogMenu){
+		const catalogMenuSub = catalogMenu.getElementsByClassName('catalog-menu-submenu');
+		for(let i = 0; i < catalogMenuSub.length; i++){
+			const thisParent = catalogMenuSub[i].closest('li');
+			thisParent.classList.add('li-submemu');
+		}
+	}
 	/** =============== custom select ===============*/
 	const mySelectBlocks = Array.from(document.getElementsByClassName('mySelect'));
 	if(mySelectBlocks.length > 0){

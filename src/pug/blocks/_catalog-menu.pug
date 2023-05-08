@@ -1,6 +1,9 @@
 mixin catalog-menu(obj)
-	.catalog-menu
-		p Каталог
+	.catalog-menu#cat-menu
+		a(href="#!").btn
+			+svg('menu')
+			span Каталог товаров
+			+svg('down')
 		//==== меню Уровень #1 =====
 		.catalog-menu-drop
 			ul
@@ -15,7 +18,7 @@ mixin catalog-menu(obj)
 							.catalog-menu-submenu
 								ul
 									each menuEl in item.menuArr
-										li 
+										li
 											a(href="#!"+ menuEl.link) !{ menuEl.text}
 											if menuEl.subMenu
 												//==== меню Уровень #3 =====

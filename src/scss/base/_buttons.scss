@@ -1,0 +1,13 @@
+.btn{
+	display: inline-flex;
+	align-items: center;
+
+	border-radius: 8px;
+	background-color: $accent;
+	color: #fff;
+	transition: .3s;
+	&:hover{
+		color: #fff;
+		background-color: $acHover;
+	}
+}
