@@ -80,3 +80,19 @@ a(href="#!").header-top-banner
 		.header-bottom-content
 			//=======catalog menu=====
 			include ../blocks/_catalog-menu
+
+			//======= search form ======
+			.header-search
+				form.header-search-form
+					.form-item
+						input(type="text" name="")
+						
+						//=== блок  фильтров ====
+						.header-search-filters
+							.svg-btn
+								+svg('filter')
+						
+						//=== иконка лупа ====
+						.header-search-btn
+							.svg-btn
+								+svg('search')

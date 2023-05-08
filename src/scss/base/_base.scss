@@ -1,5 +1,5 @@
 
-
+/*===================== base =================*/
 *, *:after, *:before {
 	box-sizing: border-box;
 }
@@ -98,12 +98,16 @@ input[type="submit"] {
 	-webkit-appearance: none;
 }
 
-.flex-wrapper, .flex-justify{
+.flex-wrapper, .flex-justify,.svg-btn{
 	display: flex;
 	align-items: center;
 }
 .flex-justify{
 	justify-content: space-between;
+}
+.svg-btn{
+	justify-content: center;
+	border-radius: 8px;
 }
 .container{
 	margin-left: auto;
