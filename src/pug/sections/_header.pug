@@ -83,6 +83,7 @@ a(href="#!").header-top-banner
 
 			//======= search form ======
 			.header-search
+				//===== для демонстрации появления блока с результатми поиска, добавлен скрипт на строке 2 в main.js . Можно его удалить
 				form.header-search-form
 					.form-item
 						input(type="text" name="")
@@ -208,3 +209,16 @@ a(href="#!").header-top-banner
 
 			//======= shopping-block ======
 			.shopping-block
+				.flex-wrapper
+					//==== сравнение ===
+					.shopping-block__item
+						+svg('compare')
+					
+					//==== избранное ===
+					.shopping-block__item
+						+svg('favor')
+					
+					//==== корзина ===
+					.shopping-block__item
+						+svg('cart')
+						.notify-el 5

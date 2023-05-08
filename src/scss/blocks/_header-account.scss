@@ -1,10 +1,11 @@
 /*=====.account-block====*/
 .account-block{
 	position: relative;
-	
+	white-space: nowrap;
 	padding-left: 15px;
 	padding-right: 15px;
 	cursor:pointer;
+	
 	&:hover{
 		background-color: #223446;
 	}

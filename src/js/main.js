@@ -1,4 +1,21 @@
 document.addEventListener("DOMContentLoaded", function (){
+	/*======= скрипт, что бы отображить блок с результатми поиска */
+	const headerSearch = document.querySelector('.header-search-form');
+	if(headerSearch){
+		const inputElement = headerSearch.querySelector('INPUT');
+		const resultsBlock = headerSearch.querySelector('.search-form-results');
+		inputElement.addEventListener('keyup', function(){
+			resultsBlock.style.visibility = 'visible';
+		});
+		window.addEventListener('click', function(e){
+		
+			if(!e.target.closest('.header-search-form')){
+				resultsBlock.style.visibility = 'hidden';
+			}
+		});
+	}	
+	
+
 	/**====задать класс для пунктов меню каталога, у которых есть выпадашки */
 	const catalogMenu = this.getElementById('cat-menu');
 	if(catalogMenu){
@@ -37,8 +54,15 @@ document.addEventListener("DOMContentLoaded", function (){
 				item.addEventListener('click', ()=>{
 					mySelecDrop.classList.remove('active');
 					mySelect.classList.remove('open');
-					// mySelectIcon.classList.remove('active');
-					mySelectInput.value = item.value;
+					if(mySelectInput){mySelectInput.value = item.value;}
+					
+					/*=== отметить иконкой выбранную категорию в фильтрах формы поиска в шапке======= */
+					if(item.closest('.header-search-filters')){
+						for(let j=0; j<mySelectOptions.length; j++){
+							mySelectOptions[j].classList.remove('current-filter');
+							item.classList.add('current-filter');
+						}
+					}
 
 				});
 			}

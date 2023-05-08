@@ -1,6 +1,7 @@
 /*===================== header-search =================*/
 .header-search{
 	padding-top: 10px;
+	flex-grow: 1;
 	.form-item{
 		display: flex;
 		height: 38px;
@@ -10,7 +11,7 @@
 			height: 38px;
 			background: #223446;
 			border: 0px;
-			width: 495px;
+			flex-grow: 1;
 			padding-right: 5px;
 			padding-left: 15px;
 		}
@@ -72,7 +73,7 @@
 .search-form-results{
 	position: absolute;
 	top: 38px;
-	
+	visibility: hidden;
 	 background-color: #fff;
     -webkit-box-shadow: 6px 6px 19px rgba(0, 0, 0, 0.06);
     box-shadow: 6px 6px 19px rgba(0, 0, 0, 0.06);
