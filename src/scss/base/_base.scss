@@ -132,16 +132,16 @@ input[type="submit"] {
 	overflow-x: hidden;
 	overflow-y: auto;
 	scrollbar-width: 5px;
-	scrollbar-color:$cardGray,  rgba(0, 188, 82, .5);
+	scrollbar-color:transparent,  #DEE2E6;
 	&::-webkit-scrollbar{
 		width: 5px;
 		height: 20px;
 	}
 	&::-webkit-scrollbar-thumb{
 		border-radius: 10px;
-		background-color: rgba(0, 188, 82, .5);
+		background-color: #DEE2E6;
 	}
 	&::-webkit-scrollbar-track{
-		background-color:  $cardGray;
+		background-color: transparent;
 	}
 }
