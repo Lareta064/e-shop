@@ -30,6 +30,9 @@
     border-radius: 0px 0px 10px 10px;
     padding-top: 2px;
     padding-bottom: 5px;
+	@media (max-width: 1199px) {
+	  width: 220px;
+	}
 	li>a{
 		padding: 5px 10px 5px 10px;
 		white-space: normal;
@@ -40,6 +43,11 @@
 		column-gap: 12px;
 		border-radius: 3px;
 		transition:.3s;
+		@media (max-width: 1199px) {
+			padding-left: 5px;
+			padding-right: 5px;
+			&:after{right: 5px;}
+		}
 		svg{flex-shrink: 0;}
 		&:hover{
 			background-color: $dropHover;
@@ -68,6 +76,7 @@
 		width: 100%;
 		display: none;
 		
+		
 	}
 	li:hover> &-submenu{display: block;}
 	li{
@@ -77,6 +86,7 @@
 	}
 	.li-submemu>a{
 		position: relative;
+		padding-right: 7px;
 		&:after{
 			content:'';
 			width: 9px;
@@ -90,6 +100,9 @@
 			transform: translateY(-50%) rotate(-90deg);
 			right: 12px;
 			transition:.3s;
+			@media (max-width: 1199px) {
+				right: 5px;
+			}
 		}
 	}
 	ul{
