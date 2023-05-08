@@ -1,5 +1,8 @@
 .catalog-menu{
 	position: relative;
+	height: 58px;
+	padding-top: 10px;
+	
 	.btn{
 		height: 38px;
 		border-radius: 8px;
@@ -9,6 +12,7 @@
 		column-gap: 10px;
 		span{flex-grow: 1;}
 		min-width: 197px;
+		margin-bottom: 10px;
 		.svg-down{stroke: #fff; width: 10px;
 		height: 17px;}
 	}
@@ -17,7 +21,7 @@
 
 	&-drop{
 	position: absolute;
-    top: calc(15px + 100%);
+    top:  100%;
     left: 0px;
     box-shadow: 6px 6px 19px rgba(0, 0, 0, 0.06);
     display: none;

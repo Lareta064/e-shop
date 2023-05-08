@@ -6,7 +6,7 @@ mixin catalog-menu(obj)
 			+svg('down')
 		//==== меню Уровень #1 =====
 		.catalog-menu-drop
-			ul
+			ul.scroll-y
 				each item in obj
 					li
 						a(href="#!"+ item.link) 
@@ -16,21 +16,21 @@ mixin catalog-menu(obj)
 						if item.menuArr
 							//==== меню Уровень #2 =====
 							.catalog-menu-submenu
-								ul
+								ul.scroll-y
 									each menuEl in item.menuArr
 										li
 											a(href="#!"+ menuEl.link) !{ menuEl.text}
 											if menuEl.subMenu
 												//==== меню Уровень #3 =====
 												.catalog-menu-submenu
-													ul
+													ul.scroll-y
 														each menuElSub in menuEl.subMenu
 															li 
 																a(href="#!"+  menuElSub.link) !{ menuElSub.text}
 																if menuElSub.subMenu
 																	//==== меню Уровень #4 =====
 																	.catalog-menu-submenu
-																		ul
+																		ul.scroll-y
 																			each menuItem in  menuElSub.subMenu
 																				li
 																					a(href="#!"+   menuItem.link) !{  menuItem.text}

@@ -124,3 +124,18 @@ input[type="submit"] {
 		width: 100%;
 	}
 }
+.scroll-y{
+	scrollbar-width: 5px;
+	scrollbar-color:$cardGray,  rgba(0, 188, 82, .5);
+	&::-webkit-scrollbar{
+		width: 5px;
+		height: 20px;
+	}
+	&::-webkit-scrollbar-thumb{
+		border-radius: 10px;
+		background-color: rgba(0, 188, 82, .5);
+	}
+	&::-webkit-scrollbar-track{
+		background-color:  $cardGray;
+	}
+}
