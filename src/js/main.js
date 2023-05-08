@@ -123,8 +123,16 @@ document.addEventListener("DOMContentLoaded", function (){
 			drop.addEventListener('click', (e)=>{
 				e.preventDefault();
 				dropContent.classList.add('visible');
-			})
+			});
+		window.addEventListener('click', function(e){
+			if(!e.target.closest('.drop-open')){
+				dropContent.classList.remove('visible');
+			}
+		});
+
+
 		}
+
 	}
 
 });

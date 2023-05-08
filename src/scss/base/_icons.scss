@@ -107,4 +107,8 @@
 	width: 14px;
 	height: 16px;
 	fill: #444;
+	transition: .3s;
+	&:hover{
+		fill:$red;
+	}
 }
