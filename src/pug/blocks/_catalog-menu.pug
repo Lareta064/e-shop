@@ -30,7 +30,7 @@ mixin catalog-menu(obj)
 
 +catalog-menu([
 	{
-		link:'', text:'Аудио техника', svg:'location',
+		link:'', text:'Аудио техника', svg:'cat1',
 		menuArr: [
 			{link:'', text: 'AV ресиверы'},
 			{link:'', text: 'MP3 плееры'},
@@ -42,7 +42,7 @@ mixin catalog-menu(obj)
 			]
 	}, 
 	{
-		link:'', text:'Бытовая техника',svg:'location',
+		link:'', text:'Бытовая техника',svg:'cat2',
 		menuArr:[
 			{link:'', text:'Встраиваемая техника',
 			subMenu:[
@@ -119,7 +119,7 @@ mixin catalog-menu(obj)
 		]
 	},
 	{
-		link:'', text: 'Гаджеты', svg:'location',
+		link:'', text: 'Гаджеты', svg:'cat3',
 		menuArr: [
 			{link:'', text: 'Авто-техника'},
 			{link:'', text: 'Аксессуары для квдрокоптеров'},
@@ -133,5 +133,130 @@ mixin catalog-menu(obj)
 			{link:'', text: 'Смарт-часы и фитнес-трекеры'}]},
 			{link:'', text: 'Умный дом'}
 			]
-	}
+	},
+	{link:'', text:'Детский мир', svg:'cat4',
+		menuArr: [
+			{link:'', text: 'Игрушки'},
+			{link:'', text: 'Коляски и велокресла'},
+			{link:'', text: 'Товары для родителей'}, 
+			
+		]
+	},
+	{link:'', text:'Компьютеры', svg:'cat5',
+		menuArr: [
+			{link:'', text: 'IP-телефония'},
+			{link:'', text: 'USB Flash'},
+			{link:'', text: 'Аксессуары для ПК и ноутбуков'}, 
+			{link:'', text: 'Источники бесперебойного питания'},
+			{link:'', text: 'Комплектующие',
+				subMenu:[
+				{link:'', text:'Вытяжки'},
+				{link:'', text:'Варочные поверхности'},
+				{link:'', text:'Духовые шкафы'},
+				{link:'', text:'Посудомоечные машины'},
+				{link:'', text:'Подогреватели посуды'},
+				]
+			},
+			{link:'', text: 'Манипуляторы'},
+			{link:'', text: 'Мониторы'},
+			{link:'', text: 'Моноблоки (All in one)'},
+			{link:'', text: 'Программное обеспечение'},
+			{link:'', text: 'Сетевое оборудование'},
+			]
+	},
+	{link:'', text:'Apple Store', svg:'cat6',
+		menuArr: [
+			{link:'', text: 'Apple TV'},
+			{link:'', text: 'Apple Watch'},
+			{link:'', text: 'iMac'}, 
+			{link:'', text: 'iPad'},
+			{link:'', text: 'iPhone'},
+			{link:'', text: 'iPod'},
+			{link:'', text: 'Mac Mini'},
+			{link:'', text: 'Mac Pro'},
+			{link:'', text: 'Mac Book'},
+			{link:'', text: 'Аксессуары Apple',
+				subMenu:[
+				{link:'', text:'Вытяжки'},
+				{link:'', text:'Варочные поверхности'},
+				{link:'', text:'Духовые шкафы'},
+				{link:'', text:'Посудомоечные машины'},
+				{link:'', text:'Подогреватели посуды'},
+				]
+			},
+			{link:'', text: 'Беспроводное оборудование'},
+			{link:'', text: 'Мониторы Apple'},
+			{link:'', text: 'Устройства ввода'},
+			]
+	},
+	{link:'', text:'ТВ, Видео, Фото', svg:'cat7',
+		menuArr: [
+			{link:'', text: 'Видеокамеры'},
+			{link:'', text: 'Настенные крепления для телевизоров'},
+			{link:'', text: 'Медиаплееры'}, 
+			{link:'', text: 'Настольные и настенные часы'},
+			{link:'', text: 'Объктивы'},
+			{link:'', text: 'Проекторы и аксессуары'},
+			{link:'', text: 'Сумки и аксессуары для фото и видео'},
+			{link:'', text: 'Телевизоры'},
+			{link:'', text: 'Аксессуары',
+				subMenu:[
+				{link:'', text:'Вытяжки'},
+				{link:'', text:'Варочные поверхности'},
+				{link:'', text:'Духовые шкафы'},
+				{link:'', text:'Посудомоечные машины'},
+				{link:'', text:'Подогреватели посуды'},
+				]
+			},
+			{link:'', text: 'Экшн-камеры'},
+			]
+	},
+	{link:'', text:'Ноутбуки и планшеты', svg:'cat8',
+		menuArr: [
+			{link:'', text: 'Аккумуляторы для ноутбуков'},
+			{link:'', text: 'Аксессуары'},
+			{link:'', text: 'Аксессуары для графических планшетов'}, 
+			{link:'', text: 'Графические планшеты'},
+			{link:'', text: 'Защитные пленки для графических планшетов'},
+			{link:'', text: 'Ноутбуки'},
+			{link:'', text: 'Планшеты'},
+			{link:'', text: 'Подставки для ноутбуков'},
+			{link:'', text: 'Сумки и чехлы для ноутбуков'},
+			{link:'', text: 'Чехлы и обложки для планшетов'},
+			{link:'', text: 'Электронные книги'},
+			]
+	},
+	{link:'', text:'Спорт', svg:'cat9',
+		menuArr: [
+			{link:'', text: 'AV ресиверы'},
+			{link:'', text: 'MP3 плееры'},
+			{link:'', text: 'Акустические системы (колонки)'}, 
+			{link:'', text: 'Музыкальные центры'},
+			{link:'', text: 'Наушники и гарнитуры'},
+			{link:'', text: 'Системы домашнего кинотеатра'},
+			{link:'', text: 'Усилители'},
+			]
+	},
+	{link:'', text:'Телефоны', svg:'cat10',
+		menuArr: [
+			{link:'', text: 'AV ресиверы'},
+			{link:'', text: 'MP3 плееры'},
+			{link:'', text: 'Акустические системы (колонки)'}, 
+			{link:'', text: 'Музыкальные центры'},
+			{link:'', text: 'Наушники и гарнитуры'},
+			{link:'', text: 'Системы домашнего кинотеатра'},
+			{link:'', text: 'Усилители'},
+			]
+	},
+	{link:'', text:'Game Zone', svg:'cat11',
+		menuArr: [
+			{link:'', text: 'AV ресиверы'},
+			{link:'', text: 'MP3 плееры'},
+			{link:'', text: 'Акустические системы (колонки)'}, 
+			{link:'', text: 'Музыкальные центры'},
+			{link:'', text: 'Наушники и гарнитуры'},
+			{link:'', text: 'Системы домашнего кинотеатра'},
+			{link:'', text: 'Усилители'},
+			]
+	},
 ])
