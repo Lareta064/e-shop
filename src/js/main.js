@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 	}	
 	
-
 	/**====задать класс для пунктов меню каталога, у которых есть выпадашки */
 	const catalogMenu = this.getElementById('cat-menu');
 	if(catalogMenu){
@@ -116,5 +115,16 @@ document.addEventListener("DOMContentLoaded", function (){
 		
 	});
 
+	/* =====  показать вложенный дропбокс по клику на родит элемент  ===========  */
+	const dropOpen = document.querySelectorAll('.drop-open');
+	if(dropOpen.length >0){
+		for(let drop of dropOpen){
+			const dropContent = drop.querySelector('.drop-block');
+			drop.addEventListener('click', (e)=>{
+				e.preventDefault();
+				dropContent.classList.add('visible');
+			})
+		}
+	}
 
 });

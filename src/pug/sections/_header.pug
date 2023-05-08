@@ -219,6 +219,30 @@ a(href="#!").header-top-banner
 						+svg('favor')
 					
 					//==== корзина ===
-					.shopping-block__item
+					.shopping-block__item.drop-open
 						+svg('cart')
 						.notify-el 5
+						.mini-cart-modal.drop-block
+							
+							a(href="#!").product-item
+								.product-img
+									img(src="./img/products/9.jpg", width="40" height="40" alt="img")
+								.product-name.text-bold Apple iPhone 13 Pro 1TB Silver (MLVW3)
+
+								.product-count x1
+								.product-price 34 500 грн
+								.product-btn
+									.btn-del
+										+svg('delete')
+
+							a(href="#!").product-item
+								.product-img
+									img(src="./img/products/9.jpg", width="40" height="40" alt="img")
+								.product-name.text-bold Apple iPhone 13 Pro 1TB Silver (MLVW3)
+
+								.product-count x1
+								.product-price 34 500 грн
+								.product-btn
+									.btn-del
+										+svg('delete')
+
