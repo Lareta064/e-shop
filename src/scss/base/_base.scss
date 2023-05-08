@@ -129,6 +129,8 @@ input[type="submit"] {
 	}
 }
 .scroll-y{
+	overflow-x: hidden;
+	overflow-y: auto;
 	scrollbar-width: 5px;
 	scrollbar-color:$cardGray,  rgba(0, 188, 82, .5);
 	&::-webkit-scrollbar{

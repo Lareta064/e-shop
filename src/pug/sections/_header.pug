@@ -88,10 +88,50 @@ a(href="#!").header-top-banner
 						input(type="text" name="")
 						
 						//=== блок  фильтров ====
-						.header-search-filters
-							.svg-btn
+						.header-search-filters.mySelect.mySelect--absolute
+							.svg-btn.mySelect-input
 								+svg('filter')
-						
+							.mySelect-drop.scroll-y
+								//==== класс .current-filter получает выбранный фильтр. По загрузке страницы выбран фильтр Везде =======
+								.mySelect-options.current-filter
+									a(href="#!")
+										span Везде
+								.mySelect-options
+									a(href="#!")
+										span Apple Store
+								.mySelect-options
+									a(href="#!")
+										span Game Zone
+								.mySelect-options
+									a(href="#!")
+										span Аудио техника
+								.mySelect-options
+									a(href="#!")
+										span Бытовая техника
+								.mySelect-options
+									a(href="#!")
+										span Гаджеты
+								.mySelect-options
+									a(href="#!")
+										span Детский мир
+								.mySelect-options
+									a(href="#!")
+										span Компьютеры
+								.mySelect-options
+									a(href="#!")
+										span Новинки Apple
+								.mySelect-options
+									a(href="#!")
+										span Ноутбуки и планшеты
+								.mySelect-options
+									a(href="#!")
+										span Спорт
+								.mySelect-options
+									a(href="#!")
+										span ТВ, Видео, Фото
+								.mySelect-options
+									a(href="#!")
+										span Телефоны
 						//=== иконка лупа ====
 						.header-search-btn
 							.svg-btn
