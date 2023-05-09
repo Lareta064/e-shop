@@ -1,0 +1,99 @@
+.cat-menu-mob{
+	position: fixed;
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	height: 100vh;
+	width: 100%;
+	z-index: 10;
+
+	.cat-menu__close{
+		margin-left: auto;
+		z-index: 5;
+	}
+	.cat-menu__header{
+		display: flex;
+		align-items: center;
+    	font-weight: 600;
+		height: 46px;
+		padding-left: 15px;
+		padding-right: 15px;
+		border-bottom: 1px dashed #d8d8d8;
+		.svg-menu{fill:#000; margin-right: 12px;}
+	}
+}
+
+.multi-menu{
+	height: calc(100vh - 50px);
+	
+	padding-left: 15px;
+	padding-right: 15px;
+    &>ul>li>a{font-weight: 600;}
+	a{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		display: block;
+		padding-left: 20px;
+		padding-right: 40px;
+
+	}
+	ul{
+		
+		li{
+			position: relative;
+			padding-top: 2px;
+			padding-bottom: 2px;
+			&:hover>a{
+				background-color: $dropHover;
+			}
+		}
+	}
+	
+	label{
+		display: block;
+		position: relative;
+		span{
+			width: 30px;
+			height: 38px;
+			position: relative;
+			display: block;
+			position: absolute;
+			right: 10px;
+			top:-38px;
+			&:after{
+				content:'';
+				position: absolute;
+				display: block;
+				transition:.5s;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='5' height='10' fill='none' viewBox='0 0 5 10'%3e%3cpath stroke='%23000' stroke-linecap='round' d='M1.3 1.5l2.082 2.882a1 1 0 01.006 1.162L1.3 8.5'%3e%3c/path%3e%3c/svg%3e");
+				background-repeat: no-repeat;
+				background-size: auto;
+				background-position: center;
+			}
+		}
+		input{
+			position: absolute;
+			width: 0.01px;
+			height: 0.01px;
+			top: 0;
+			left: 0;
+			opacity: 0;
+
+		}
+		input:checked + span:after{
+			transform: rotate(90deg);
+		}
+		input:checked + span + ul{display: block;}
+	}
+
+	
+	li ul{
+		display: none;
+		margin-left: 15px;
+	}
+}

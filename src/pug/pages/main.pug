@@ -1,6 +1,9 @@
 extends ../layouts/layout.pug
 
 block content
+	//======== каталог меню на мобильной версии ============
+	include ../blocks/_multi-level-menu
+	
 	include ../sections/_header
 block variables
 	-var title = "Главная";

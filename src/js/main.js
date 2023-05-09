@@ -163,4 +163,15 @@ document.addEventListener("DOMContentLoaded", function (){
 		 });
 		
 	}
+
+	const multiLevelMenu = 	document.querySelector('.multiLevel-menu');
+	if(multiLevelMenu){
+		const menuIconItem = multiLevelMenu.querySelectorAll('.level-icon');
+		
+		for(let icon of menuIconItem){
+			console.log(icon);
+			const nextSib = icon.nextElemetSibling;
+			console.log(nextSib);
+		}
+	}
 });
