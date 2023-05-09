@@ -126,18 +126,27 @@ document.addEventListener("DOMContentLoaded", function (){
 		
 	});
 
-	/* =====  показать вложенный .drop-block по клику на родит элемент .drop-open  ===========  */
+	/* =====  показать вложенный .drop-block по клику на родит элемент .drop-open (корзина в шапке)  ===========  */
 	const dropOpen = document.querySelectorAll('.drop-open');
 	if(dropOpen.length >0){
 		for(let drop of dropOpen){
 			const dropContent = drop.querySelector('.drop-block');
 			drop.addEventListener('click', (e)=>{
 				e.preventDefault();
-				dropContent.classList.add('visible');
+				if(!drop.classList.contains('drop-open--active')){
+					dropContent.classList.add('visible');
+					drop.classList.add('drop-open--active');
+				}
+				else{
+					dropContent.classList.remove('visible');
+					drop.classList.remove('drop-open--active');
+				}
+				
 			});
 			window.addEventListener('click', function(e){
 				if(!e.target.closest('.drop-open')){
 					dropContent.classList.remove('visible');
+					drop.classList.remove('drop-open--active');
 				}
 			});
 		}

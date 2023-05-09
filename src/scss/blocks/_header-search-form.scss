@@ -81,6 +81,10 @@
 /* header search-results block*/
 .header-search-form{
 	position: relative;
+	@media (max-width: 991px) {
+	   display: none;
+	   &.open{display: block;}
+	}
 	
 }
 .search-form-results{
