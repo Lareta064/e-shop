@@ -15,16 +15,17 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 	}	
 	
-	/*===== зафиксировать чассть шапки по скроллу */
+	/*===== зафиксировать часть шапки по скроллу на экранах от 992пикс*/
 	 window.addEventListener('scroll', function(){
-		const headerFix = this.document.getElementById('header-fixed');
-		
-		if(this.window.pageYOffset > 170){
-			headerFix.classList.add('header-fixed');
+		if(this.window.innerWidth >=992){
+			const headerFix = this.document.getElementById('header-fixed');
+			
+			if(this.window.pageYOffset > 170){
+				headerFix.classList.add('header-fixed');
+			}
+			else{headerFix.classList.remove('header-fixed');}
 		}
-		else{headerFix.classList.remove('header-fixed');}
-		
-	 })
+	 });
 	/**====задать класс для пунктов меню Каталог товаров, у которых есть подменю */
 	const catalogMenu = this.getElementById('cat-menu');
 	if(catalogMenu){

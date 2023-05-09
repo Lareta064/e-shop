@@ -29,3 +29,16 @@
     column-gap:15px;
    
 }
+@media (max-width: 991px) {
+    .header-bottom{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 46px;
+    }
+    .header-bottom-content{
+        height: 46px;
+        justify-content: space-between;
+    }
+}
