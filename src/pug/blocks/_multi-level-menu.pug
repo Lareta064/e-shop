@@ -1,10 +1,10 @@
-.cat-menu-mob
+.cat-menu-mob(frame-modal='catalogy')
 	.cat-menu__header
 		+svg('menu')
 		span Каталог
-		.cat-menu__close
+		.modal-right-close(frame-close)
 			+svg('close')
-			
+
 	//===== Подменю показывается за счет чекед инпута. Важно, что бы спан (в нем выводится иконка- галочка впрво) стоял после инпута. Если  внутри тега <li> не выводится список <ul>  с подменю, то <label> с его содержимым не требуется, только тег <a> внутри <li>
 	.multi-menu.scroll-y
 		ul
