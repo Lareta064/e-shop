@@ -3,7 +3,25 @@
 	background:  $darkBg;
     box-shadow: 0 3px 3px rgba(0,0,0,.2);
     height: 58px;
+   
+    &.header-fixed{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        transform: translateY(-500px);
+        animation-name: fadeTop;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
     
+}
+@keyframes fadeTop{
+   
+    100%{
+         transform: translateY(0);
+    }
 }
 .header-bottom-content{
     height: 58px;
