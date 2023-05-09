@@ -2,9 +2,11 @@
 .header-search{
 	padding-top: 10px;
 	flex-grow: 1;
+	
 	.form-item{
 		display: flex;
 		height: 38px;
+		
 		input{
 			color: #fff;
 			font-size: 14px;
@@ -14,6 +16,7 @@
 			flex-grow: 1;
 			padding-right: 5px;
 			padding-left: 15px;
+			border-radius: 8px 0 0 8px;
 		}
 		.header-search-filters,
         .header-search-btn{
@@ -62,9 +65,19 @@
 			}
 		}
 		.mySelect-options.current-filter a:before{display: block;}
+		@media (max-width: 991px) {
+		 .mySelect-drop.active{left: auto; right:0;}
+		}
+	}
+	@media (max-width: 991px) {
+		z-index: 2;
+		position: absolute;
+		top: 58px;
+		left: 15px;
+		right: 15px;
 	}
 }
-
+@media (max-width: 991px) { .header-search-open{ order:3;}}
 /* header search-results block*/
 .header-search-form{
 	position: relative;
