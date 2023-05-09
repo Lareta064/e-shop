@@ -1,17 +1,31 @@
-.cat-menu-mob{
+.modal-frame{
+	display: none;
+	transition: .3s;
 	position: fixed;
-	background-color: #fff;
 	top: 0;
 	left: 0;
 	bottom: 0;
+	right: 0;
 	height: 100vh;
-	width: 100%;
 	z-index: 10;
-	transition: .3s;
-	transform: translateX(-100%);
-    &.visible{
-		transform: translateX(0);
+	background-color: rgba(0,0,0, .5);
+	&.visible{
+		display: block;
 	}
+}
+
+.modal-frame.modal-frame--right{
+	display: block;
+	transform: translateX(-100%);
+	&.visible{
+		transform: translateX(0)!important;
+	}
+	
+}
+.cat-menu-mob{
+	background-color: #fff;
+	width: 100%;
+	max-width: 400px;
 	.modal-right-close{
 		margin-left: auto;
 		z-index: 5;
@@ -26,10 +40,11 @@
 		border-bottom: 1px dashed #d8d8d8;
 		.svg-menu{fill:#000; margin-right: 12px;}
 	}
+
 }
 
 .multi-menu{
-	height: calc(100vh - 50px);
+	height: calc(100vh - 46px);
 	
 	padding-left: 15px;
 	padding-right: 15px;
