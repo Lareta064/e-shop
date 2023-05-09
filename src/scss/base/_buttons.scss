@@ -1,13 +1,25 @@
-.btn{
+.btn,.btn-light{
 	display: inline-flex;
 	align-items: center;
-
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 40px;
+	font-size: 14px;
 	border-radius: 8px;
 	background-color: $accent;
 	color: #fff;
 	transition: .3s;
+	white-space: nowrap;
 	&:hover{
 		color: #fff;
 		background-color: $acHover;
+	}
+}
+.btn-light{
+	color: #000;
+    background-color: #f8f9fa;
+	&:hover{
+		background-color: #e9ecef;
+    	color: #000;
 	}
 }

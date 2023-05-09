@@ -108,6 +108,7 @@
 	height: 16px;
 	fill: #444;
 	transition: .3s;
+	cursor:pointer;
 	&:hover{
 		fill:$red;
 	}

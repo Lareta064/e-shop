@@ -27,20 +27,23 @@ a(href="#!").header-top-banner
 						span.badge-item New
 					li.sub-menu
 						a(href="#!") Распродажа
+						
+						//=====блок товаров, появляющийся по ховеру на пункт меню Распродажа =====
 						.sub-menu-block
 							include ../sections/_submenu-cards
 					li
 						a(href="#!") Отзывы о магазине
-			
+			//===== врумя работы ====
 			.header-center__box
 				p Пн-Пт с 09:00 до 18:00,
 				p Сб с 10:00 до 15:30, Вс- выходной
-			
+			//==== блок с телефонами ======
 			.header-contacts
 				.header-contacts-tel
 					a(href="tel:+74951244501") +7 (495) 124-45-01
 					a(href="tel:+74951244502") +7 (495) 124-45-02
-
+				
+				//=== выпадающий по ховеру блок контактов ====
 				.mySelect-drop
 					.mySelect-options
 						a(href="#!")
@@ -192,7 +195,7 @@ a(href="#!").header-top-banner
 									p Аккумулятор для ноутбука ACER Aspire 3100 (BATBL50L6, AC 50L6 3S2P) 11.1V 5200mAh PowerPlant (NB00000092)
 									p 1689 грн
 			
-			//======= account-block ======
+			//=======  кнопка - account-block ======
 			.account-block
 				.flex-wrapper
 					.account-block__icon
@@ -201,7 +204,7 @@ a(href="#!").header-top-banner
 						span Здравствуйте,
 						span.text-dashed войдите в кабинет
 				
-				//=== modal-drop ====
+				//=== выпадашка по ховеру на кнопку Войдите ====
 				.mySelect-drop
 					a(href="#!").mySelect-options Регистрация
 					a(href="#!").mySelect-options Авторизация
@@ -210,39 +213,59 @@ a(href="#!").header-top-banner
 			//======= shopping-block ======
 			.shopping-block
 				.flex-wrapper
-					//==== сравнение ===
-					.shopping-block__item
+					//====  иконка - Сравнение ===
+					a(href="#!").shopping-block__item
 						+svg('compare')
 					
-					//==== избранное ===
-					.shopping-block__item
+					//==== Иконка - избранное ===
+					a(href="#!").shopping-block__item
 						+svg('favor')
 					
-					//==== корзина ===
+					//==== иконка - Корзина ===
 					.shopping-block__item.drop-open
 						+svg('cart')
 						.notify-el 5
-						.mini-cart-modal.drop-block
+						
+						//===== выпадающая корзина товаров в шапке, появляется по клику  =======
+						.products-table--mini.products-table.drop-block
+							.products-table__body
+								//==== одна строка таблицы товаров =====
+								.product-item
+									.product-img
+										img(src="./img/products/9.jpg", width="40" height="40" alt="img")
+									a(href="#!").product-name Apple iPhone 13 Pro 1TB Silver (MLVW3)
+
+									.product-count x1
+									.product-price 34 500 грн
+									.product-btn
+										.btn-del
+											+svg('delete')
+								//==== одна строка таблицы товаров =====
+								.product-item
+									.product-img
+										img(src="./img/products/5.jpg", width="40" height="40" alt="img")
+									a(href="#!").product-name Apple iPhone 13 Pro 1TB Silver (MLVW3)
+
+									.product-count x1
+									.product-price 4 500 грн
+									.product-btn
+										.btn-del
+											+svg('delete')
 							
-							.product-item
-								.product-img
-									img(src="./img/products/9.jpg", width="40" height="40" alt="img")
-								a(href="#!").product-name Apple iPhone 13 Pro 1TB Silver (MLVW3)
+							//==== футер таблицы
+							.products-table__footer
+								.flex-wrapper
+									.footer-row__text Предварительная стоимость
+									.product-price  39 000 грн
 
-								.product-count x1
-								.product-price 34 500 грн
-								.product-btn
-									.btn-del
-										+svg('delete')
+								.flex-wrapper
+									.footer-row__text Итоговая сумма
+									.product-price  39 000 грн
+							
+							//==== кнопки =======
+							.btn-wrapper
+								a(href="#!").btn-light
+									span Открыть корзину
 
-							.product-item
-								.product-img
-									img(src="./img/products/9.jpg", width="40" height="40" alt="img")
-								a(href="#!").product-name Apple iPhone 13 Pro 1TB Silver (MLVW3)
-
-								.product-count x1
-								.product-price 34 500 грн
-								.product-btn
-									.btn-del
-										+svg('delete')
-
+								a(href="#!").btn
+									span Оформить заказ
