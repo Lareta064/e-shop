@@ -1,24 +1,3 @@
-//======= Мобильная версия верхней фиксированной плашки  в шапке ==========
-//- .header-top-mobile
-//- 	.header-top-grid
-		
-		.mob-catalogy
-			a(href="#!").btn.btn--36
-				+svg('menu')
-		
-//- 		.mob-account
-//- 			a(href="#!").btn-dark.btn--36
-//- 				+svg('user')
-//- 		.mob-search
-//- 			a(href="#!")
-//- 				+svg('search')
-//- 		.mob-compare
-//- 			a(href="#!")
-//- 				+svg('compare')
-//- 		.mob-cart.shopping-block__item.drop-open
-//- 			+svg('cart')
-//- 			.notify-el 5
-			
 
 //==== Десктоп версия от 992 пикс. Header top banner ======			
 header.header
@@ -37,7 +16,7 @@ header.header
 				+switch-group
 
 	//========== header-center ===============
-	.header-center
+	.header-center.none
 		.container
 			.header-center__content
 				a(href="index.html").logo
@@ -248,9 +227,9 @@ header.header
 				//======= shopping-block ======
 				.shopping-block
 					.flex-wrapper
-						.shopping-block__item
-							.header-search-open
-								+svg('search')
+						//==== кнопка - лупа, что бы по клику открыть форму поиска на моб версии =======
+						.shopping-block__item.header-search-open
+							+svg('search')
 						
 						//====  иконка - Сравнение ===
 						a(href="#!").shopping-block__item

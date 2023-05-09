@@ -152,5 +152,15 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 
 	}
-
+    
+	/*======= показать строку поиска на моб версии по клику на иконку */
+	const openSearchMobile = document.querySelector('.header-search-open');
+	if(openSearchMobile){
+		 openSearchMobile.addEventListener('click', function(e){
+			
+			document.querySelector('.header-search-form').classList.toggle('open');
+			
+		 });
+		
+	}
 });
