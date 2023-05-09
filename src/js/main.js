@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 	}	
 	
-	/**====задать класс для пунктов меню каталога, у которых есть выпадашки */
+	/**====задать класс для пунктов меню Каталог товаров, у которых есть подменю */
 	const catalogMenu = this.getElementById('cat-menu');
 	if(catalogMenu){
 		const catalogMenuSub = catalogMenu.getElementsByClassName('catalog-menu-submenu');
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		
 	});
 
-	/* =====  показать вложенный дропбокс по клику на родит элемент  ===========  */
+	/* =====  показать вложенный .drop-block по клику на родит элемент .drop-open  ===========  */
 	const dropOpen = document.querySelectorAll('.drop-open');
 	if(dropOpen.length >0){
 		for(let drop of dropOpen){
@@ -124,13 +124,11 @@ document.addEventListener("DOMContentLoaded", function (){
 				e.preventDefault();
 				dropContent.classList.add('visible');
 			});
-		window.addEventListener('click', function(e){
-			if(!e.target.closest('.drop-open')){
-				dropContent.classList.remove('visible');
-			}
-		});
-
-
+			window.addEventListener('click', function(e){
+				if(!e.target.closest('.drop-open')){
+					dropContent.classList.remove('visible');
+				}
+			});
 		}
 
 	}
