@@ -7,7 +7,7 @@
 		top: 10px;
 		height: 38px;
 		left: -5px;
-		background: #223446;
+		background: $darkBtn;
 	}
 	&__item{
 		width: 52px;
@@ -21,7 +21,7 @@
 	}
 	&__item +&__item{margin-left: 5px;}
 	&__item:hover{
-		background-color: #223446;
+		background-color: $darkBtn;
 	}
 
 	.notify-el{
