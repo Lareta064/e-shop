@@ -1,9 +1,9 @@
 .modal-frame.modal-frame--right(frame-modal='catalogy')
-	.cat-menu-mob
-		.cat-menu__header
+	.modal-frame-content
+		.modal-frame__header
 			+svg('menu')
 			span Каталог
-			.modal-right-close(frame-close)
+			.modal-close(frame-close)
 				+svg('close')
 
 		//===== Подменю показывается за счет чекед инпута. Важно, что бы спан (в нем выводится иконка- галочка впрво) стоял после инпута. Если  внутри тега <li> не выводится список <ul>  с подменю, то <label> с его содержимым не требуется, только тег <a> внутри <li>

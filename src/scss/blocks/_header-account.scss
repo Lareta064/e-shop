@@ -41,6 +41,8 @@
 		}
 	}
 	&:hover .mySelect-drop{display: block;}
+	&.account-block--mobile{display: none;}
+	&.account-block--desk{display: block;}
 }
 @media (max-width: 991px) {
  .account-block{
@@ -50,12 +52,15 @@
 	border-radius: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
+	background-color: $darkBtn;
 	.account-block__icon{
 		display: flex;
 		align-items:center;
 	}
 	
-	background-color: $darkBtn;
+	&.account-block--mobile{display: flex;}
+	&.account-block--desk{display: none;}
+	
 	.account-block__text{display: none;}
 }
 }

@@ -210,7 +210,16 @@ header.header
 										p 1689 грн
 				
 				//=======  кнопка - account-block ======
-				.account-block
+				
+				//==== блок для моб версии
+				.account-block.account-block--mobile(frame-btn="account-modal")
+					.flex-wrapper
+						.account-block__icon
+							+svg('user')
+				
+				
+				//==== блок для десктоп версии
+				.account-block.account-block--desk
 					.flex-wrapper
 						.account-block__icon
 							+svg('user')
