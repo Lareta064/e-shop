@@ -23,6 +23,9 @@
 
 .header-center{
 	background-color: #fff;
+	@media (max-width: 991px) {
+		padding-top: 52px;
+	}
 }
 .header-center__content{
 	display: flex;
@@ -92,7 +95,10 @@
    color: #000000;
     background-color: #FFFD10;
 }
-
+.badge-item.badge-item--right{
+	top: 5px;
+	right: 5px;
+}
 .header-contacts{
 	position: relative;
 	padding-left: 40px;
