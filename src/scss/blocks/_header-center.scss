@@ -7,6 +7,9 @@
 		width: 120px;
 		margin-right: 25px;
 	}
+	@media (max-width: 991px) {
+		width: 170px;
+	}
 	img{
 		width: 100%;
 		height: 100%;
@@ -32,11 +35,18 @@
 	height: 74px;
 	align-items: center;
 	position: relative;
+	@media (max-width: 991px) {
+		display: grid;
+		grid-auto-flow: column;
+	}
 	
 }
 .main-menu{
 	margin-left: auto;
 	padding-right: 20px;
+	@media (max-width: 991px) {
+	  display: none;
+	}
 	
 }
 .main-menu>ul{
@@ -102,7 +112,11 @@
 .header-contacts{
 	position: relative;
 	padding-left: 40px;
-	
+	@media (max-width: 991px) {
+		max-width: 180px;
+		justify-self: end;
+		
+	}
 	.header-contacts-tel{
 		position: relative;
 		padding-right: 24px;
@@ -115,6 +129,7 @@
 			color: #222;
 			padding-top: 3px;
 			padding-bottom: 3px;
+			white-space: nowrap;
 			@media (max-width: 1199px) {
 				font-size: 12px;
 			}
