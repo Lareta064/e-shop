@@ -10,8 +10,8 @@ header.header
 		.container
 			.flex-justify
 				.header-top-links
-					a(href="") Доставка
-					a(href="") Оплата
+					a(href="delivery.html") Доставка
+					a(href="pay-page.html") Оплата
 				
 				+switch-group
 
@@ -26,7 +26,7 @@ header.header
 				.main-menu
 					ul
 						li
-							a(href="#!") Новинки
+							a(href="new-products.html") Новинки
 							span.badge-item New
 						li.sub-menu
 							a(href="#!") Распродажа
@@ -35,7 +35,7 @@ header.header
 							.sub-menu-block
 								include ../sections/_submenu-cards
 						li
-							a(href="#!") Отзывы о магазине
+							a(href="review.html") Отзывы о магазине
 				//===== врумя работы ====
 				.header-center__box
 					p Пн-Пт с 09:00 до 18:00,
@@ -241,11 +241,11 @@ header.header
 							+svg('search')
 						
 						//====  иконка - Сравнение ===
-						a(href="#!").shopping-block__item
+						a(href="compare.html").shopping-block__item
 							+svg('compare')
 						
 						//==== Иконка - избранное ===
-						a(href="#!").shopping-block__item
+						a(href="favorite.html").shopping-block__item
 							+svg('favor')
 						
 						//==== иконка - Корзина ===
@@ -255,6 +255,9 @@ header.header
 							
 							//===== выпадающая корзина товаров в шапке, появляется по клику  =======
 							.products-table--mini.products-table.drop-block
+								.products-table__body
+									.text-center В корзине пока пусто!
+								
 								.products-table__body
 									//==== одна строка таблицы товаров =====
 									.product-item
@@ -295,7 +298,7 @@ header.header
 								
 								//==== кнопки =======
 								.btn-wrapper
-									a(href="#!").btn-light
+									a(href="basket.html").btn-light
 										span Открыть корзину
 
 									a(href="#!").btn

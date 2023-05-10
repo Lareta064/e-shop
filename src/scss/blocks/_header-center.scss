@@ -10,6 +10,10 @@
 	@media (max-width: 991px) {
 		width: 170px;
 	}
+	@media (max-width: 767px) {
+		width: 140px;
+		margin-right: 0px;
+	}
 	img{
 		width: 100%;
 		height: 100%;
@@ -18,7 +22,14 @@
 }
 .header-center__box{
 	@media (max-width: 1199px) {
-	font-size: 12px;
+		font-size: 12px;
+	}
+	@media (max-width: 991px) {
+	   justify-self: end;
+	   font-size: 14px;
+	}
+	@media (max-width: 767px) {
+	   display: none;
 	}
 	
 }
@@ -27,7 +38,9 @@
 .header-center{
 	background-color: #fff;
 	@media (max-width: 991px) {
-		padding-top: 52px;
+		padding-top: 63px;
+		 border-bottom: 1px solid #e7e7e7;
+		 height: 115px;
 	}
 }
 .header-center__content{
@@ -38,6 +51,7 @@
 	@media (max-width: 991px) {
 		display: grid;
 		grid-auto-flow: column;
+		height: auto;
 	}
 	
 }
@@ -115,6 +129,7 @@
 	@media (max-width: 991px) {
 		max-width: 180px;
 		justify-self: end;
+		padding-left: 25px;
 		
 	}
 	.header-contacts-tel{
@@ -132,6 +147,9 @@
 			white-space: nowrap;
 			@media (max-width: 1199px) {
 				font-size: 12px;
+			}
+			@media (max-width: 991px) {
+			   font-size: 14px;
 			}
 		}
 	}
