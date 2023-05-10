@@ -29,16 +29,28 @@
     column-gap:15px;
    
 }
+.mob-catalogy,.header-search-open{
+     display: none;
+   }
 @media (max-width: 991px) {
-    .header-bottom{
+   .header-bottom{
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        height: 46px;
-    }
-    .header-bottom-content{
-        height: 46px;
-        justify-content: space-between;
-    }
+        z-index: 3;
+   }
+   .header-bottom-content{
+        column-gap:10px;
+        align-items: center;
+   }
+   .mob-catalogy{
+     display: block;
+   }
+   .header-bottom-content{
+        .mob-catalogy{
+            order:1;
+        }
+        
+   }
 }

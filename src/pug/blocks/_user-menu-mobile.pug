@@ -1,0 +1,52 @@
+.modal-frame.modal-frame--right.modal-frame-mobile(frame-modal='account-modal')
+	.modal-frame-content
+		.modal-frame__header
+			+svg('user')
+			span Информация
+			.modal-close(frame-close)
+				+svg('close')
+		.user-menu.scroll-y
+			.user-menu-list
+				//===== авторизация ====
+				.user-menu-item.user-menu-autorize
+					.user-menu__title
+						span Здравствуйте,
+						span войдите в кабинет
+					
+					//- .user-menu__drop
+					//- 	a(href="#!") Регистрация
+					//- 	a(href="#!") Авторизация
+
+				//===== Выбор языка ====
+				.user-menu-item.user-menu-lang
+					.user-menu__title
+						span Язык
+					
+					.user-menu__drop
+						.switch-lang
+							a(href="#!").switch-lang-item.active Ru
+							a(href="#!").switch-lang-item En
+
+				//===== Выбор валюты ====
+				.user-menu-item.user-menu-currency
+					.user-menu__title
+						span Валюта
+					
+					.user-menu__drop
+						a(href="#!") Euro
+						a(href="#!") US Dollar
+						a(href="#!").active Гривна грн
+				
+				.user-menu-item.user-menu-link
+					.user-menu__title
+						a(href="#!") Доставка
+
+				.user-menu-item.user-menu-link
+					.user-menu__title
+						a(href="#!") Оплата
+
+				.user-menu-item
+					.working-time
+						p Пн-Пт с 09:00 до 18:00, 
+						p Сб с 10:00 до 15:30, 
+						p Вс- выходной	

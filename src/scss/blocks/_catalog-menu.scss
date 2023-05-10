@@ -112,4 +112,7 @@
 		overflow-y: auto;
 		
 	}
+	@media (max-width: 991px) {
+		display: none;
+	}
 }

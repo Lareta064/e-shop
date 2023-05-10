@@ -1,0 +1,76 @@
+//============.user-menu mobile===========
+.user-menu{
+height: calc(100vh - 46px);
+}
+.user-menu-list{
+	padding: 15px;
+	padding-top: 0;
+	font-size: 13px;
+	line-height: 1.45;
+	color: #333;
+	.user-menu-item{
+		padding: 5px 8px;
+
+	}
+	.user-menu__title{
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 30px;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 3px;
+		background-color:  $dropHover;
+		display: flex;
+		align-items: center;
+		column-gap: 8px;
+
+	}
+	.user-menu__drop{
+		padding-left: 20px;
+		padding-top: 8px;
+		padding-bottom: 10px;
+		display: flex;
+		flex-direction: column;
+		row-gap:2px;
+		
+	}
+	.user-menu-autorize ,
+    .user-menu-currency{
+		.user-menu__drop a{
+			padding-top: 3px;
+			padding-bottom: 3px;
+			padding-left: 8px;
+			padding-right: 8px;
+			width: fit-content;
+			border-radius: 3px;
+			&:hover, &.active{
+				background-color: $dropHover;
+			}
+			
+		}
+	}
+	 .user-menu-autorize .user-menu__drop a{width: 100%;}
+	.user-menu-item.user-menu-link .user-menu__title{
+		background-color: transparent;
+	}
+	
+	.user-menu-item.user-menu-link .user-menu__title a:hover{
+		background-color:  $dropHover
+	}
+	.user-menu-item.user-menu-link a{padding-top: 3px;
+			padding-bottom: 3px;
+			padding-left: 8px;
+			padding-right: 8px;
+			width: 100%;
+			border-radius: 3px;}
+	.user-menu-item.user-menu-link {padding-left: 0;padding-right: 0;}
+	.user-menu-item.user-menu-link +.user-menu-item.user-menu-link{
+		border-top: 1px dashed  $greyBg;
+	}
+}
+
+.working-time{
+	padding: 5px 12px;
+	font-size: 14px;
+	line-height: 20px;
+}

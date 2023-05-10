@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function (){
+	const bodyEl = document.body;
 	/*======= скрипт, что бы отображить блок с результатми поиска */
 	const headerSearch = document.querySelector('.header-search-form');
 	if(headerSearch){
@@ -126,22 +127,89 @@ document.addEventListener("DOMContentLoaded", function (){
 		
 	});
 
-	/* =====  показать вложенный .drop-block по клику на родит элемент .drop-open  ===========  */
+	/* =====  показать вложенный .drop-block по клику на родит элемент .drop-open (корзина в шапке)  ===========  */
 	const dropOpen = document.querySelectorAll('.drop-open');
 	if(dropOpen.length >0){
 		for(let drop of dropOpen){
 			const dropContent = drop.querySelector('.drop-block');
 			drop.addEventListener('click', (e)=>{
 				e.preventDefault();
-				dropContent.classList.add('visible');
+				if(!drop.classList.contains('drop-open--active')){
+					dropContent.classList.add('visible');
+					drop.classList.add('drop-open--active');
+				}
+				else{
+					dropContent.classList.remove('visible');
+					drop.classList.remove('drop-open--active');
+				}
+				
 			});
 			window.addEventListener('click', function(e){
 				if(!e.target.closest('.drop-open')){
 					dropContent.classList.remove('visible');
+					drop.classList.remove('drop-open--active');
 				}
 			});
 		}
 
+	}
+    
+         /* =============== modal с атрибутом frame-modal ===============*/ 
+    const modalFramesOpen = document.querySelectorAll('[frame-btn]');
+    const modalFrames = document.querySelectorAll('[frame-modal]');
+    if( modalFrames.length > 0){
+      const modalFramesClose = document.querySelectorAll('[frame-close]');
+
+      for(let item of modalFramesOpen){
+        item.addEventListener('click', function(e){
+          for(let item of  modalFrames){
+            item.classList.remove('visible');
+            
+            bodyEl.classList.remove('lock');
+          }
+          e.preventDefault();
+          const itemAttr = item.getAttribute('frame-btn');
+
+          for(let frame of modalFrames){
+            const frameAttr =frame.getAttribute('frame-modal');	
+            if(frameAttr == itemAttr){
+              frame.classList.add('visible');
+              bodyEl.classList.add('lock');
+			 
+            }
+          }
+        });
+      }
+      /*==  закрыть модалки  frame-modal по клику на крестик ======*/
+      for(let item of modalFramesClose){
+        item.addEventListener('click', function(e){
+          e.preventDefault();
+          item.closest('[frame-modal]').classList.remove('visible');
+          bodyEl.classList.remove('lock');
+		  
+		  
+        });
+      }
+      /*=============== закрыть модалки по клику вне ===============*/
+      for(let frame of modalFrames){
+        frame.addEventListener('click', function(e){
+          if(e.target === e.currentTarget){
+            this.classList.remove(`visible`);
+            bodyEl.classList.remove('lock');
+          }
+        });
+      }
+    }
+
+	/*======= показать строку поиска на моб версии по клику на иконку */
+	const openSearchMobile = document.querySelector('.header-search-open');
+	if(openSearchMobile){
+		 openSearchMobile.addEventListener('click', function(e){
+			
+			document.querySelector('.header-search-form').classList.toggle('open');
+			
+		 });
+		
 	}
 
 });

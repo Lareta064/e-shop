@@ -11,7 +11,7 @@ mixin catalog-menu(obj)
 					li
 						a(href="#!"+ item.link) 
 							svg(class="svg-"+ item.svg)
-								use(href="../img/svgSprite.svg#svg-"+ item.svg +"")
+								use(href="./img/svgSprite.svg#svg-"+ item.svg +"")
 							span !{item.text}
 						if item.menuArr
 							//==== меню Уровень #2 =====
