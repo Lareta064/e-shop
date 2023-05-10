@@ -45,6 +45,9 @@
 	.mySelect-drop{
 		max-height: 420px;
 		z-index: 1;
+		@media (max-width: 767px) {
+			max-height: 320px;
+		}
 	}
 	.header-search-filters{
 		.mySelect-options a{
