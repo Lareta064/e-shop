@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		loop:true,
 		animateOut: 'fadeOut',
 		smartSpeed:1000,
-		// autoplay:true,
+		autoplay:true,
 		nav:true,
 		
 	})

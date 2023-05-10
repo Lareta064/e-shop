@@ -118,12 +118,19 @@
 	.skew-item{
 		margin-top: 16px;
 		margin-left: 10px;
+		&__text{
+			 -webkit-line-clamp: 3; 
+			display: -webkit-box; 
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
 	}
 }
 .banner-slide__title{
 	color: #fff;
 	width: 505px;
-	max-width: 350px;;
+	max-width: 350px;
+	margin-top: -15px;
 }
 .banner-slide__title .text-18{
 	font-size: 18px;

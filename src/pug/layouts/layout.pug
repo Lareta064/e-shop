@@ -18,10 +18,22 @@ html(lang="ru")
 		meta(name="format-detection" content="telephone=no")
 		
 		
-		link(rel="stylesheet", href="fonts/fonts.css")
+		//- link(rel="stylesheet", href="fonts/fonts.css")
 		link(rel="stylesheet", href="css/main.css")
 		title !{title}
-		
+		style.
+			@font-face {
+				font-family: 'Montserrat';
+				src: url('./fonts/Montserrat-Regular.woff2') format('woff2');
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'Montserrat';
+				src: url('./Montserrat-SemiBold.woff2') format('woff2');
+				font-weight: 600;
+				font-style: normal;
+			}
 	body(class=(bodyCl !=="" ? bodyCl : ''))
 		#overlay
 		block content
