@@ -98,7 +98,9 @@ input[type="submit"] {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 }
-
+section{
+	padding-top: 40px;
+}
 .flex-wrapper, .flex-justify,.svg-btn,.btn-wrapper{
 	display: flex;
 	align-items: center;

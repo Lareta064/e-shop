@@ -8,9 +8,9 @@ html(lang="ru")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
 		
-		//======= swipe =============
-		link(rel="stylesheet" href="libs/swiper/swiper.min.css" )
-		
+
+		//======= owl carousel =============
+		link(rel="stylesheet" href="libs/OwlCarousel/owl.carousel.min.css" )
 		//======= галерея lightbox =============
 		link(rel="stylesheet" href="./libs/lightbox/css/lightbox.css" )
 		
@@ -18,10 +18,22 @@ html(lang="ru")
 		meta(name="format-detection" content="telephone=no")
 		
 		
-		link(rel="stylesheet", href="fonts/fonts.css")
+		//- link(rel="stylesheet", href="fonts/fonts.css")
 		link(rel="stylesheet", href="css/main.css")
 		title !{title}
-		
+		style.
+			@font-face {
+				font-family: 'Montserrat';
+				src: url('./fonts/Montserrat-Regular.woff2') format('woff2');
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'Montserrat';
+				src: url('./Montserrat-SemiBold.woff2') format('woff2');
+				font-weight: 600;
+				font-style: normal;
+			}
 	body(class=(bodyCl !=="" ? bodyCl : ''))
 		#overlay
 		block content
@@ -29,8 +41,8 @@ html(lang="ru")
 		//=============== jquery ===================
 		script(src="./libs/jquery/jquery-3.0.0.min.js")
 		
-		//=============== swiper ===================
-		script(src="libs/swiper/swiper.js")
+		//=============== owl ===================
+		script(src="libs/OwlCarousel/owl.carousel.min.js")
 		
 		//=============== lightbox ===================
 		script(src="./libs/lightbox/js/lightbox.min.js")
