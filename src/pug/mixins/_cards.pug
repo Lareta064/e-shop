@@ -5,3 +5,41 @@ mixin card-light(link, imgSrc, title, price)
 		.card-light__text !{title}
 		.card-light__price
 			span.price-box !{price} грн
+
+mixin pc(img,img2, title, stock, stars, price)
+	.product-card
+		.pc__header
+			.label-block
+				.label.label-hit
+					span Топ
+				.label.label-pop
+					span Популярный
+				.label.label-new
+					span Новинка
+			.pc__img
+				img.main-img(src="./img/products/phone"+ img +".jpg", width="200" height="200" alt="alt")
+				
+				img.hover-img(src="./img/products/phone"+ img2 +".jpg", width="200" height="200" alt="alt")
+		.pc__info
+			.pc__body
+				.pc__name !{title}
+				if stock == 'in'
+					.pc__stock.instock
+						span Есть в наличии
+				else
+					.pc__stock.outstock
+						span Нет в наличии
+				.pc__art 696681
+				.pc__rating
+					//=== красные звездочки рейтинга закрашиваются по скрипту в main.js , который задает им ширину в соответствии с атрибутом data-rating========
+					.star-rating(data-rating=""+ stars)
+						span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+						span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+					.star-rating__val #{stars}
+			.pc__footer
+				.pc__price 38 499 грн
+				.pc__btn
+					.btn
+						svg.svg-cart
+							use(href="./img/svgSprite.svg#svg-cart")
+
