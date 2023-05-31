@@ -182,12 +182,3 @@ section{
 	&-new {background-color:   $blue;}
 	
 }
-.label-block{
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	z-index: 3;
-	transition: .3s;
-	.label{margin-left: auto;
-	}
-}

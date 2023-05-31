@@ -19,7 +19,7 @@ block content
 	section.products
 		.container
 			.product-card
-				.product-card__header
+				.pc__header
 					.label-block
 						.label.label-hit
 							span Топ
@@ -27,23 +27,28 @@ block content
 							span Популярный
 						.label.label-new
 							span Новинка
-					.product-card__img
+					.pc__img
 						img.main-img(src="./img/products/phone1.jpg", width="200" height="200" alt="alt")
 						
 						img.hover-img(src="./img/products/phone11.jpg", width="200" height="200" alt="alt")
-				
-				.product-card__body
-					.product-card__name Apple iPhone 13 Pro 1TB Silver (MLVW3)
-					.product-card__stock
-						span Есть в наличии
-					.product-card__article 696681
-					.product-card__rating
-						//=== красные звездочки рейтинга закрашиваются по скрипту в main.js , который задает им ширину в соответствии с атрибутом data-rating========
-						.star-rating(data-rating="3")
-							span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
-							span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
-						.star-rating__val 4.5
-				.product-card__footer
+				.pc__info
+					.pc__body
+						.pc__name Apple iPhone 13 Pro 1TB Silver (MLVW3)
+						.pc__stock.instock
+							span Есть в наличии
+						.pc__art 696681
+						.pc__rating
+							//=== красные звездочки рейтинга закрашиваются по скрипту в main.js , который задает им ширину в соответствии с атрибутом data-rating========
+							.star-rating(data-rating="3")
+								span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+								span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+							.star-rating__val 4.5
+					.pc__footer
+						.pc__price 38 499 грн
+						.pc__btn
+							.btn
+								svg.svg-cart
+									use(href="./img/svgSprite.svg#svg-cart")
 
 block variables
 	-var title = "Главная";
