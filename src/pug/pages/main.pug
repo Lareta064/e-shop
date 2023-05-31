@@ -16,6 +16,34 @@ block content
 	//======== benefits ============
 	include ../sections/_benefits
 
+	section.products
+		.container
+			.product-card
+				.product-card__header
+					.label-block
+						.label.label-hit
+							span Топ
+						.label.label-pop
+							span Популярный
+						.label.label-new
+							span Новинка
+					.product-card__img
+						img.main-img(src="./img/products/phone1.jpg", width="200" height="200" alt="alt")
+						
+						img.hover-img(src="./img/products/phone11.jpg", width="200" height="200" alt="alt")
+				
+				.product-card__body
+					.product-card__name Apple iPhone 13 Pro 1TB Silver (MLVW3)
+					.product-card__stock
+						span Есть в наличии
+					.product-card__article 696681
+					.product-card__rating
+						//=== красные звездочки рейтинга закрашиваются по скрипту в main.js , который задает им ширину в соответствии с атрибутом data-rating========
+						.star-rating(data-rating="3")
+							span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+							span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+						.star-rating__val 4.5
+				.product-card__footer
 
 block variables
 	-var title = "Главная";

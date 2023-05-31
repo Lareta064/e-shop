@@ -165,3 +165,29 @@ section{
 		background-color: transparent;
 	}
 }
+/********лейблы на карточке***********/
+.label{
+	display: block;
+	width: fit-content;
+	font-size: 11px;
+	font-weight: 400;
+	padding: 0 15px;
+	position: relative;
+	border-radius: 13px;
+	line-height: 26px;
+	height: 26px;
+	color: #fff;
+	background-color: $darkYellow;
+	&-pop{background-color: $purple;}
+	&-new {background-color:   $blue;}
+	
+}
+.label-block{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 3;
+	transition: .3s;
+	.label{margin-left: auto;
+	}
+}

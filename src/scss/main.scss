@@ -7,33 +7,18 @@
 @import "base/_form.scss";
 @import "base/_buttons.scss";
 @import "base/_modal.scss";
+@import "blocks/_custom-select.scss";
 
-
-//blocks
-@import "blocks/_level-menu.scss"; 
-@import "blocks/_user-menu-mobile.scss"; 
-@import "blocks/_switch-lang.scss"; 
-@import "blocks/_switch-currency.scss"; 
-@import "blocks/_switch-group.scss"; 
-@import "blocks/_custom-select.scss"; 
-@import "blocks/_header-search-form.scss"; 
-
-@import "blocks/_header-mobile-top.scss"; 
-
-@import "blocks/_header-top-row.scss";
-@import "blocks/_header-center.scss";
-@import "blocks/_header-account.scss";
-@import "blocks/_header-shopping.scss";
+/* // end base styles */
 
 @import "blocks/_card-simple.scss";
 @import "blocks/_card-benefit.scss";
-@import "blocks/_header-submenu.scss";
-@import "blocks/_header-bottom.scss";
-@import "blocks/_catalog-menu.scss";
+@import "blocks/_card-product.scss";
 
-
-
+//=====header
 @import "sections/_header.scss";
+
+//====== slider header
 @import "sections/_header-slider.scss";
 
   //ui

@@ -1,0 +1,38 @@
+include ../../layouts/_mixins-links.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		script(src="../js/main.js")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ../../ui/ui-navigation.pug
+
+		block content
+			.container-dashboard
+				.product-card
+					.product-card__header
+						.label-block
+							.label.label-hit
+								span Топ
+							.label.label-pop
+								span Популярный
+							.label.label-new
+								span Новинка
+						.product-card__img
+							img.main-img(src="../img/products/phone1.jpg", width="200" height="200" alt="alt")
+							
+							img.hover-img(src="../img/products/phone11.jpg", width="200" height="200" alt="alt")
+					
+					.product-card__body
+					.product-card__footer
