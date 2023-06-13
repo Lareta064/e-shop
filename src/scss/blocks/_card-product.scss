@@ -24,7 +24,12 @@
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
-	.label +.label{margin-top: 10px;}
+	.label +.label{
+		margin-top: 10px;
+		@media (max-width: 767px) {
+		margin-top: 5px;
+		}
+	}
 	.pc__header{
 		padding: 20px;
 		padding-bottom: 10px;
@@ -51,6 +56,7 @@
 			z-index: 1;
 			@media (max-width: 767px) {
 				height: 150px;
+				width: 145px;
 			}
 		}
 		.hover-img{

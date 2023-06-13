@@ -191,6 +191,10 @@ section{
 	background-color: $darkYellow;
 	&-pop{background-color: $purple;}
 	&-new {background-color:   $blue;}
+	@media (max-width: 767px) {
+	 height: 21px;
+	 line-height: 21px;
+	}
 	
 }
 .tooltip-box{
