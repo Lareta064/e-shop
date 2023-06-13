@@ -146,6 +146,8 @@ section{
 	}
 	@media(max-width: 767px){
 		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
 .scroll-y{
@@ -181,4 +183,25 @@ section{
 	&-pop{background-color: $purple;}
 	&-new {background-color:   $blue;}
 	
+}
+.tooltip-box{
+	position: relative;
+	.tooltip-text{
+		padding: 7px 10px 8px;
+		border-radius: 6px;
+		color: #fff;
+		font-size: 12px;
+		background-color: #0d365c;
+		white-space: nowrap;
+		opacity: 0;
+		transition: .2s;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: -100%;
+
+	}
+}
+.tooltip-box:hover{
+	.tooltip-text{opacity: 1;}
 }
