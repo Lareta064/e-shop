@@ -3,6 +3,30 @@
 	height: 20px;
 	fill: #fff;
 }
+.svg-reload{
+	width: 24px;
+	height: 24px;
+	fill: #000;
+	stroke: #000;
+	transition:.5s;
+	
+}
+.icon-reload{
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	background-color: $greyBtnBg;
+	cursor: pointer;
+		transition: .3s;
+	
+		&:hover {
+			background-color: $greyBtnBgHover;
+			.svg-reload{transform: rotate(180deg)}
+		}
+}
 .svg-down{
 	width: 9px;
 	height: 4px;

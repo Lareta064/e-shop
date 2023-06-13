@@ -104,10 +104,11 @@ section{
 .section-title{
 	margin-bottom: 30px;
 }
-.flex-wrapper, .flex-justify,.svg-btn,.btn-wrapper{
+.flex-wrapper, .flex-justify,.svg-btn,.btn-wrapper, .flex-center{
 	display: flex;
 	align-items: center;
 }
+.flex-center{justify-content: center;}
 .flex-justify{
 	justify-content: space-between;
 }
@@ -132,6 +133,11 @@ section{
 .pos-rel{position: relative;
 }
 .text-center{text-align: center;}
+.m-auto{
+	margin-left: auto;
+	margin-right: auto;
+}
+.mt-30{margin-top: 30px;}
 .container{
 	margin-left: auto;
 	margin-right: auto;
