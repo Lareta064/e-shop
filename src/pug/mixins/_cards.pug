@@ -54,7 +54,8 @@ mixin pc(img,img2, title, stock, stars, price)
 					.star-rating__val #{stars}
 			//===== футер карточки ======
 			.pc__footer
-				.pc__price 38 499 грн
+				.pc__price-box
+					.pc__price 38 499 грн
 				
 				.pc__btn
 					//=== иконки, на десктоп версии стоят абсолютом, на моб версии слева от кнопки Купить=========
@@ -74,6 +75,62 @@ mixin pc(img,img2, title, stock, stars, price)
 									.tooltip-text В сравнение
 									span.icon-compare
 					
+					.btn
+						svg.svg-cart
+							use(href="./img/svgSprite.svg#svg-cart")
+
+mixin pc-mini(img, title, stock, stars, price, sale,salePrice)
+	//====== single product mini card ========
+	.product-card-mini
+		if sale=='sale'
+			//==== блок с обратным отсчетом времени ======
+			.sale-timer
+				.sale-timer__item
+					span 9
+					span дней
+				.sale-timer__item
+					span 22
+					span часа
+				.sale-timer__item
+					span 15
+					span минут
+				.sale-timer__item
+					span 22
+					span сек
+		.pc__img
+			img(src="./img/products/"+img+".jpg", alt="img")
+		.pc__info
+			a(href="#!").pc__name !{title}
+			.pc__rating
+				//=== красные звездочки рейтинга закрашиваются по скрипту в main.js , который задает им ширину в соответствии с атрибутом data-rating========
+				.star-rating(data-rating=""+ stars)
+					span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+					span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+				.star-rating__val #{stars}
+			
+			.pc__price-box
+				if sale =='sale'
+					.pc__price-old
+						span !{salePrice}
+						.sale-label 10%
+				.pc__price !{price}
+			
+		//=== иконки, появляются по ховеру=========
+		.pc__links-wrapper
+			object
+				.pc__links
+					a(href="#!")
+						span.quick-view
+					if stock == 'in'
+						a(href="#!").tooltip-box
+							.tooltip-text Купить в 1 клик
+							span.quick-bay
+					a(href="#!").tooltip-box
+						.tooltip-text В закладки
+						span.icon-favorite
+					a(href="#!").tooltip-box
+						.tooltip-text В сравнение
+						span.icon-compare
 					.btn
 						svg.svg-cart
 							use(href="./img/svgSprite.svg#svg-cart")

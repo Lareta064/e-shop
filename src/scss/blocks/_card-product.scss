@@ -202,6 +202,33 @@
 		}
 	}
 }
+.pc__price-box{
+	position: relative;
+	.sale-label{
+		color: #fff;
+		font-weight: 600;
+		z-index: 2;
+		width: 42px;
+		height: 18px;
+		line-height: 18px;
+		font-size: 11px;
+		text-align: center;
+		padding: 0px;
+		border-radius: 4px;
+		background-image: url('../img/sale-label.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: left;
+	} 
+	.pc__price-old{
+		
+		
+		display: flex;
+		column-gap:12px;
+		span{text-decoration: line-through;color: #000;
+		opacity: 0.3;font-size: 13px;}
+	}
+}
 .pc__price{
 	color: #000;
 	font-size: 16px;
