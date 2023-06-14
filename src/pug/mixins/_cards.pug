@@ -134,3 +134,43 @@ mixin pc-mini(img, title, stock, stars, price, sale,salePrice)
 					.btn
 						svg.svg-cart
 							use(href="./img/svgSprite.svg#svg-cart")
+
+
+
+mixin shop-card(img, name)
+	.shop-card
+		//=====блок со списком магазинов, отображаемых по клику на кнопку в правом нижнем углу =====
+		.shop-card__list
+			ul
+				li
+					a(href="#!") USB Flash
+				li
+					a(href="#!") Аксессуары для ПК и ноутбуков
+				li
+					a(href="#!") Источники бесперебойного питания
+				li
+					a(href="#!") Комплектующие
+				li
+					a(href="#!") Манипуляторы
+				li
+					a(href="#!") Мониторы
+				li
+					a(href="#!") Моноблоки (All in one)
+				li
+					a(href="#!") Программное обеспечение
+				li
+					a(href="#!") Сетевое оборудование
+				li
+					a(href="#!") IP-Телефония
+				
+				
+
+		//==== картинка ===
+		.shop-card__img
+			img(src="./img/"+img+"", width="200" height="200" alt="img")
+		.shop-card__row
+			a(href="#!").shop-card__name !{name}
+			
+			.shop-card__btn
+				svg.svg-chevron-right
+					use(href="./img/svgSprite.svg#svg-chevron-right")

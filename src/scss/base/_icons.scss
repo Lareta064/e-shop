@@ -33,6 +33,15 @@
 	stroke:#000;
 	fill: transparent;
 }
+.svg-chevron-left, .svg-chevron-right, .svg-chevron-top{
+   width: 5px;
+   height: 9px;
+   fill: #000;
+}
+.svg-chevron-top{
+	width: 17px;
+	height: 10px;
+}
 .svg-filter{
 	width: 16px;
 	height: 16px;
