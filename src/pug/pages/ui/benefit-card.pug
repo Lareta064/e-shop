@@ -28,4 +28,6 @@ html(lang="ru")
 						.text-bold Поддержка 24/7
 						p Мы работает 24 часа 7 дней в неделю
 				pre.
-					include ../../sections/_submenu-cards
+					+benefitCard(1, 'Поддержка 24/7', 'Мы работает 24 часа 7 дней в неделю')
+					
+					+benefitCard(svg, title, text)

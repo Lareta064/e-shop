@@ -6,6 +6,16 @@ mixin card-light(link, imgSrc, title, price)
 		.card-light__price
 			span.price-box !{price} грн
 
+mixin benefitCard(svg, title, text)
+	.benefit-card
+		.benefit-card__icon
+			svg(class="svg-ben"+ svg)
+				use(href="./img/svgSprite.svg#svg-ben"+ svg)
+
+		.benefit-card__text
+			.text-bold !{title}
+			p !{text}
+
 mixin pc(img,img2, title, stock, stars, price)
 	//=== карточка продукта =======
 	.product-card

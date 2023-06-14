@@ -1,0 +1,35 @@
+.products-carousel{
+	.product-card,&-item{
+		height: 100%;
+	}
+	.owl-stage, .owl-item{
+		display: flex;
+	}
+	
+}
+.products-slider .owl-carousel{
+	.owl-nav{
+		position: absolute;
+		right: 0;
+		top: -56px;
+		
+		&>*+*{margin-left: 5px;}
+	}
+	.owl-next, .owl-prev{
+		background-color: $greyBtnBg!important;
+		border-radius: 6px;
+		width: 28px;
+		height: 28px;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+		line-height: 28px;
+		span{font-size: 28px; display: block; line-height: 1; }
+		cursor:pointer;
+		transition:.3s;
+		&:hover{
+			background-color: $greyBtnBgHover !important;
+		}
+	}
+}

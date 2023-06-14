@@ -20,19 +20,7 @@ html(lang="ru")
 
 		block content
 			.container-dashboard
-				.pc
-					.pc__header
-						.label-block
-							.label.label-hit
-								span Топ
-							.label.label-pop
-								span Популярный
-							.label.label-new
-								span Новинка
-						.pc__img
-							img.main-img(src="../img/products/phone1.jpg", width="200" height="200" alt="alt")
-							
-							img.hover-img(src="../img/products/phone11.jpg", width="200" height="200" alt="alt")
-					
-					.pc__body
-					.pc__footer
+				+pc('3', 33, 'Apple iPhone 13 Pro 1TB Graphite (MLVV3)', 'in', '4')
+				pre.
+					+pc('3', 33, 'Apple iPhone 13 Pro 1TB Graphite (MLVV3)', 'in', '4')
+					pc(img,img2, title, stock, stars, price)
