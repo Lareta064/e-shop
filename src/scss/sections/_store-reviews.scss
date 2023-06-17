@@ -1,3 +1,9 @@
+/* отзывы о магазине*/
+.store-card-block{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap:30px;
+}
 .store-card{
 	border: 1px solid #e9e9e9;
 	border-radius: 10px;
@@ -38,6 +44,7 @@
 		.star-rating{justify-content: center;
 			margin-left: auto;
 			margin-right: auto;
+			height: 20px;
 			span{font-size: 20px;}
 		}
 		.star-rating .stars-active{
@@ -78,4 +85,32 @@
 			}
 		}
 	}
+}
+
+.store-card-scores{
+	width: 100%;
+	max-width: 715px;
+	padding: 30px 40px;
+	border: 1px solid #e9e9e9;
+	border-radius: 10px;
+	background: #fff;
+	.store-card__item{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		margin-bottom: 15px;
+		column-gap:10px;
+		.border-separate{
+			flex-grow: 1;
+			border-bottom: 1.5px dashed #d9d9d9;
+		}
+	}
+	.star-rating{height: 20px;}
+	
+	.star-rating .stars-active {
+		color: $darkYellow;
+		
+	}
+	.star-rating span{font-size: 20px;}
 }

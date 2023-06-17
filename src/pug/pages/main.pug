@@ -32,6 +32,7 @@ block content
 		.container
 			h2.h2 Отзывы о магазине
 			.store-card-block
+				//==== карточка с рейтингом ===========
 				.store-card
 					.store-card__rating
 						.store-card__rating-val
@@ -39,10 +40,9 @@ block content
 						.store-card__rating-count 
 							span Всего оценок: 7
 						.store-card__rating-start
-							.pc__rating
-								.star-rating(data-rating="4.8")
-									span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
-									span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+							.star-rating(data-rating="4.8")
+								span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+								span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
 					.store-card__desk
 						//====== progress bar ==========
 						.store-card__bar
@@ -87,6 +87,44 @@ block content
 							.store-card__bar-line
 								span
 							.store-card__bar-percent(data-percent="0") 0%
-							
+
+
+				//==== 	карточка оставить отзыв о магазине  ===========	
+				.store-card-scores
+					//===== одна строчка с оценкой =======
+					.store-card__item
+						.store-card__item-name Доставка
+						span.border-separate
+						.store-card__item-stars
+							.star-rating(data-rating="4.8")
+								span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+								span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+					
+					//===== одна строчка с оценкой =======
+					.store-card__item
+						.store-card__item-name Качество товара
+						span.border-separate
+						.store-card__item-stars
+							.star-rating(data-rating="4.8")
+								span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+								span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+					
+					//===== одна строчка с оценкой =======
+					.store-card__item
+						.store-card__item-name Цена
+						span.border-separate
+						.store-card__item-stars
+							.star-rating(data-rating="4.8")
+								span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+								span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+					
+					//===== одна строчка с оценкой =======					
+					.store-card__item
+						.store-card__item-name Оценка магазина
+						span.border-separate
+						.store-card__item-stars
+							.star-rating(data-rating="4.8")
+								span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+								span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
 block variables
 	-var title = "Главная";
