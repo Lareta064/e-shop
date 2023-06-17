@@ -12,4 +12,16 @@ document.addEventListener("DOMContentLoaded", function (){
 			
 		}
 	}
+    /*  ==== отзывы о магазине, закрасить прогрессбар */
+	const storeRatingBar = document.querySelectorAll('.store-card__bar');
+	if (storeRatingBar.length > 0){
+		for (let item of storeRatingBar){
+			const itemProgressLine = item.querySelector('.store-card__bar-line span');
+			const itemProgressLineVal = item.querySelector('[data-percent]');
+			const itemProgressLineWidth = itemProgressLineVal.dataset.percent;
+			
+			itemProgressLine.style.width = `${itemProgressLineWidth}%`;
+			console.log(itemProgressLine.style.width);
+		}
+	}
 });

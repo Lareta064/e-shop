@@ -1,0 +1,81 @@
+.store-card{
+	border: 1px solid #e9e9e9;
+	border-radius: 10px;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	padding: 30px 40px;
+	width: 100%;
+	max-width: 715px;
+	&__rating{
+		width: 40%;
+		text-align: center;
+		&-val{
+			height: 94px;
+			margin-bottom: 12px;
+			span{
+				height: 89px;
+				width: 89px;
+				display: inline-block;
+				line-height: 72px;
+				color: #fff;
+				border-radius: 50px;
+				background: #6EA753;
+				font-size: 30px;
+				font-weight: 600;
+				border: 8px solid #7EBC62;
+				box-shadow: -3px 3px 0px #659C4C;
+			}
+		}
+		&-count{margin-bottom: 12px;}
+		&-count span{
+			background: #f8f9fa;
+			border-radius: 15px;
+			padding: 3px 15px;
+			display: inline-block;
+			font-size: 13px;
+		}
+		.star-rating{justify-content: center;
+			margin-left: auto;
+			margin-right: auto;
+			span{font-size: 20px;}
+		}
+		.star-rating .stars-active{
+			color: $darkYellow;
+		}
+	}
+
+	&__desk{
+		width: 60%;
+		padding: 0px 10px;
+	}
+
+	&__bar{
+		display: flex;
+		column-gap:15px;
+		align-items: center;
+		margin-bottom: 15px;
+		font-size: 13px;
+		line-height: 20px;
+		&-star{font-size: 20px; color: $darkYellow;}
+		.store-card__bar-line{
+			position: relative;
+			height: 10px;
+			border-radius: 10px;
+			background: #f8f9fa;
+			flex-grow:1;
+			max-width: 200px;
+			overflow: hidden;
+			span{
+				position: absolute;
+				top: 0;
+				border-radius: 10px;
+				left: 0;
+				bottom: 0;
+				z-index: 1;
+				background-color: #04A349;
+				display: inline-block;
+			}
+		}
+	}
+}

@@ -27,20 +27,66 @@ block content
 	include ../sections/_products-slider
 	
 	include ../sections/_multi-sliders
-
-	section.shop-categories
+	include ../sections/_shop-categories
+	section.store-reviews
 		.container
-			.h2 Магазин по отделам
-			.shop-categories__content
-				+shop-card('shop-cat1.png', 'Компьютеры')
-				+shop-card('shop-cat2.jpg', 'Гаджеты')
-				+shop-card('shop-cat3.png', 'Ноутбуки и планшеты')
-				+shop-card('shop-cat4.png', 'Apple Store')
-				+shop-card('shop-cat5.jpg', 'Телефоны')
-				+shop-card('shop-cat6.jpg', 'Бытовая техника')
-				+shop-card('shop-cat7.jpg', 'Спорт')
-				+shop-card('shop-cat8.jpg', 'Game Zone')
+			h2.h2 Отзывы о магазине
+			.store-card-block
+				.store-card
+					.store-card__rating
+						.store-card__rating-val
+							span 4.8
+						.store-card__rating-count 
+							span Всего оценок: 7
+						.store-card__rating-start
+							.pc__rating
+								.star-rating(data-rating="4.8")
+									span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+									span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+					.store-card__desk
+						//====== progress bar ==========
+						.store-card__bar
+							.store-card__bar-star
+								span &#9733;
+							
+							//===== ширина линии закрашивается по скрипту в main.js =============
+							.store-card__bar-line
+								span
+							.store-card__bar-percent(data-percent="89") 89%
 
+						//====== progress bar ==========
+						.store-card__bar
+							.store-card__bar-star
+								span &#9733;
+							.store-card__bar-line
+								span
+							.store-card__bar-percent(data-percent="10") 10%
 						
+						//====== progress bar ==========
+						.store-card__bar
+							.store-card__bar-star
+								span &#9733;
+							.store-card__bar-line
+								span
+							.store-card__bar-percent(data-percent="0") 0%
+						
+						//====== progress bar ==========
+						.store-card__bar
+							.store-card__bar-star
+								span &#9733;
+							
+							.store-card__bar-line
+								span
+							.store-card__bar-percent(data-percent="0") 0%
+						
+						//====== progress bar ==========
+						.store-card__bar
+							.store-card__bar-star
+								span &#9733;
+							
+							.store-card__bar-line
+								span
+							.store-card__bar-percent(data-percent="0") 0%
+							
 block variables
 	-var title = "Главная";
