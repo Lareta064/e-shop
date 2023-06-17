@@ -130,7 +130,8 @@ block content
 					.store-card__btn
 						button.btn-light(frame-btn="store-review") Написать отзыв
 					//===== модальное окно Оставить отзыв. Открывается по скрипту, сравнивающим атрибуты frame-btn и frame-modal=======
-					.modal-frame.modal-frame--right(frame-modal="store-review")
+					
+					.modal-frame.modal-frame--center(frame-modal="store-review")
 						.modal-frame-content
 							.modal-frame__header
 								p Оценка магазина
@@ -140,11 +141,21 @@ block content
 							.modal-frame___body
 								form(action="" method="method")
 									.form-item
-										//===== спан со звездочкой для обязательныйх полей =====
+										//===== спан со звездочкой для обязательных полей =====
 										span.required-symbol *
 										input(type="text" placeholder="Ваше имя")
+										.error Текст ошибки
 										.form-icon
 											img(src="./img/name-icon.svg", alt="alt")
+                                    
+									//==== поле для комментария ==========
+									.form-item
+										//===== спан со звездочкой для обязательных полей =====
+										span.required-symbol *
+										textarea(type="text" placeholder="Ваш комментарий")
+										.error Текст ошибки
+										.form-icon
+											img(src="./img/comment-icon.svg", alt="alt")
 
 block variables
 	-var title = "Главная";

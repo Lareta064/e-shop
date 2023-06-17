@@ -13,9 +13,9 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 .form-item{
-  position: relative;
-  input{
-    width: 100px;
+  position: relative; margin-bottom: 16px;
+  input, textarea{
+    width: 100%;
     display: block;
     height: 52px;
     border-radius:12px;
@@ -24,14 +24,31 @@ select:-webkit-autofill:focus {
     box-shadow: none;
     color: #000;
     font-size: 13px;
-
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: inherit;
+   
   }
   .required-symbol{
     position: absolute;
     color: red;
-    top: 5px;
-    left: 5px;
+    top: 8px;
+    left: 8px;
     z-index: 2;
+  }
+    .required-symbol +input, .required-symbol+ textarea{
+      padding-left: 20px;
+    }
+    textarea{
+    height: 60px;
+    resize: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 20px;
+    }
+  input::placeholder, textarea::placeholder{
+    font-family: inherit;
+    font-size: inherit;
   }
 .form-icon{
   position: absolute;
@@ -43,9 +60,15 @@ select:-webkit-autofill:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  img{
-    width: 15px;
-  }
+    img{
+      width: 15px;
+    }
 
-}
+  }
+    .error {
+      display: block;
+      font-size: 12px;
+      line-height: 1.6;
+      color: red;
+    }
 }
