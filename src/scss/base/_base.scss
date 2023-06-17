@@ -102,12 +102,12 @@ section{
 	padding-top: 30px;
 }
 
-.flex-wrapper, .flex-justify,.svg-btn,.btn-wrapper, .flex-center{
+.flex-title,.flex-wrapper, .flex-justify,.svg-btn,.btn-wrapper, .flex-center{
 	display: flex;
 	align-items: center;
 }
 .flex-center{justify-content: center;}
-.flex-justify{
+.flex-title,.flex-justify{
 	justify-content: space-between;
 }
 .svg-btn{

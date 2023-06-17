@@ -30,7 +30,14 @@ block content
 	include ../sections/_shop-categories
 	section.store-reviews
 		.container
-			h2.h2 Отзывы о магазине
+			.flex-title
+				h2.h2 Отзывы о магазине
+				a(href="#!").icon-link
+					span Все отзывы
+					.round-btn
+						svg.svg-chevron-right
+							use(href="../img/svgSprite.svg#svg-chevron-right")
+			
 			.store-card-block
 				//==== карточка с рейтингом ===========
 				.store-card
@@ -247,11 +254,66 @@ block content
 												label.star-rating-label
 													input(type="checkbox")
 													span &#9733;
-                                    //===== текст ниже появляется, если Пользователь не все отметил звездочками =====
+									//===== текст ниже появляется, если Пользователь не все отметил звездочками =====
 									.error Пожалуйста, поставьте оценку.
 									//===== form button =====
 									.form-button
 										button.btn(type="submit") Оставить отзыв
+           
+			//======== карточки с отзывами о магазине ======
+			.store-reviews-cards.mt-30
+				//===== одна карточка =======
+				.store-review-card
+					.store-review-card__header
+						.store-review-card__user
+							.squre-icon
+								img(src="./img/name-icon.svg", width="13" alt="icon")
+							p Светлана
+						
+						.store-review-card__date 03.01.2020
+					.star-rating(data-rating="4.8")
+						span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+						span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+					
+					.store-review-card__text
+						p супер зашла в интернет -магазин CyberStore увидела нужный товар положила в корзину и вуаля доставили домой по укр почте-совершенно бесплатно супер условия покупки
+
+				//===== одна карточка =======
+				.store-review-card
+					.store-review-card__header
+						.store-review-card__user
+							.squre-icon
+								img(src="./img/name-icon.svg", width="13" alt="icon")
+							p Игорь
+						
+						.store-review-card__date 03.01.2020
+					.star-rating(data-rating="4.8")
+						span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+						span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+					
+					.store-review-card__text
+						p Делаю не первую покупку в CyberStore . В этот раз заказала набор контейнеров LUMINARC 3 шт. + сумка, доставили быстро, всё целое, нигде ни царапинки. Спасибо! ..
+				//===== одна карточка =======
+				.store-review-card
+					.store-review-card__header
+						.store-review-card__user
+							.squre-icon
+								img(src="./img/name-icon.svg", width="13" alt="icon")
+							p Елена
+						
+						.store-review-card__date 03.01.2020
+					
+					.star-rating(data-rating="4.8")
+						span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+						span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+					
+					.store-review-card__text
+						p Все супер!
+			//===== кнопка под карточками ========
+			.flex-center.mt-30
+				.icon-reload
+					svg.svg-reload
+						use(href="./img/svgSprite.svg#svg-reload")
 
 block variables
 	-var title = "Главная";
