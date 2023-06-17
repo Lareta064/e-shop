@@ -8,7 +8,11 @@
 	background-color: #fff;
 	position: relative;
 	height: 300px;
-	
+	transition:.3s;	
+	&:hover{
+		box-shadow: 3px 3px 10px rgba(0, 0, 0, .07);
+			border-color: #fff;
+	}
 	&__list{
 		position: absolute;
 		z-index: 2;

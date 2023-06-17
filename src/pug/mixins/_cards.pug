@@ -79,7 +79,7 @@ mixin pc(img,img2, title, stock, stars, price)
 						svg.svg-cart
 							use(href="./img/svgSprite.svg#svg-cart")
 
-mixin pc-mini(img, title, stock, stars, price, sale,salePrice)
+mixin pc-mini(img,img2, title, stock, stars, price, sale,salePrice)
 	//====== single product mini card ========
 	.product-card-mini
 		if sale=='sale'
@@ -97,8 +97,12 @@ mixin pc-mini(img, title, stock, stars, price, sale,salePrice)
 				.sale-timer__item
 					span 22
 					span сек
+		//====card images====
 		.pc__img
-			img(src="./img/products/"+img+".jpg", alt="img")
+			img.main-img(src="./img/products/phone"+ img +".jpg", width="200" height="200" alt="alt")
+			
+			img.hover-img(src="./img/products/phone"+ img2 +".jpg", width="200" height="200" alt="alt")
+		
 		.pc__info
 			a(href="#!").pc__name !{title}
 			.pc__rating
