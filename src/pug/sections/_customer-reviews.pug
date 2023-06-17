@@ -1,0 +1,75 @@
+//=========== отзывы покупателей ===============
+section.customer-reviews
+	.container
+		//==== блок с заголовком =======
+		.flex-title
+			h2.h2 Отзывы покупателей
+			a(href="#!").icon-link
+				span Все отзывы
+				.round-btn
+					svg.svg-chevron-right
+						use(href="../img/svgSprite.svg#svg-chevron-right")
+		
+		//===== cards wrapper ======
+		.customer-reviews-wrapper
+			
+			//== одна карточка ======
+			.customer-reviews-card
+				.customer-review__header
+					//===== вторая картинка no-foto отобразится, если нет основной картинки, которая идет первой ================
+					.customer-review__img(style="background-image: url(./img/products/5.jpg), url(./img/no-foto.png)")
+					.customer-review__title
+						p Apple Watch Edition Series 3 GPS + Cellular 42mm White Ceramic w. Soft White/Pebble Sport B. (MQKD2)
+				.customer-review__body
+					p Прочные, водонепроницаемые, удобная синхронизация, можно разговаривать, писать и читать почту и сообщения, долго держит заряд
+				
+				.customer-review__footer
+					.customer-review__info
+						p Василий
+						span 03.03.2023
+					.star-rating(data-rating="3")
+						span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+						span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+
+			//== одна карточка ======
+			.customer-reviews-card
+				.customer-review__header
+					//===== вторая картинка no-foto отобразится, если нет основной картинки, которая идет первой ================
+					.customer-review__img(style="background-image: url(./img/products/phone1.jpg), url(./img/no-foto.png)")
+					.customer-review__title
+						p Apple Watch Edition Series 3 GPS + Cellular 42mm White Ceramic w. Soft White/Pebble Sport B. (MQKD2)
+				.customer-review__body
+					p Прочные, водонепроницаемые, удобная синхронизация, можно разговаривать, писать и читать почту и сообщения, долго держит заряд
+				
+				.customer-review__footer
+					.customer-review__info
+						p Василий
+						span 03.03.2023
+					.star-rating(data-rating="4")
+						span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+						span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+
+			//== одна карточка ======
+			.customer-reviews-card
+				.customer-review__header
+					//===== вторая картинка no-foto отобразится, если нет основной картинки, которая идет первой ================
+					.customer-review__img(style="background-image: url(./img/products/phone22.jpg), url(./img/no-foto.png)")
+					.customer-review__title
+						p Apple Watch Edition Series 3 GPS + Cellular 42mm White Ceramic w. Soft White/Pebble Sport B. (MQKD2)
+				.customer-review__body
+					p Прочные, водонепроницаемые, удобная синхронизация, можно разговаривать, писать и читать почту и сообщения, долго держит заряд
+				
+				.customer-review__footer
+					.customer-review__info
+						p Василий
+						span 03.03.2023
+					.star-rating(data-rating="5")
+						span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+						span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+
+		//===== кнопка под карточками ========
+		.flex-center.mt-30
+			.icon-reload
+				svg.svg-reload
+					use(href="./img/svgSprite.svg#svg-reload")
+

@@ -1,0 +1,291 @@
+//================ отзывы о магазине =============
+section.store-reviews
+	.container
+		//==== блок с заголовком =======
+		.flex-title
+			h2.h2 Отзывы о магазине
+			a(href="#!").icon-link
+				span Все отзывы
+				.round-btn
+					svg.svg-chevron-right
+						use(href="../img/svgSprite.svg#svg-chevron-right")
+		
+		//====== большие карточки =========
+		.store-card-block
+			
+			//==== карточка с рейтингом ===========
+			.store-card
+				.store-card__rating
+					.store-card__rating-val
+						span 4.8
+					.store-card__rating-count 
+						span Всего оценок: 7
+					.store-card__rating-start
+						.star-rating(data-rating="4.8")
+							span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+							span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+				.store-card__desk
+					//====== progress bar ==========
+					.store-card__bar
+						.store-card__bar-star
+							span &#9733;
+						
+						//===== ширина линии закрашивается по скрипту в main.js =============
+						.store-card__bar-line
+							span
+						.store-card__bar-percent(data-percent="89") 89%
+
+					//====== progress bar ==========
+					.store-card__bar
+						.store-card__bar-star
+							span &#9733;
+						.store-card__bar-line
+							span
+						.store-card__bar-percent(data-percent="10") 10%
+					
+					//====== progress bar ==========
+					.store-card__bar
+						.store-card__bar-star
+							span &#9733;
+						.store-card__bar-line
+							span
+						.store-card__bar-percent(data-percent="0") 0%
+					
+					//====== progress bar ==========
+					.store-card__bar
+						.store-card__bar-star
+							span &#9733;
+						
+						.store-card__bar-line
+							span
+						.store-card__bar-percent(data-percent="0") 0%
+					
+					//====== progress bar ==========
+					.store-card__bar
+						.store-card__bar-star
+							span &#9733;
+						
+						.store-card__bar-line
+							span
+						.store-card__bar-percent(data-percent="0") 0%
+
+
+			//==== 	карточка оставить отзыв о магазине  ===========	
+			.store-card-scores
+				//===== одна строчка с оценкой =======
+				.store-card__item
+					.store-card__item-name Доставка
+					span.border-separate
+					.store-card__item-stars
+						.star-rating(data-rating="4.8")
+							span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+							span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+				
+				//===== одна строчка с оценкой =======
+				.store-card__item
+					.store-card__item-name Качество товара
+					span.border-separate
+					.store-card__item-stars
+						.star-rating(data-rating="4.8")
+							span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+							span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+				
+				//===== одна строчка с оценкой =======
+				.store-card__item
+					.store-card__item-name Цена
+					span.border-separate
+					.store-card__item-stars
+						.star-rating(data-rating="4.8")
+							span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+							span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+				
+				//===== одна строчка с оценкой =======					
+				.store-card__item
+					.store-card__item-name Оценка магазина
+					span.border-separate
+					.store-card__item-stars
+						.star-rating(data-rating="4.8")
+							span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+							span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+
+				.store-card__btn
+					button.btn-light(frame-btn="store-review") Написать отзыв
+				//===== модальное окно Оставить отзыв. Открывается по скрипту, сравнивающим атрибуты frame-btn и frame-modal=======
+				
+				.modal-frame.modal-frame--center(frame-modal="store-review")
+					.modal-frame-content
+						.modal-frame__header
+							p Оценка магазина
+							.modal-close(frame-close)
+								+svg('close')
+
+						.modal-frame___body
+							form(action="" method="method")
+								.form-item
+									//===== спан со звездочкой для обязательных полей =====
+									span.required-symbol *
+									input(type="text" placeholder="Ваше имя")
+									//===== элемент с классом error  появляется, когда форма при отправке не проходит валидацию ======
+									.error Текст ошибки
+									.form-icon
+										img(src="./img/name-icon.svg", alt="alt")
+								
+								//==== поле для комментария ==========
+								.form-item
+									//===== спан со звездочкой для обязательных полей =====
+									span.required-symbol *
+									textarea(type="text" placeholder="Ваш комментарий")
+									
+									.form-icon
+										img(src="./img/comment-icon.svg", alt="alt")
+
+								//==== 	поставить оценку ===========	
+								
+								
+								.store-card-scores
+									//===== одна строчка с оценкой =======
+									.store-card__item
+										.store-card__item-name Доставка
+										span.border-separate
+										
+										//====звездочки закрашиваются по скрипту========
+										.star-rating-group
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+									
+									//===== одна строчка с оценкой =======
+									.store-card__item
+										.store-card__item-name Качество товара
+										span.border-separate
+										.star-rating-group
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+									
+									//===== одна строчка с оценкой =======
+									.store-card__item
+										.store-card__item-name Цена
+										span.border-separate
+										.star-rating-group
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+									
+									//===== одна строчка с оценкой =======					
+									.store-card__item
+										.store-card__item-name Оценка магазина
+										span.border-separate
+										.star-rating-group
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+											label.star-rating-label
+												input(type="checkbox")
+												span &#9733;
+								//===== текст ниже появляется, если Пользователь не все отметил звездочками =====
+								.error Пожалуйста, поставьте оценку.
+								//===== form button =====
+								.form-button
+									button.btn(type="submit") Оставить отзыв
+		
+		//======== карточки с отзывами о магазине ======
+		.store-reviews-cards.mt-30
+			//===== одна карточка =======
+			.store-review-card
+				.store-review-card__header
+					.store-review-card__user
+						.squre-icon
+							img(src="./img/name-icon.svg", width="13" alt="icon")
+						p Светлана
+					
+					.store-review-card__date 03.01.2020
+				.star-rating(data-rating="4.8")
+					span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+					span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+				
+				.store-review-card__text
+					p супер зашла в интернет -магазин CyberStore увидела нужный товар положила в корзину и вуаля доставили домой по укр почте-совершенно бесплатно супер условия покупки
+
+			//===== одна карточка =======
+			.store-review-card
+				.store-review-card__header
+					.store-review-card__user
+						.squre-icon
+							img(src="./img/name-icon.svg", width="13" alt="icon")
+						p Игорь
+					
+					.store-review-card__date 03.01.2020
+				.star-rating(data-rating="4.8")
+					span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+					span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+				
+				.store-review-card__text
+					p Делаю не первую покупку в CyberStore . В этот раз заказала набор контейнеров LUMINARC 3 шт. + сумка, доставили быстро, всё целое, нигде ни царапинки. Спасибо! ..
+			//===== одна карточка =======
+			.store-review-card
+				.store-review-card__header
+					.store-review-card__user
+						.squre-icon
+							img(src="./img/name-icon.svg", width="13" alt="icon")
+						p Елена
+					
+					.store-review-card__date 03.01.2020
+				
+				.star-rating(data-rating="4.8")
+					span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+					span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+				
+				.store-review-card__text
+					p Все супер!
+		
+		//===== кнопка под карточками ========
+		.flex-center.mt-30
+			.icon-reload
+				svg.svg-reload
+					use(href="./img/svgSprite.svg#svg-reload")
