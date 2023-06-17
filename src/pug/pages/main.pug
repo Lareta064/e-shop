@@ -144,6 +144,7 @@ block content
 										//===== спан со звездочкой для обязательных полей =====
 										span.required-symbol *
 										input(type="text" placeholder="Ваше имя")
+										//===== элемент с классом error  появляется, когда форма при отправке не проходит валидацию ======
 										.error Текст ошибки
 										.form-icon
 											img(src="./img/name-icon.svg", alt="alt")
@@ -153,9 +154,104 @@ block content
 										//===== спан со звездочкой для обязательных полей =====
 										span.required-symbol *
 										textarea(type="text" placeholder="Ваш комментарий")
-										.error Текст ошибки
+										
 										.form-icon
 											img(src="./img/comment-icon.svg", alt="alt")
+
+									//==== 	поставить оценку ===========	
+									
+									
+									.store-card-scores
+										//===== одна строчка с оценкой =======
+										.store-card__item
+											.store-card__item-name Доставка
+											span.border-separate
+											
+											//====звездочки закрашиваются по скрипту========
+											.star-rating-group
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+										
+										//===== одна строчка с оценкой =======
+										.store-card__item
+											.store-card__item-name Качество товара
+											span.border-separate
+											.star-rating-group
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+										
+										//===== одна строчка с оценкой =======
+										.store-card__item
+											.store-card__item-name Цена
+											span.border-separate
+											.star-rating-group
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+										
+										//===== одна строчка с оценкой =======					
+										.store-card__item
+											.store-card__item-name Оценка магазина
+											span.border-separate
+											.star-rating-group
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+												label.star-rating-label
+													input(type="checkbox")
+													span &#9733;
+                                    //===== текст ниже появляется, если Пользователь не все отметил звездочками =====
+									.error Пожалуйста, поставьте оценку.
+									//===== form button =====
+									.form-button
+										button.btn(type="submit") Оставить отзыв
 
 block variables
 	-var title = "Главная";

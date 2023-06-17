@@ -21,7 +21,23 @@ document.addEventListener("DOMContentLoaded", function (){
 			const itemProgressLineWidth = itemProgressLineVal.dataset.percent;
 			
 			itemProgressLine.style.width = `${itemProgressLineWidth}%`;
-			console.log(itemProgressLine.style.width);
+			
+		}
+	}
+
+	/*===== закрасить звездочки по клику в модальном окне Написать отзыв о магазине */
+	const starsGroups = document.querySelectorAll('.star-rating-group');
+	if (starsGroups.length > 0){
+		for (let item of starsGroups){
+			const itemLabels = item.querySelectorAll('.star-rating-label');
+			for (let i = 0; i < itemLabels.length; i++){
+				itemLabels[i].addEventListener('click', function(e){
+					e.stopPropagation();
+					for (let j = 0; j < itemLabels.length; j++){
+						itemLabels[j].querySelector('input').checked = (j <= i ? true : false);
+					}
+				})
+			}
 		}
 	}
 });

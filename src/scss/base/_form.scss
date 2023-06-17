@@ -65,7 +65,15 @@ select:-webkit-autofill:focus {
     }
 
   }
-    .error {
+   
+}
+.form-button{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+form{
+ .error {
       display: block;
       font-size: 12px;
       line-height: 1.6;
