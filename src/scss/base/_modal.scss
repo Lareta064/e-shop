@@ -13,13 +13,42 @@
 	&.visible{
 		display: block;
 	}
+	
+		
 }
 
-.modal-frame.modal-frame--right{
+.modal-frame.modal-frame--left{
 	display: block;
 	transform: translateX(-100%);
 	&.visible{
 		transform: translateX(0)!important;
+	}
+}
+.modal-frame.modal-frame--center{
+	.modal-frame-content{
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 70px;
+		max-height: 600px;
+		height:auto;
+		border-radius: 12px;
+		box-shadow: 0 2px 15px rgba(0, 0, 0, .18);
+		border: 1px solid rgba(0, 0, 0, .2);
+		
+		
+	}
+	.modal-frame__header{
+		padding: 35px;
+		border-bottom:0;
+		padding-bottom: 0;
+		margin-bottom: 35px;
+		
+	}
+	.modal-frame___body{
+		padding: 35px;
+		padding-top: 0;
+
 	}
 }
 @media(min-width:992px){

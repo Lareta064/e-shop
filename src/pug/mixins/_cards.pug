@@ -5,3 +5,176 @@ mixin card-light(link, imgSrc, title, price)
 		.card-light__text !{title}
 		.card-light__price
 			span.price-box !{price} грн
+
+mixin benefitCard(svg, title, text)
+	.benefit-card
+		.benefit-card__icon
+			svg(class="svg-ben"+ svg)
+				use(href="./img/svgSprite.svg#svg-ben"+ svg)
+
+		.benefit-card__text
+			.text-bold !{title}
+			p !{text}
+
+mixin pc(img,img2, title, stock, stars, price)
+	//=== карточка продукта =======
+	.product-card
+		.pc__header
+			//=====лейблы по ховеру ====
+			.label-block
+				.label.label-hit
+					span Топ
+				.label.label-pop
+					span Популярный
+				.label.label-new
+					span Новинка
+			
+			//=====картинки: одна видна сразу, втора\ появляется по ховеру на карточку ====
+			.pc__img
+				img.main-img(src="./img/products/phone"+ img +".jpg", width="200" height="200" alt="alt")
+				
+				img.hover-img(src="./img/products/phone"+ img2 +".jpg", width="200" height="200" alt="alt")
+				
+		.pc__info
+
+			.pc__body
+				a(href="#!").pc__name !{title}
+				if stock == 'in'
+					.pc__stock.instock
+						span Есть в наличии
+				else
+					.pc__stock.outstock
+						span Нет в наличии
+				.pc__art 696681
+				.pc__rating
+					//=== красные звездочки рейтинга закрашиваются по скрипту в main.js , который задает им ширину в соответствии с атрибутом data-rating========
+					.star-rating(data-rating=""+ stars)
+						span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+						span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+					.star-rating__val #{stars}
+			//===== футер карточки ======
+			.pc__footer
+				.pc__price-box
+					.pc__price 38 499 грн
+				
+				.pc__btn
+					//=== иконки, на десктоп версии стоят абсолютом, на моб версии слева от кнопки Купить=========
+					.pc__links-wrapper
+						object
+							.pc__links
+								a(href="#!")
+									span.quick-view
+								if stock == 'in'
+									a(href="#!").tooltip-box
+										.tooltip-text Купить в 1 клик
+										span.quick-bay
+								a(href="#!").tooltip-box
+									.tooltip-text В закладки
+									span.icon-favorite
+								a(href="#!").tooltip-box
+									.tooltip-text В сравнение
+									span.icon-compare
+					
+					.btn
+						svg.svg-cart
+							use(href="./img/svgSprite.svg#svg-cart")
+
+mixin pc-mini(img,img2, title, stock, stars, price, sale,salePrice)
+	//====== single product mini card ========
+	.product-card-mini
+		if sale=='sale'
+			//==== блок с обратным отсчетом времени ======
+			.sale-timer
+				.sale-timer__item
+					span 9
+					span дней
+				.sale-timer__item
+					span 22
+					span часа
+				.sale-timer__item
+					span 15
+					span минут
+				.sale-timer__item
+					span 22
+					span сек
+		//====card images====
+		.pc__img
+			img.main-img(src="./img/products/phone"+ img +".jpg", width="200" height="200" alt="alt")
+			
+			img.hover-img(src="./img/products/phone"+ img2 +".jpg", width="200" height="200" alt="alt")
+		
+		.pc__info
+			a(href="#!").pc__name !{title}
+			.pc__rating
+				//=== красные звездочки рейтинга закрашиваются по скрипту в main.js , который задает им ширину в соответствии с атрибутом data-rating========
+				.star-rating(data-rating=""+ stars)
+					span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+					span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+				.star-rating__val #{stars}
+			
+			.pc__price-box
+				if sale =='sale'
+					.pc__price-old
+						span !{salePrice}
+						.sale-label 10%
+				.pc__price !{price}
+			
+		//=== иконки, появляются по ховеру=========
+		.pc__links-wrapper
+			object
+				.pc__links
+					a(href="#!")
+						span.quick-view
+					if stock == 'in'
+						a(href="#!").tooltip-box
+							.tooltip-text Купить в 1 клик
+							span.quick-bay
+					a(href="#!").tooltip-box
+						.tooltip-text В закладки
+						span.icon-favorite
+					a(href="#!").tooltip-box
+						.tooltip-text В сравнение
+						span.icon-compare
+					.btn
+						svg.svg-cart
+							use(href="./img/svgSprite.svg#svg-cart")
+
+
+
+mixin shop-card(img, name)
+	.shop-card
+		//=====блок со списком магазинов, отображаемых по клику на кнопку в правом нижнем углу =====
+		.shop-card__list
+			ul
+				li
+					a(href="#!") USB Flash
+				li
+					a(href="#!") Аксессуары для ПК и ноутбуков
+				li
+					a(href="#!") Источники бесперебойного питания
+				li
+					a(href="#!") Комплектующие
+				li
+					a(href="#!") Манипуляторы
+				li
+					a(href="#!") Мониторы
+				li
+					a(href="#!") Моноблоки (All in one)
+				li
+					a(href="#!") Программное обеспечение
+				li
+					a(href="#!") Сетевое оборудование
+				li
+					a(href="#!") IP-Телефония
+				
+				
+
+		//==== картинка ===
+		.shop-card__img
+			img(src="./img/"+img+"", width="200" height="200" alt="img")
+		.shop-card__row
+			a(href="#!").shop-card__name !{name}
+			
+			.shop-card__btn
+				svg.svg-chevron-right
+					use(href="./img/svgSprite.svg#svg-chevron-right")
