@@ -82,3 +82,13 @@ form{
       color: red;
     }
 }
+label{position: relative;
+}
+.help-input{
+  width: 0.01em;
+  height: 0.01em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

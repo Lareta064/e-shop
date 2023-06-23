@@ -90,6 +90,9 @@
 			column-count: 2;
 			column-gap: 15px;
 			padding-right: 10px;
+			@media (max-width: 767px) {
+				column-count: 1;
+			}
 			a{
 				display: block;
 				line-height: 20px;
@@ -108,10 +111,28 @@
 		color: $footerLogoText;
 		margin-bottom: 22px;
 	}
-
+	
+    @media (max-width: 767px) {
+		&__content{
+			grid-template-columns: 1fr;
+			row-gap: 10px;
+			text-align: center;
+			label{cursor:pointer;}
+		}
+		&__ul {
+			display: none;
+		}
+	
+		&-list input:checked+&__ul {
+			display: block;
+		}
+	}
 }
 .footer-bottom{
 	padding-top: 75px;
+	@media (max-width: 991px) {
+		padding-top: 45px;
+	}
 	&__content{
 		display: flex;
 		justify-content: space-between;
