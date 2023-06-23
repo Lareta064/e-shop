@@ -23,3 +23,9 @@
 		opacity: .6;
 	}
 }
+.light-link{
+	color: $footerText;
+	&:hover{
+		color: $footerLogoText;
+	}
+}

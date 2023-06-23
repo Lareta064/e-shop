@@ -30,6 +30,10 @@
 }
 .outline-button{
 	border: 2px solid #fff;background-color: transparent; color: #fff;
+	&:hover{
+		opacity: .7;
+		background-color: transparent;
+	}
 }
 .btn--36{
 	width: 36px;
