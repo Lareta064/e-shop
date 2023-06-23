@@ -101,7 +101,11 @@ input[type="submit"] {
 section{
 	padding-top: 30px;
 }
-
+.main{padding-bottom: 60px;
+	@media (max-width: 767px) {
+	padding-bottom: 30px;
+	}
+}
 .flex-title,.flex-wrapper, .flex-justify,.svg-btn,.btn-wrapper, .flex-center{
 	display: flex;
 	align-items: center;

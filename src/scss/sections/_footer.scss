@@ -112,6 +112,27 @@
 		font-size: 16px;
 		color: $footerLogoText;
 		margin-bottom: 22px;
+		
+		@media (max-width: 767px) {
+			position: relative;
+			width: fit-content;
+			padding-right: 30px;
+			margin-left: auto;
+			margin-right: auto;
+		
+			&:after{
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 7px;
+				
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='18' height='10' fill='none' viewBox='0 0 18 10'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' d='M8 .8L5.118 2.882a1 1 0 01-1.162.006L1 .8'%3e%3c/path%3e%3c/svg%3e");
+				width: 20px;
+				height: 14px;
+				background-repeat: no-repeat;background-size: auto;
+				background-position:center;
+			}
+		}
 	}
 	
     @media (max-width: 767px) {
