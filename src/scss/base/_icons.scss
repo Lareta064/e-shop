@@ -182,3 +182,19 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www
 	height: 14px;
 background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='15' height='14' fill='none' viewBox='0 0 15 14'%3e%3cpath stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M2 4h11m0 0l-1.774-2M13 4l-1.774 2M13 10H2m0 0l1.774 2M2 10l1.774-2'/%3e%3c/svg%3e ");
 }
+.social-block{
+	display: flex;
+	align-items: center;
+	column-gap:10px;
+	a{
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		background-color: #fff;
+		color: #000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+	}
+}

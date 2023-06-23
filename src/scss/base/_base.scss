@@ -37,7 +37,7 @@ body {
 		padding-right: 18px;
 	}
 }
-
+a{transition: .3s;}
 a,
 a:hover {
 	text-decoration: none;
@@ -101,7 +101,11 @@ input[type="submit"] {
 section{
 	padding-top: 30px;
 }
-
+.main{padding-bottom: 60px;
+	@media (max-width: 767px) {
+	padding-bottom: 30px;
+	}
+}
 .flex-title,.flex-wrapper, .flex-justify,.svg-btn,.btn-wrapper, .flex-center{
 	display: flex;
 	align-items: center;
@@ -109,6 +113,8 @@ section{
 .flex-center{justify-content: center;}
 .flex-title,.flex-justify{
 	justify-content: space-between;
+}
+.pos-rel{position: relative;
 }
 .svg-btn{
 	justify-content: center;

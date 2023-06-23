@@ -1,4 +1,135 @@
+//===== footer======
 footer.footer
 	.footer-top
 		.container
-		
+			.footer-top__text
+				.envelope-icon
+					svg(width='76' height='52' viewBox='0 0 76 52' fill='none' xmlns='http://www.w3.org/2000/svg')
+						rect(x='0.75' y='1.02686' width='74.5' height='49.9462' rx='5.25' stroke='white' stroke-width='1.5')
+						path(d='M2 3.70605L34.4078 20.1026C36.6797 21.252 39.3631 21.2514 41.6345 20.1008L74 3.70605' stroke='white' stroke-width='1.5')
+				p Хотите быть в курсе всех акций и скидок? Подпишитесь на нашу рассылку
+			
+			.footer-top__form
+				form.subscribe-form
+					.form-item
+						input(type="text")
+					.form-btn
+						button(type="submit").btn  Подписаться
+
+	//======== footer menu columns =============
+	.footer-menu
+		.container
+			.footer-menu__content
+				//==== один список меню ====
+				.footer-menu-list
+					label.pos-rel
+						.footer-menu__title Информация
+						input.help-input(type="checkbox" name="fotter-menu")
+						.footer-menu__ul
+							ul
+								li
+									a(href="#!") Установка шаблона
+								li
+									a(href="#!") О нас
+								li
+									a(href="#!") Информация о доставке
+								li
+									a(href="#!") Политика безопасности
+								li
+									a(href="#!") Условия соглашения
+								li
+									a(href="#!") Связаться с нами
+								li
+									a(href="#!") Карта сайта
+								li
+									a(href="#!") Производители
+								li
+									a(href="") Партнёры
+								li
+									a(href="") Товары со скидкой
+				
+				//==== один список меню ====
+				.footer-menu-list
+					label.pos-rel
+						.footer-menu__title Категории
+						input.help-input(type="checkbox" name="fotter-menu")
+						.footer-menu__ul
+							ul
+								li
+									a(href="#!") Apple Store
+								li
+									a(href="#!") Game Zone
+								li
+									a(href="#!") Аудио техника
+								li
+									a(href="#!") Бытовая техника
+								li
+									a(href="#!") Гаджеты
+								li
+									a(href="#!") Детский мир
+								li
+									a(href="#!") Компьютеры
+								li
+									a(href="#!") Ноутбуки и планшеты
+								li
+									a(href="#!") Телефоны
+
+				//==== один список меню ====
+				.footer-menu-list
+					//===== для реализации функции аккордеона на моб версии, испльзуется инпут радиобаттон
+					label.pos-rel
+						.footer-menu__title Личный кабинет
+						input.help-input(type="checkbox" name="fotter-menu")
+						.footer-menu__ul
+							ul
+								li
+									a(href="#!") Личный кабинет
+								li
+									a(href="#!") История заказов
+								li
+									a(href="#!") Мои закладки
+								li
+									a(href="#!") Рассылка новостей
+								li
+									a(href="#!") Возврат товара
+								li
+									a(href="#!") Подарочные сертификаты
+	
+	//======== footer bottom =============
+	.footer-bottom
+		.container
+			.footer-bottom__content
+				.footer-bottom__logo
+					img(src="./img/logo_footer.png", alt="logo")
+				.footer-bottom__column
+					.footer-contacts
+						.opening-hours
+							ul
+								li Пн-Пт с 09:00 до 18:00,
+								li Сб с 10:00 до 15:30, Вс- выходной
+							a(href="mailto:help.cyberstore@gmail.com").light-link help.cyberstore@gmail.com
+					
+					.footer-phone
+						a(href="tel:+38 (093) 124-45-01") +38 (093) 124-45-01
+						a(href="tel:+38 (066) 124-45-02") +38 (066) 124-45-02
+					
+						button.outline-button Заказать звонок
+
+	//====== footer copyright ===========
+	.footer-copyright
+		.container
+			.footer-copyright__content
+				p CyberStore - Демонстрация шаблона © 2023
+				.social-block
+					a(href="#!")
+						svg.svg-tg
+							use(href="./img/svgSprite.svg#svg-tg")
+					a(href="#!")
+						svg.svg-tg
+							use(href="./img/svgSprite.svg#svg-tg")
+					a(href="#!")
+						svg.svg-tg
+							use(href="./img/svgSprite.svg#svg-tg")
+					a(href="#!")
+						svg.svg-tg
+							use(href="./img/svgSprite.svg#svg-tg")

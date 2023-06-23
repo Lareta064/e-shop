@@ -13,7 +13,8 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 .form-item{
-  position: relative; margin-bottom: 16px;
+  position: relative; 
+  
   input, textarea{
     width: 100%;
     display: block;
@@ -29,6 +30,7 @@ select:-webkit-autofill:focus {
     font-family: inherit;
    
   }
+  .form-item +.form-item{margin-top: 16px;}
   .required-symbol{
     position: absolute;
     color: red;
@@ -79,4 +81,14 @@ form{
       line-height: 1.6;
       color: red;
     }
+}
+label{position: relative;
+}
+.help-input{
+  width: 0.01em;
+  height: 0.01em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }

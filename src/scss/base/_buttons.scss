@@ -1,4 +1,4 @@
-.btn,.btn-light, .btn--36,.btn-dark{
+.btn,.btn-light, .btn--36,.btn-dark,.outline-button{
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -27,6 +27,13 @@
 }
 .btn-dark{
 	background-color: $darkBtn;
+}
+.outline-button{
+	border: 2px solid #fff;background-color: transparent; color: #fff;
+	&:hover{
+		opacity: .7;
+		background-color: transparent;
+	}
 }
 .btn--36{
 	width: 36px;

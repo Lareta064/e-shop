@@ -9,30 +9,32 @@ block content
 	
 	//======== header ============
 	include ../sections/_header
-	
-	//======== owl carousel ============
-	include ../sections/_header-slider
+	main.main
+		//======== owl carousel ============
+		include ../sections/_header-slider
 
-	//======== benefits ============
-	include ../sections/_benefits
+		//======== benefits ============
+		include ../sections/_benefits
 
-	//======== секция с карточками ============
-	include ../sections/_products
+		//======== секция с карточками ============
+		include ../sections/_products
 
-	//========карточка-баннер продукта ============
-	include ../sections/_product-banners
-	
-	include ../sections/_categories-tabs.pug
-	
-	include ../sections/_products-slider
-	
-	include ../sections/_multi-sliders
+		//========карточка-баннер продукта ============
+		include ../sections/_product-banners
+		
+		include ../sections/_categories-tabs.pug
+		
+		include ../sections/_products-slider
+		
+		include ../sections/_multi-sliders
 
-	include ../sections/_shop-categories
+		include ../sections/_shop-categories
 
-	include ../sections/_store-reviews
+		include ../sections/_store-reviews
 
-	include ../sections/_customer-reviews
+		include ../sections/_customer-reviews
+
+	include ../sections/_footer
 
 block variables
 	-var title = "Главная";
