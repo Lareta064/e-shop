@@ -1,7 +1,9 @@
 .footer{
 	background: $darkBg;
 	padding-top: 50px;
-	padding-bottom: 50px;
+	@media (max-width: 767px) {
+		padding-top: 30px;
+	}
 	color: $footerText;
 	&-top{
 		.container{
@@ -130,8 +132,11 @@
 }
 .footer-bottom{
 	padding-top: 75px;
+	padding-bottom: 50px;
 	@media (max-width: 991px) {
-		padding-top: 45px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		
 	}
 	&__content{
 		display: flex;
@@ -180,5 +185,22 @@
 	margin-bottom: 10px;
 	&:hover{
 		opacity: .7;
+	}
+}
+.footer-copyright{
+	border-top:1px solid $footerText;
+	padding-top: 30px;
+		padding-bottom: 30px;
+	&__content{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: 767px) {
+			flex-direction: column-reverse;
+			row-gap: 15px;
+		}
+	}
+	.social-block a:hover{
+		background-color: $footerText;
 	}
 }
