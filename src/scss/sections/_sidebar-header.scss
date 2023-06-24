@@ -1,0 +1,34 @@
+.header-slider-grid{
+	display: flex;
+	.banner-slider{
+		width: calc(75% - 15px);
+		margin-left: auto;
+		
+	}
+}
+.header-grid{
+	.catalog-menu{
+		width: 25%;
+		
+		.btn{min-width: 100%;}
+		.catalog-menu-submenu,.catalog-menu-drop{
+			
+			width: 100%;
+			
+			
+		}
+		&>.catalog-menu-drop{display: block;}
+		.catalog-menu-submenu{left: 97%;}
+	}
+	.catalog-menu ul{
+		max-height: 600px;
+		height: 600px;
+		@media(max-width: 1439px){
+			max-height: 306px;
+			height: auto;
+		}
+		@media (max-width: 1199px) {
+			max-height: 250px;
+		}
+	}
+}
