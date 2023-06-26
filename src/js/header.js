@@ -31,15 +31,46 @@ document.addEventListener("DOMContentLoaded", function (){
 	
 	/*===== зафиксировать часть шапки по скроллу на экранах от 992пикс*/
 	 window.addEventListener('scroll', function(){
-		if(this.window.innerWidth >=992){
-			const headerFix = this.document.getElementById('header-fixed');
+	
+		if(window.innerWidth >=992){
+			const headerFix = document.getElementById('header-fixed');
 			
-			if(this.window.pageYOffset > 170){
+			if(window.pageYOffset > 170){
 				headerFix.classList.add('header-fixed');
 			}
 			else{headerFix.classList.remove('header-fixed');}
 		}
 	 });
+	 /*  для второй версии шапки отслеживать пока слайдер не прокрутится */
+	window.addEventListener('scroll', function () {
+
+		if (window.innerWidth >= 1440) {
+			const headerFixLong = document.getElementById('header-fix');
+			const headerFixLongCatalogy = document.querySelector('.catalog-menu-drop');
+
+			if (window.pageYOffset > 800) {
+				headerFixLong.classList.add('header-fixed');
+				headerFixLongCatalogy.classList.remove('catalog-menu--visible');
+			}
+			else { 
+				headerFixLong.classList.remove('header-fixed'); 
+				headerFixLongCatalogy.classList.add('catalog-menu--visible');
+			}
+		}
+		if (window.innerWidth >= 992) {
+			const headerFixLong = document.getElementById('header-fix');
+			const headerFixLongCatalogy = document.querySelector('.catalog-menu-drop');
+
+			if (window.pageYOffset > 500) {
+				headerFixLong.classList.add('header-fixed');
+				headerFixLongCatalogy.classList.remove('catalog-menu--visible');
+			}
+			else {
+				headerFixLong.classList.remove('header-fixed');
+				headerFixLongCatalogy.classList.add('catalog-menu--visible');
+			}
+		}
+	});
 	/**====задать класс для пунктов меню Каталог товаров, у которых есть подменю */
 	const catalogMenu = this.getElementById('cat-menu');
 	if(catalogMenu){
