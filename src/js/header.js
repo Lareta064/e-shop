@@ -45,10 +45,10 @@ document.addEventListener("DOMContentLoaded", function (){
 	 });
 	 /*  для второй версии шапки отслеживать пока слайдер не прокрутится */
 	window.addEventListener('scroll', function () {
-
+		const headerFixLong = document.getElementById('header-fix');
+		const headerFixLongCatalogy = document.querySelector('.catalog-menu-wrapper');
 		if (window.innerWidth >= 1440) {
-			const headerFixLong = document.getElementById('header-fix');
-			const headerFixLongCatalogy = document.querySelector('.catalog-menu-drop');
+			
 
 			if (window.pageYOffset > 800) {
 				headerFixLong.classList.add('header-fixed');
@@ -60,8 +60,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		}
 		if (window.innerWidth >= 992) {
-			const headerFixLong = document.getElementById('header-fix');
-			const headerFixLongCatalogy = document.querySelector('.catalog-menu-drop');
+			
 
 			if (window.pageYOffset > 500) {
 				headerFixLong.classList.add('header-fixed');

@@ -5,8 +5,8 @@ mixin catalog-menu(obj)
 			span Каталог товаров
 			+svg('down')
 		//==== меню Уровень #1 =====
-		.catalog-menu-wrapper
-			.catalog-menu-drop.catalog-menu--visible
+		.catalog-menu-wrapper.catalog-menu--visible
+			.catalog-menu-drop
 				ul.scroll-y
 					each item in obj
 						li
