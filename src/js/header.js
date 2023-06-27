@@ -31,14 +31,16 @@ document.addEventListener("DOMContentLoaded", function (){
 	
 	/*===== зафиксировать часть шапки по скроллу на экранах от 992пикс*/
 	 window.addEventListener('scroll', function(){
-	
-		if(window.innerWidth >=992){
-			const headerFix = document.getElementById('header-fixed');
-			
-			if(window.pageYOffset > 170){
-				headerFix.classList.add('header-fixed');
+		const headerFix = document.getElementById('header-fixed');
+		if (headerFix){
+			if(window.innerWidth >=992){
+				
+				
+				if(window.pageYOffset > 170){
+					headerFix.classList.add('header-fixed');
+				}
+				else{headerFix.classList.remove('header-fixed');}
 			}
-			else{headerFix.classList.remove('header-fixed');}
 		}
 	 });
 	 /*  для второй версии шапки отслеживать пока слайдер не прокрутится */

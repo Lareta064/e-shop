@@ -5,35 +5,36 @@ mixin catalog-menu(obj)
 			span Каталог товаров
 			+svg('down')
 		//==== меню Уровень #1 =====
-		.catalog-menu-drop.catalog-menu--visible
-			ul.scroll-y
-				each item in obj
-					li
-						a(href="#!"+ item.link) 
-							svg(class="svg-"+ item.svg)
-								use(href="./img/svgSprite.svg#svg-"+ item.svg +"")
-							span !{item.text}
-						if item.menuArr
-							//==== меню Уровень #2 =====
-							.catalog-menu-submenu
-								ul.scroll-y
-									each menuEl in item.menuArr
-										li
-											a(href="#!"+ menuEl.link) !{ menuEl.text}
-											if menuEl.subMenu
-												//==== меню Уровень #3 =====
-												.catalog-menu-submenu
-													ul.scroll-y
-														each menuElSub in menuEl.subMenu
-															li 
-																a(href="#!"+  menuElSub.link) !{ menuElSub.text}
-																if menuElSub.subMenu
-																	//==== меню Уровень #4 =====
-																	.catalog-menu-submenu
-																		ul.scroll-y
-																			each menuItem in  menuElSub.subMenu
-																				li
-																					a(href="#!"+   menuItem.link) !{  menuItem.text}
+		.catalog-menu-wrapper
+			.catalog-menu-drop.catalog-menu--visible
+				ul.scroll-y
+					each item in obj
+						li
+							a(href="#!"+ item.link) 
+								svg(class="svg-"+ item.svg)
+									use(href="./img/svgSprite.svg#svg-"+ item.svg +"")
+								span !{item.text}
+							if item.menuArr
+								//==== меню Уровень #2 =====
+								.catalog-menu-submenu
+									ul.scroll-y
+										each menuEl in item.menuArr
+											li
+												a(href="#!"+ menuEl.link) !{ menuEl.text}
+												if menuEl.subMenu
+													//==== меню Уровень #3 =====
+													.catalog-menu-submenu
+														ul.scroll-y
+															each menuElSub in menuEl.subMenu
+																li 
+																	a(href="#!"+  menuElSub.link) !{ menuElSub.text}
+																	if menuElSub.subMenu
+																		//==== меню Уровень #4 =====
+																		.catalog-menu-submenu
+																			ul.scroll-y
+																				each menuItem in  menuElSub.subMenu
+																					li
+																						a(href="#!"+   menuItem.link) !{  menuItem.text}
 
 +catalog-menu([
 	{
