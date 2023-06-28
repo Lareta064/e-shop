@@ -1,4 +1,4 @@
-extends ../layouts/layout.pug
+extends ../layouts/layout-inner-page.pug
 
 block content
 	//======== каталог меню на мобильной версии ============
@@ -18,8 +18,69 @@ block content
 					{link: "cat-page.html", text: 'Новинки Apple Apple'},
 					{link: "#", text: 'iPhone 13 Pro 1TB Silver (MLVW3)'},
 					)
-				.product-page__tabs
-		
+				.product-page__section
+					
+					h1.block-title Apple iPad 9 10.2" 256GB Wi-Fi (Silver) 2021
+					
+					//===== tabs ========
+					.container-module(custom-tabs)
+						.tabs__header.pct_nav
+							.tabs__header__scroll
+								ul#prodCatTab0.nav.nav-tabs.my-tabs
+									li.tabs__active_line.mod_0
+									li.active
+										a(data-tab="cat1" href='#!') Все о товаре
+									li
+										a( data-tab="cat2" href='#!') Отзывы
+											sup &nbsp; 0
+									li
+										a( data-tab="cat3" href='#!') Вопрос-ответ
+											sup &nbsp; 2
+									li
+										a( data-tab="cat4"  href='#!') Кастомная вкладка
+									
+						.tab-content__wrapper
+							.tab-content.tab-content--active(data-content="cat1")
+								.product-tabs__content
+									//====== левая часть со слайдерами =====
+									.product-img-slider.double-slider
+										
+										//======= слайдер с маленькими картинками ====
+										.double-slider-nav
+											.double-slider-thumb
+												img(src="./img/products/phone1.jpg", alt="")
+											.double-slider-thumb
+												img(src="./img/products/phone2.jpg", alt="")
+											.double-slider-thumb
+												img(src="./img/products/phone3.jpg", alt="")
+											.double-slider-thumb
+												img(src="./img/products/phone1.jpg", alt="")
+											.double-slider-thumb
+												img(src="./img/products/phone2.jpg", alt="")
+										//===== большой слайдер =========
+										.double-slider-frame
+											.double-slider-item
+												img(src="./img/products/phone1.jpg", alt="alt")
+											.double-slider-item
+												img(src="./img/products/phone2.jpg", alt="alt")
+											.double-slider-item
+												img(src="./img/products/phone3.jpg", alt="alt")
+											.double-slider-item
+												img(src="./img/products/phone1.jpg", alt="alt")
+											.double-slider-item
+												img(src="./img/products/phone2.jpg", alt="alt")
+
+									.product-info-card
+
+									
+									//====== правая часть с описанием =====
+							
+							
+							
+							.tab-content(data-content="cat2")
+								.product-tabs__content
+									p tabs 2
+
 
 	include ../sections/_footer
 
