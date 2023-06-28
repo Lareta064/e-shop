@@ -32,3 +32,42 @@ html(lang="ru")
 								.icon-reload
 									svg.svg-reload
 										use(href="../img/svgSprite.svg#svg-reload")
+
+					li
+						.btn Кнопка
+						pre.
+							.btn Кнопка
+					li
+						.btn-light Кнопка
+						pre.
+							.btn-light Кнопка
+					li
+						a(href="#!").btn.btn--36
+							svg.svg-menu
+								use(href="../img/svgSprite.svg#svg-menu")
+							
+						pre.
+							a(href="#!").btn.btn--36
+								+svg('menu')
+					li
+						.btn-dark Кнопка
+						pre.
+							.btn-dark Кнопка
+					li(style="padding-top:15px; padding-bottom:15px; background-color: blue;")
+						.outline-button Кнопка
+						pre.
+							.outline-button Кнопка
+					li
+						.round-btn
+							svg.svg-chevron-right
+								use(href="../img/svgSprite.svg#svg-chevron-right")
+						pre.
+							.round-btn
+								svg.svg-chevron-right
+									use(href="./img/svgSprite.svg#svg-chevron-right")
+					li
+						.squre-icon
+							img(src="../img/name-icon.svg", width="13" alt="icon")
+						pre.
+							.squre-icon
+								img(src="./img/name-icon.svg", width="13" alt="icon")

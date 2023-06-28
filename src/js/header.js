@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		loop:true,
 		animateOut: 'fadeOut',
 		smartSpeed:1000,
-		autoplay:true,
+		// autoplay:true,
 		nav:true,
 		
 	})
@@ -28,20 +28,56 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 	}	
-	
+	const catalogMenu = document.getElementById('cat-menu');
 	/*===== зафиксировать часть шапки по скроллу на экранах от 992пикс*/
 	 window.addEventListener('scroll', function(){
-		if(this.window.innerWidth >=992){
-			const headerFix = this.document.getElementById('header-fixed');
-			
-			if(this.window.pageYOffset > 170){
-				headerFix.classList.add('header-fixed');
+		const headerFix = document.getElementById('header-fixed');
+		if (headerFix){
+			if(window.innerWidth >=992){
+				
+				
+				if(window.pageYOffset > 170){
+					headerFix.classList.add('header-fixed');
+				}
+				else{headerFix.classList.remove('header-fixed');}
 			}
-			else{headerFix.classList.remove('header-fixed');}
 		}
 	 });
+	 /*  для второй версии шапки отслеживать пока слайдер не прокрутится */
+	window.addEventListener('scroll', function () {
+		const headerFixLong = document.getElementById('header-fix');
+		const headerFixLongCatalogy = document.querySelector('.catalog-menu-wrapper');
+		if (window.innerWidth >= 1440) {
+			
+
+			if (window.pageYOffset > 800) {
+				headerFixLong.classList.add('header-fixed');
+				headerFixLongCatalogy.classList.remove('catalog-menu--visible');
+				catalogMenu.classList.add('cat-menu--scroll');
+			}
+			else { 
+				headerFixLong.classList.remove('header-fixed'); 
+				headerFixLongCatalogy.classList.add('catalog-menu--visible');
+				catalogMenu.classList.remove('cat-menu--scroll');
+			}
+		}
+		if (window.innerWidth >= 992) {
+			
+
+			if (window.pageYOffset > 500) {
+				headerFixLong.classList.add('header-fixed');
+				headerFixLongCatalogy.classList.remove('catalog-menu--visible');
+				catalogMenu.classList.add('cat-menu--scroll');
+			}
+			else {
+				headerFixLong.classList.remove('header-fixed');
+				headerFixLongCatalogy.classList.add('catalog-menu--visible');
+				catalogMenu.classList.remove('cat-menu--scroll');
+			}
+		}
+	});
 	/**====задать класс для пунктов меню Каталог товаров, у которых есть подменю */
-	const catalogMenu = this.getElementById('cat-menu');
+	
 	if(catalogMenu){
 		const catalogMenuSub = catalogMenu.getElementsByClassName('catalog-menu-submenu');
 		for(let i = 0; i < catalogMenuSub.length; i++){

@@ -1,0 +1,24 @@
+extends ../layouts/layout.pug
+
+block content
+	//======== каталог меню на мобильной версии ============
+	include ../blocks/_multi-level-menu
+
+	//======== user modal mobile ============
+	include ../blocks/_user-menu-mobile
+	
+	//======== header ============
+	include ../sections/_header-new
+	main.main
+		+breadcrumbs(
+			{link: "index.html", text: 'Главная'},
+			{link: "cat-page.html", text: 'Новинки Apple Apple'},
+			{link: "#", text: 'iPhone 13 Pro 1TB Silver (MLVW3)'},
+			)
+		
+
+	include ../sections/_footer
+
+block variables
+	-var title = "Главная";
+	-var bodyCl = "inner-page";

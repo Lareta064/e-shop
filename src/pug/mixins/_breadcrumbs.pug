@@ -1,0 +1,6 @@
+mixin breadcrumbs(...items)
+	.breadcrumbs-wrapper
+		ul
+			each item in items
+				li
+					a(href=""+ item.link) !{item.text}

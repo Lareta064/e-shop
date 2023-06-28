@@ -1,0 +1,308 @@
+
+//==== Десктоп версия от 992 пикс. Header top banner ======			
+header.header.header-grid
+	//==== Header top banner ======
+	a(href="#!").header-top-banner
+		img(src="./img/header-top/top_banner.png", height="45"  alt="banner")
+
+	//==== header top content ======
+	.header-top
+		.container
+			.flex-justify
+				.header-top-links
+					a(href="delivery.html") Доставка
+					a(href="pay-page.html") Оплата
+				
+				+switch-group
+
+	//========== header-center ===============
+	.header-center
+		.container
+			.header-center__content
+				a(href="index.html").logo
+					img(src="./img/logo.svg", alt="logo")
+
+				//====main menu =====
+				.main-menu
+					ul
+						li
+							a(href="new-products.html") Новинки
+							span.badge-item New
+						li.sub-menu
+							a(href="#!") Распродажа
+							
+							//=====блок товаров, появляющийся по ховеру на пункт меню Распродажа =====
+							.sub-menu-block
+								include ../sections/_submenu-cards
+						li
+							a(href="review.html") Отзывы о магазине
+				//===== врумя работы ====
+				.header-center__box
+					p Пн-Пт с 09:00 до 18:00,
+					p Сб с 10:00 до 15:30, Вс- выходной
+				//==== блок с телефонами ======
+				.header-contacts
+					.header-contacts-tel
+						a(href="tel:+74951244501") +7 (495) 124-45-01
+						a(href="tel:+74951244502") +7 (495) 124-45-02
+					
+					//=== выпадающий по ховеру блок контактов ====
+					.mySelect-drop
+						.mySelect-options
+							a(href="#!")
+								span
+									+svg('tg')
+								span +7 (495) 124-45-01
+						.mySelect-options
+							a(href="#!")
+								span
+									+svg('wa')
+								span +7 (495) 124-45-02
+						.mySelect-options
+							a(href="#!")
+								span
+									+svg('mail')
+								span mail@mail.com
+						.mySelect-options
+							a(href="#!")
+								span
+									+svg('location')
+								p г. Москва, ул.Чаянова, 6
+						
+						.mySelect-options
+							a(href="#!")
+								span
+									+svg('fb')
+								span группа ВКонтакте
+						.mySelect-options
+							a(href="#!")
+								span
+									+svg('fb')
+								span канал Youtube
+
+	//========================== header-dark-block ================================ 
+
+	.header-bottom#header-fix
+
+		.container
+			
+			//========================Декстопная версия ===================
+			.header-bottom-content
+				//=======каталог товаров на десктоп версии =====
+				
+				include ../blocks/_catalog-menu-2
+				
+				//===== каталог товаров на моб версии ========
+				.mob-catalogy(frame-btn="catalogy")
+					a(href="#!").btn.btn--36
+						+svg('menu')
+				
+
+				//======= search form ======
+				.header-search
+					//===== для демонстрации появления блока с результатми поиска, добавлен скрипт на строке 2 в main.js . Можно его удалить
+					form.header-search-form
+						.form-item
+							input(type="text" name="")
+							
+							//=== блок  фильтров ====
+							.header-search-filters.mySelect.mySelect--absolute
+								.svg-btn.mySelect-input
+									+svg('filter')
+								.mySelect-drop.scroll-y
+									//==== класс .current-filter получает выбранный фильтр. По загрузке страницы выбран фильтр Везде =======
+									.mySelect-options.current-filter
+										a(href="#!")
+											span Везде
+									.mySelect-options
+										a(href="#!")
+											span Apple Store
+									.mySelect-options
+										a(href="#!")
+											span Game Zone
+									.mySelect-options
+										a(href="#!")
+											span Аудио техника
+									.mySelect-options
+										a(href="#!")
+											span Бытовая техника
+									.mySelect-options
+										a(href="#!")
+											span Гаджеты
+									.mySelect-options
+										a(href="#!")
+											span Детский мир
+									.mySelect-options
+										a(href="#!")
+											span Компьютеры
+									.mySelect-options
+										a(href="#!")
+											span Новинки Apple
+									.mySelect-options
+										a(href="#!")
+											span Ноутбуки и планшеты
+									.mySelect-options
+										a(href="#!")
+											span Спорт
+									.mySelect-options
+										a(href="#!")
+											span ТВ, Видео, Фото
+									.mySelect-options
+										a(href="#!")
+											span Телефоны
+							
+							
+							//=== иконка лупа ====
+							.header-search-btn
+								.svg-btn
+									+svg('search')
+
+						//===== результаты поиска =====
+						ul.search-form-results.scroll-y
+							//====один элемент поиска ====
+							li
+								a(href="#!").product-preview
+									.product-preview__img
+										img(src="./img/products/9.jpg", width="50" height="50" alt="img")
+									.text-bold
+										p Аккумулятор для ноутбука Acer Acer UM08A31 2200mAh 3cell 11.1V Li-ion (A47006)
+										p 945 грн
+							//====один элемент поиска ====
+							li
+								a(href="#!").product-preview
+									.product-preview__img
+										img(src="./img/products/10.jpg", width="50" height="50" alt="img")
+									.text-bold
+										p Аккумулятор для ноутбука ACER Aspire 1360 (BTP-58A1 AC-58A1-8) 14.8V 5200mAh PowerPlant (NB00000167)
+										p 992 грн
+
+							//====один элемент поиска ====	
+							li
+								a(href="#!").product-preview
+									.product-preview__img
+										img(src="./img/products/11.jpg", width="50" height="50" alt="img")
+									.text-bold
+										p Аккумулятор для ноутбука ACER Aspire 3100 (BATBL50L6, AC 50L6 3S2P) 11.1V 5200mAh PowerPlant (NB00000092)
+										p 1689 грн
+
+							//====один элемент поиска ====
+							li
+								a(href="#!").product-preview
+									.product-preview__img
+										img(src="./img/products/9.jpg", width="50" height="50" alt="img")
+									.text-bold
+										p Аккумулятор для ноутбука Acer Acer UM08A31 2200mAh 3cell 11.1V Li-ion (A47006)
+										p 945 грн
+							//====один элемент поиска ====
+							li
+								a(href="#!").product-preview
+									.product-preview__img
+										img(src="./img/products/10.jpg", width="50" height="50" alt="img")
+									.text-bold
+										p Аккумулятор для ноутбука ACER Aspire 1360 (BTP-58A1 AC-58A1-8) 14.8V 5200mAh PowerPlant (NB00000167)
+										p 992 грн
+
+							//====один элемент поиска ====	
+							li
+								a(href="#!").product-preview
+									.product-preview__img
+										img(src="./img/products/11.jpg", width="50" height="50" alt="img")
+									.text-bold
+										p Аккумулятор для ноутбука ACER Aspire 3100 (BATBL50L6, AC 50L6 3S2P) 11.1V 5200mAh PowerPlant (NB00000092)
+										p 1689 грн
+				
+				//=======  кнопка - account-block ======
+				
+				//==== блок для моб версии
+				.account-block.account-block--mobile(frame-btn="account-modal")
+					.flex-wrapper
+						.account-block__icon
+							+svg('user')
+				
+				
+				//==== блок для десктоп версии
+				.account-block.account-block--desk
+					.flex-wrapper
+						.account-block__icon
+							+svg('user')
+						.account-block__text
+							span Здравствуйте,
+							span.text-dashed войдите в кабинет
+					
+					//=== выпадашка по ховеру на кнопку Войдите ====
+					.mySelect-drop
+						a(href="#!").mySelect-options Регистрация
+						a(href="#!").mySelect-options Авторизация
+						
+
+				//======= shopping-block ======
+				.shopping-block
+					.flex-wrapper
+						//==== кнопка - лупа, что бы по клику открыть форму поиска на моб версии =======
+						.shopping-block__item.header-search-open
+							+svg('search')
+						
+						//====  иконка - Сравнение ===
+						a(href="compare.html").shopping-block__item
+							+svg('compare')
+						
+						//==== Иконка - избранное ===
+						a(href="favorite.html").shopping-block__item
+							+svg('favor')
+						
+						//==== иконка - Корзина ===
+						.shopping-block__item.drop-open
+							+svg('cart')
+							.notify-el 5
+							
+							//===== выпадающая корзина товаров в шапке, появляется по клику  =======
+							.products-table--mini.products-table.drop-block
+								.products-table__body
+									.text-center В корзине пока пусто!
+								
+								.products-table__body
+									//==== одна строка таблицы товаров =====
+									.product-item
+										.product-img
+											img(src="./img/products/9.jpg", width="40" height="40" alt="img")
+										.product-item-center
+											a(href="#!").product-name Apple iPhone 13 Pro 1TB Silver (MLVW3)
+
+											.product-count x 1
+											.product-price 34 500 грн
+										
+										.product-btn
+											.btn-del
+												+svg('delete')
+									//==== одна строка таблицы товаров =====
+									.product-item
+										.product-img
+											img(src="./img/products/5.jpg", width="40" height="40" alt="img")
+										
+										.product-item-center
+											a(href="#!").product-name Apple iPhone 13 Pro 1TB Silver (MLVW3)
+
+											.product-count x 1
+											.product-price 4 500 грн
+										.product-btn
+											.btn-del
+												+svg('delete')
+								
+								//==== футер таблицы
+								.products-table__footer
+									.flex-wrapper
+										.footer-row__text Предварительная стоимость
+										.product-price  39 000 грн
+
+									.flex-wrapper
+										.footer-row__text Итоговая сумма
+										.product-price  39 000 грн
+								
+								//==== кнопки =======
+								.btn-wrapper
+									a(href="basket.html").btn-light
+										span Открыть корзину
+
+									a(href="#!").btn
+										span Оформить заказ
+

@@ -20,18 +20,15 @@ html(lang="ru")
 		block content
 			.container-dashboard
 				h2 хлебные крошки
-
 				.container-dashboard__content
-					
-				.container-dashboard__content(style="background:  darkblue")
-					//- +breadcrumbs(
-					//- 	{link: "#", text: 'Профиль'},
-					//- 	{link: "#", text: 'Список заказов'},
-					//- 	{link: "#", text: 'Проверка продавца'},
-					//- 	)(class="breadcrumb-block--white")
-				pre.
-					//- +breadcrumbs(
-					//- 	{link: "#", text: 'Профиль'},
-					//- 	{link: "#", text: 'Список заказов'},
-					//- 	{link: "#", text: 'Проверка продавца'},
-					//- 	)(class="breadcrumb-block--white")
+					+breadcrumbs(
+						{link: "index.html", text: 'Главная'},
+						{link: "cat-page.html", text: 'Новинки Apple Apple'},
+						{link: "#", text: 'iPhone 13 Pro 1TB Silver (MLVW3)'},
+						)
+					pre.
+						+breadcrumbs(
+							{link: "#", text: 'Профиль'},
+							{link: "#", text: 'Список заказов'},
+							{link: "#", text: 'Проверка продавца'},
+							)

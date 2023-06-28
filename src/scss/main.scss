@@ -7,7 +7,9 @@
 @import "base/_form.scss";
 @import "base/_buttons.scss";
 @import "base/_modal.scss";
+@import "base/_breadcrumbs.scss";
 @import "blocks/_custom-select.scss";
+
 
 /* // end base styles */
 
@@ -17,9 +19,11 @@
 
 //=====header
 @import "sections/_header.scss";
-
 //====== slider header
 @import "sections/_header-slider.scss";
+
+//=====стили для шапки с сайдбаром-меню ============
+@import "sections/_sidebar-header.scss";
 
 //===== product-cards-section========
 @import "sections/_product-cards-section.scss";
