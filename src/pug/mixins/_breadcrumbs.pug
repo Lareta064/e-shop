@@ -1,4 +1,6 @@
-mixin breadcrumbs(arg)
+mixin breadcrumbs(...items)
 	.breadcrumbs-wrapper
-		each item in arg
-			a(href=""+ item.link) !{item.text}
+		ul
+			each item in items
+				li
+					a(href=""+ item.link) !{item.text}

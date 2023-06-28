@@ -10,13 +10,15 @@ block content
 	//======== header ============
 	include ../sections/_header-new
 	main.main
-		.breadcrumbs-wrapper
-			a(href="#!") Главная
-			a(href="#!") Новинки Apple Apple
-			a(href="#!") iPhone 13 Pro 1TB Silver (MLVW3)
+		+breadcrumbs(
+			{link: "index.html", text: 'Главная'},
+			{link: "cat-page.html", text: 'Новинки Apple Apple'},
+			{link: "#", text: 'iPhone 13 Pro 1TB Silver (MLVW3)'},
+			)
 		
 
 	include ../sections/_footer
 
 block variables
 	-var title = "Главная";
+	-var bodyCl = "inner-page";

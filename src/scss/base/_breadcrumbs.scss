@@ -1,0 +1,51 @@
+/******breadcrumbs***/
+.breadcrumbs-wrapper{
+	width: 100%;
+	overflow-x: auto;
+	scrollbar-width: none;
+	&::-webkit-scrollbar{display: none;}
+	
+	ul{
+		display: inline-flex;
+		align-items: center;
+	}
+	li{
+		font-size: 12px;
+		padding: 0 7px;
+		position: relative;
+		white-space: nowrap !important;
+		position: relative;
+		
+	}
+	a{
+		width: fit-content;
+		
+		transition: .3s;
+		position: relative;
+		&:after{
+			content:'';
+			position: absolute;
+			left: 0;
+			width: 100%;
+			bottom: 0;
+			height: 1px;
+			background-color: #333;
+			transition: .3s;
+		}
+		&:hover:after{
+			width: 0;
+		}
+	}
+    li:last-child a{
+		cursor: default;
+		pointer-events: none;
+		
+		&:after{display: none;}
+	}
+	li+li:before{
+		content:'/';
+		color: inherit;
+		position: relative;
+		left: -7px;
+	}
+}
