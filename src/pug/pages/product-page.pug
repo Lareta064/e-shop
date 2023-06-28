@@ -9,12 +9,16 @@ block content
 	
 	//======== header ============
 	include ../sections/_header-new
-	main.main
-		+breadcrumbs(
-			{link: "index.html", text: 'Главная'},
-			{link: "cat-page.html", text: 'Новинки Apple Apple'},
-			{link: "#", text: 'iPhone 13 Pro 1TB Silver (MLVW3)'},
-			)
+	main.main.main--inner
+		.product-page__content
+			.container
+				//====== breadcrumbs ======
+				+breadcrumbs(
+					{link: "index.html", text: 'Главная'},
+					{link: "cat-page.html", text: 'Новинки Apple Apple'},
+					{link: "#", text: 'iPhone 13 Pro 1TB Silver (MLVW3)'},
+					)
+				.product-page__tabs
 		
 
 	include ../sections/_footer

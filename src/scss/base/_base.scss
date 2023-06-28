@@ -24,7 +24,7 @@ body {
 	font-family: $reg;
 	font-size: 14px;
 	-webkit-font-smoothing: antialiased;
-	height: 3000px;
+	
 }
 .body-column{
 	display: flex;
@@ -117,6 +117,10 @@ section{
 	padding-bottom: 30px;
 	}
 }
+.main.main--inner{
+	padding-top: 15px;
+}
+
 .flex-title,.flex-wrapper, .flex-justify,.svg-btn,.btn-wrapper, .flex-center{
 	display: flex;
 	align-items: center;
