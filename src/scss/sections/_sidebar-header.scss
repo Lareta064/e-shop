@@ -1,6 +1,6 @@
 .header-slider-pt{
 	padding-top: 30px;
-	background-color: red;
+	
 	@media(max-width:1599px) {
 		padding-top: 20px;
 	}
@@ -58,6 +58,8 @@
 	
 		.container{
 			height: 390px;
+			width: 100%;
+			max-width: 100%;
 		}
 		@media(max-width: 1599px) {
 			height: 375px;
@@ -83,7 +85,8 @@
 		grid-template-columns: 1fr;
 		grid-template-rows: calc(50% - 15px);
 		row-gap: 30px;
-		@media (max-width: 1599px) {
+	
+		@media (max-width: 1499px) {
 			width: 206px;
 		}
 		@media (max-width: 1364px) {
@@ -93,6 +96,11 @@
 		&-item{
 			box-shadow: 6px 6px 19px rgba(0, 0, 0, 0.06);
 			background-color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 20px;
+			font-weight: 600;
 		}
 	}
 }
@@ -130,23 +138,18 @@
 	.catalog-menu{
 		width: 264px;
 		&:hover{
-				.catalog-menu-wrapper{
-					padding-top: 0;
-					display: block;
-				}
+				.catalog-menu-wrapper{display: block;}
 			}
-		.btn{min-width: 100%;
-			
 		
-		}
-		.catalog-menu-submenu,.catalog-menu-drop{
-			
-			width: 100%;
-			
-			
-		}
+		.btn{min-width: 100%;}
+		.catalog-menu-submenu,.catalog-menu-drop{width: 100%;}
 		// &>.catalog-menu-drop.catalog-menu--visible{display: block;}
 		.catalog-menu-submenu{left: 97%;}
+	}
+	.catalog-menu.cat-menu--scroll:hover {
+		.catalog-menu-wrapper {
+			padding-top: 0;
+		}
 	}
 	.catalog-menu ul{
 		max-height: 558px;

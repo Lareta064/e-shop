@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		loop:true,
 		animateOut: 'fadeOut',
 		smartSpeed:1000,
-		autoplay:true,
+		// autoplay:true,
 		nav:true,
 		
 	})
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 	}	
-	
+	const catalogMenu = document.getElementById('cat-menu');
 	/*===== зафиксировать часть шапки по скроллу на экранах от 992пикс*/
 	 window.addEventListener('scroll', function(){
 		const headerFix = document.getElementById('header-fixed');
@@ -53,10 +53,12 @@ document.addEventListener("DOMContentLoaded", function (){
 			if (window.pageYOffset > 800) {
 				headerFixLong.classList.add('header-fixed');
 				headerFixLongCatalogy.classList.remove('catalog-menu--visible');
+				catalogMenu.classList.add('cat-menu--scroll');
 			}
 			else { 
 				headerFixLong.classList.remove('header-fixed'); 
 				headerFixLongCatalogy.classList.add('catalog-menu--visible');
+				catalogMenu.classList.remove('cat-menu--scroll');
 			}
 		}
 		if (window.innerWidth >= 992) {
@@ -65,15 +67,17 @@ document.addEventListener("DOMContentLoaded", function (){
 			if (window.pageYOffset > 500) {
 				headerFixLong.classList.add('header-fixed');
 				headerFixLongCatalogy.classList.remove('catalog-menu--visible');
+				catalogMenu.classList.add('cat-menu--scroll');
 			}
 			else {
 				headerFixLong.classList.remove('header-fixed');
 				headerFixLongCatalogy.classList.add('catalog-menu--visible');
+				catalogMenu.classList.remove('cat-menu--scroll');
 			}
 		}
 	});
 	/**====задать класс для пунктов меню Каталог товаров, у которых есть подменю */
-	const catalogMenu = this.getElementById('cat-menu');
+	
 	if(catalogMenu){
 		const catalogMenuSub = catalogMenu.getElementsByClassName('catalog-menu-submenu');
 		for(let i = 0; i < catalogMenuSub.length; i++){
