@@ -78,13 +78,50 @@ block content
 												img(src="./img/products/phone1.jpg", alt="alt")
 											a(href="./img/products/phone2.jpg" data-fancybox="product1").double-slider-item
 												img(src="./img/products/phone2.jpg", alt="alt")
-									.product-info-card
-
+									
 									
 									//====== правая часть с описанием =====
+									.product-info-card
+										//=====лейблы по ховеру ====
+										.label-block
+											.label.label-hit
+												span Топ
+											.label.label-pop
+												span Популярный
+											.label.label-new
+												span Новинка
+										
+										include ../blocks/_offer-block
+										.product-info-body
+											.product-info-row
+												.pc__stock.instock
+													span Есть в наличии
+												
+												//== если Нет в наличии ===
+													.pc__stock.outstock
+														span Нет в наличии
+												.pc__rating
+													.star-rating(data-rating="4")
+														span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+														span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+													.star-rating__val 4
+											
+											.pc__art 
+												span Код товара:
+												p 696681
+											
+											
+											a(href="#!").pc__brand-logo
+												span
+													img(src="./img/brand-logo.jpg", width="30" height="30" alt="logo")
+												span Apple
 							
-									
-							
+											.pc__price
+												.pc__price-actual 15 000 руб
+												//==== если есть старая цена
+													.pc__price-old 25 000 руб
+
+							//=======  content вкладки Отзывы ============
 							.tab-content(data-content="cat2")
 								.product-tabs__content
 									p tabs 2
