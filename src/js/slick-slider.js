@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  /* слайдер  на странице одного продукта*/
 
-
+	Fancybox.bind("[data-fancybox]", {
+		// Your custom options
+	});
+    /* слайдер  на странице одного продукта*/
 	$('.double-slider-frame').slick({
 		draggable: true,
 		centerMode: true,
