@@ -103,6 +103,22 @@
 	
 }
 .product-info-card{
+	position: relative;
+	&:hover{
+		.label-block{
+			opacity: 1;
+		
+			left: -50px;
+		}
+		
+	}
+	.label-block{
+		z-index: 3;
+		right:auto;
+		left: 0;
+		transform: translateX(-100%);
+		opacity: 0;
+	}
 	.product-info-body{
 		padding-top: 25px;
 		&>*+*{margin-top: 15px;}

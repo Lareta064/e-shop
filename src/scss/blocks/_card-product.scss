@@ -13,6 +13,13 @@
 	.label {
 		margin-left: auto;
 	}
+	.label+.label {
+		margin-top: 10px;
+
+		@media (max-width: 767px) {
+			margin-top: 5px;
+		}
+	}
 }
 .product-card{
 	width: 100%;
@@ -24,12 +31,7 @@
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
-	.label +.label{
-		margin-top: 10px;
-		@media (max-width: 767px) {
-		margin-top: 5px;
-		}
-	}
+
 	.pc__header{
 		padding: 20px;
 		padding-bottom: 10px;
