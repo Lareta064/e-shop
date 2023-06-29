@@ -1,18 +1,14 @@
 /** Счетчик количества **/
 
-let plusBtn = $('.counter-decrease');
-let minusBtn = $('.counter-increase');
+let minusBtn = $('.counter-decrease');
+let plusBtn = $('.counter-increase');
 
 
 plusBtn.on('click', function (e) {
 	e.preventDefault()
 	startCount = $(this).siblings('.counter-value').val();
-	if (startCount < 20) {
-		startCount = ++startCount;
-		$(this).siblings('.counter-value').val(startCount);
-		
-	}
-
+	startCount = ++startCount;
+	$(this).siblings('.counter-value').val(startCount);
 });
 
 minusBtn.on('click', function (e) {
