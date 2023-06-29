@@ -183,3 +183,17 @@
 	column-gap:15px;
 	
 }
+.product-info-text{
+	padding-top: 35px;
+	font-size: 14px;
+	color: #333;
+	p{
+		-webkit-line-clamp: 4;
+		display: -webkit-box;
+		overflow: hidden;
+		-webkit-box-orient: vertical;
+		font-size: 13px;
+		line-height: 20px;
+		padding-top: 15px;
+	}
+}

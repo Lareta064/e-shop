@@ -18,6 +18,9 @@
 	color: $text;
 	margin-bottom: 30px;
 }
+.text-medium{
+	font-weight: 600!important;
+}
 .flex-title{margin-bottom: 30px;}
 .flex-title .h2{margin-bottom: 0;}
 .icon-link{
@@ -34,5 +37,12 @@
 	color: $footerText;
 	&:hover{
 		color: $footerLogoText;
+	}
+}
+.read-more{
+	cursor: pointer;
+	color: #0f4b82;
+	&:hover{
+		color:#0f4b82; ;
 	}
 }
