@@ -121,6 +121,38 @@ block content
 												//==== если есть старая цена
 													.pc__price-old 25 000 руб
 
+											button.cheaper-btn Нашли дешевле?
+											
+											.pc__buttons
+												//===counter ====
+												.counter-block
+													button.counter-decrease
+													input.counter-value(type="number" value="1" name="")
+													button.counter-increase
+												
+												//=== button ====
+												button.btn.btn--34
+													span
+														svg.svg-cart
+															use(href="./img/svgSprite.svg#svg-cart")
+													span Купить
+
+												button.btn-light.btn--34
+													span.quick-bay
+													span Купить в 1 клик
+
+												
+												
+												button.btn-favorite.tooltip-box
+													
+													.tooltip-text В закладки
+													span.icon-favorite
+										
+										
+												button.btn-compare.tooltip-box
+													.tooltip-text В сравнение
+													span.icon-compare
+							
 							//=======  content вкладки Отзывы ============
 							.tab-content(data-content="cat2")
 								.product-tabs__content

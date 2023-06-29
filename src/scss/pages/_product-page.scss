@@ -163,6 +163,7 @@
 		column-gap:30px;
 		.pc__price-actual{
 			font-size: 26px;
+			line-height: 1;
 			font-weight: 600;
 			color: #000;
 		}
@@ -173,5 +174,12 @@
 			text-decoration: line-through;
 		}
 	}
-
+   .cheaper-btn{margin-top: 20px;}
+   .pc__buttons{margin-top: 20px;}
+}
+.pc__buttons{
+	display: flex;
+	align-items: center;
+	column-gap:15px;
+	
 }

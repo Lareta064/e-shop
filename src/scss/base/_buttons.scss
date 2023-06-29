@@ -6,6 +6,7 @@
 	padding-right: 20px;
 	height: 40px;
 	font-size: 14px;
+	column-gap:12px;
 	border-radius: 8px;
 	background-color: $accent;
 	color: #fff;
@@ -41,6 +42,12 @@
 	padding-left: 5px;
 	padding-right: 5px;
 	justify-content: center;
+}
+.btn--34{
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 34px;
+	line-height: 34px;
 }
 .skew-item{
 	
@@ -91,4 +98,28 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.cheaper-btn{
+	cursor:pointer;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background: #e1f7eb;
+	border-radius: 8px;
+	padding: 7px 15px;
+	color: #000;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 600;
+	&:hover{color:#0f4b82;}
+}
+.btn-quick-view ,.btn-quick-bay, .btn-favorite, .btn-compare{
+	width: 34px;
+	height: 34px;
+	border-radius: 8px;
+	background-color: #f8f9fa;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 1px 1px 16px -3px rgba(0, 0, 0, 0.16);
 }

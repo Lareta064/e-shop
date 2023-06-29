@@ -96,6 +96,7 @@
 		top: 100%;
 		display: none;
 		padding-top: 15px;
+		z-index: 3;
 	}
 	.offer-block-next, .offer-block-prev{
 		position: relative;
@@ -113,6 +114,6 @@
 		bottom: 7px;
 		width: 1px;
 		background-color: #e9e9e9;
-		
+
 	}
 }

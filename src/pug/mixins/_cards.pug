@@ -4,7 +4,7 @@ mixin card-light(link, imgSrc, title, price)
 			img(src="./img/products/"+ imgSrc +".jpg", width="100" height="100" alt="img")
 		.card-light__text !{title}
 		.card-light__price
-			span.price-box !{price} грн
+			span.price-box !{price} руб
 
 mixin benefitCard(svg, title, text)
 	.benefit-card
@@ -55,23 +55,23 @@ mixin pc(img,img2, title, stock, stars, price)
 			//===== футер карточки ======
 			.pc__footer
 				.pc__price-box
-					.pc__price 38 499 грн
+					.pc__price 38 499 руб
 				
 				.pc__btn
 					//=== иконки, на десктоп версии стоят абсолютом, на моб версии слева от кнопки Купить=========
 					.pc__links-wrapper
 						object
 							.pc__links
-								a(href="#!")
+								a(href="#!").btn-quick-view
 									span.quick-view
 								if stock == 'in'
-									a(href="#!").tooltip-box
+									a(href="#!").tooltip-box.btn-quick-bay
 										.tooltip-text Купить в 1 клик
 										span.quick-bay
-								a(href="#!").tooltip-box
+								a(href="#!").tooltip-box.btn-favorite
 									.tooltip-text В закладки
 									span.icon-favorite
-								a(href="#!").tooltip-box
+								a(href="#!").tooltip-box.btn-compare
 									.tooltip-text В сравнение
 									span.icon-compare
 					
