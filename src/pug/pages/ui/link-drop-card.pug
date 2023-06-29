@@ -11,6 +11,7 @@ html(lang="ru")
 		//====убрать синий цвет у ссылок в сафари ========
 		meta(name="format-detection" content="telephone=no")
 		link(rel="stylesheet", href="../css/main.css")
+		script(src="../../libs/jquery/jquery-3.0.0.min.js")
 		title UI-KIT
 
 	body.body-dashboard
@@ -62,4 +63,33 @@ html(lang="ru")
 										.preview-card__price-old
 											span 25000
 											span руб
+
+
+				h2 счетчик
+				.counter-block
+					button.counter-decrease
+					input.counter-value(type="number" value="1" name="")
+					button.counter-increase
+				script.
+					let minusBtn = $('.counter-decrease');
+					let plusBtn = $('.counter-increase');
+
+
+					plusBtn.on('click', function (e) {
+						e.preventDefault()
+						startCount = $(this).siblings('.counter-value').val();
+						startCount = ++startCount;
+						$(this).siblings('.counter-value').val(startCount);
+					});
+
+					minusBtn.on('click', function (e) {
+						e.preventDefault()
+						startCount = $(this).siblings('.counter-value').val();
+						if (startCount > 1) {
+							startCount = --startCount;
+							$(this).siblings('.counter-value').val(startCount);
+
+						}
+					});
+
 					
