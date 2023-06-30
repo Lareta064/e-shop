@@ -1,0 +1,29 @@
+mixin thumb-slider(srcName)
+	.double-slider-thumb
+		img(src="./img/product-page-slider/"+ srcName +".jpg", alt="")
+
+mixin main-slide(srcName)
+	a(href="./img/product-page-slider/"+ srcName +".jpg" data-fancybox="product1").double-slider-item
+		img(src="./img/product-page-slider/"+ srcName +".jpg", alt="alt")
+
+.product-img-slider.double-slider
+	
+	//======= слайдер с маленькими картинками ====
+	.double-slider-nav
+		+thumb-slider("phone1-thumb1")
+		+thumb-slider("phone1-thumb2")
+		+thumb-slider("phone1-thumb3")
+		+thumb-slider("phone1-thumb2")
+		+thumb-slider("phone1-thumb1")
+		+thumb-slider("phone1-thumb2")
+		+thumb-slider("phone1-thumb3")
+		
+	//===== большой слайдер =========
+	.double-slider-frame#product-gallery
+		+main-slide("phone1-big1")
+		+main-slide("phone1-big2")
+		+main-slide("phone1-big3")
+		+main-slide("phone1-big2")
+		+main-slide("phone1-big1")
+		+main-slide("phone1-big2")
+		+main-slide("phone1-big3")

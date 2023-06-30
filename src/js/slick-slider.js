@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-	Fancybox.bind("[data-fancybox]", {
-		// Your custom options
+	$('#product-gallery').magnificPopup({
+		delegate: 'a', // child items selector, by clicking on it popup will open
+		type: 'image'
+		// other options
 	});
     /* слайдер  на странице одного продукта*/
 	$('.double-slider-frame').slick({
