@@ -68,17 +68,24 @@
 		font-size: 22px;
 		opacity: 0;
 		transition: .3s;
+		svg{
+			opacity: 0.7;
+		}
 		@media(max-width:1439px){
 			left: 5px;
 		}
 	}
-		.slick-next{
-			left: auto;
-			right: 15px;
+	.slick-next{
+		left: auto;
+		right: 15px;
 		@media(max-width:1439px){
 			right: 5px;
 			left: auto;
 		}
+
+	}
+	.slick-prev{
+		padding-right: 2px;
 	}
 }
 .banner-slider:hover{
