@@ -51,7 +51,7 @@ block content
 										include ../blocks/_offer-block
 										.product-info-body
 											.product-info-row
-												.pc__stock.instock
+												.pc__stock.pc__stock--icon.instock
 													span Есть в наличии
 												
 												//== если Нет в наличии ===
@@ -114,6 +114,13 @@ block content
 											.text-bold Краткое описание
 											p Apple Watch Series 7 41mm Midnight Aluminum Case with Midnight Sport Band MKMX3UL/A Apple Watch Series 7 GPS Midnight — свежая версия «умных» часов от лидирующего бренда на рынке портативной электроники. Эта модель по... 
 												a(href="#").read-more Читать далее...
+							
+								//============== description block ============
+								.product-tabs__description
+									article
+									.product-tabs__sticky
+										+pc-special(1, 'Apple iPhone 13 Pro 1TB Silver (MLVW3)', 'out', '35 500')
+							
 							
 							//=======  content вкладки Отзывы ============
 							.tab-content(data-content="cat2")

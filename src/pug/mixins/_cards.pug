@@ -80,6 +80,89 @@ mixin pc(img,img2, title, stock, stars, price)
 						svg.svg-cart
 							use(href="./img/svgSprite.svg#svg-cart")
 
+mixin pc-special(img, title, stock, price)
+	//=== карточка продукта =======
+	.product-card.product-card--special
+		//====== выпадающие по ховеру  карточки предыдущего и следующего товаров ========
+		.offer-block
+			//======= элемент наведения слева =====
+			.offer-block-prev
+				button
+					span.squre-icon
+						svg.svg-chevron-left
+							use(href="../img/svgSprite.svg#svg-chevron-left")
+					
+				//==== выпадающая карточка ====
+				.preview-card-wrapper
+					a(href="product-page.html").preview-card
+						img(src="../img/products/phone1.jpg", width="100" height="100" alt="")
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						.preview-card__footer
+							//=== actual price ====
+							.preview-card__price-new
+								span 15000
+								span руб
+							
+			//======= элемент наведения справа =====
+			.offer-block-next
+				button
+					span.squre-icon
+						svg.svg-chevron-right
+							use(href="../img/svgSprite.svg#svg-chevron-right")
+					
+				//==== выпадающая карточка ====
+				.preview-card-wrapper
+					a(href="product-page.html").preview-card
+						img(src="../img/products/phone1.jpg", width="100" height="100" alt="")
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						.preview-card__footer
+							//=== actual price ====
+							.preview-card__price-new
+								span 15000
+								span руб
+	
+		//=============================//
+		.pc__header
+
+			.pc__img
+				img.main-img(src="./img/products/phone"+ img +".jpg", width="200" height="200" alt="alt")
+		//=============================//
+		.pc__info
+			.pc__body
+				a(href="product-page.html").pc__name !{title}
+				if stock == 'in'
+					.pc__stock.pc__stock--icon.instock
+						span Есть в наличии
+				else
+					.pc__stock.outstock
+						span Нет в наличии
+				.pc__art 696681
+			//===== футер карточки ======
+			.pc__footer
+				.pc__price-box
+					.pc__price 38 499 руб
+
+					//===counter ====
+					.counter-block
+						button.counter-decrease
+						input.counter-value(type="number" value="1" name="")
+						button.counter-increase
+				
+				.pc__btn
+					.btn
+						svg.svg-cart
+							use(href="./img/svgSprite.svg#svg-cart")
+					.pc__links-wrapper
+						object
+							.pc__links
+								if stock == 'in'
+									a(href="#!").btn-quick-bay
+										span.quick-bay
+								a(href="#!").btn-favorite
+									span.icon-favorite
+								a(href="#!").btn-compare
+									span.icon-compare
+
 mixin pc-mini(img,img2, title, stock, stars, price, sale,salePrice)
 	//====== single product mini card ========
 	.product-card-mini
