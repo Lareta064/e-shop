@@ -6,10 +6,23 @@
 		
 	}
 }
+.block-title{
+	font-size: 22px;
+	margin-bottom: 20px;
+	color: #000;
+	font-weight: 400;
+	line-height: 1.1;
+}
 .h2{
 	font-size: 18px;
 	color: $text;
 	margin-bottom: 30px;
+}
+.text-medium{
+	font-weight: 600!important;
+}
+.text-bold {
+	font-weight: 700 !important;
 }
 .flex-title{margin-bottom: 30px;}
 .flex-title .h2{margin-bottom: 0;}
@@ -27,5 +40,12 @@
 	color: $footerText;
 	&:hover{
 		color: $footerLogoText;
+	}
+}
+.read-more{
+	cursor: pointer;
+	color: #0f4b82;
+	&:hover{
+		color:#0f4b82; ;
 	}
 }

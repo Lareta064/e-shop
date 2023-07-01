@@ -1,16 +1,18 @@
 document.addEventListener("DOMContentLoaded", function (){
-	$(document).ready(function () {
+	
 		$('.container-module .tabs__active_line.mod_0').css({
 			'width': $('.container-module .tabs__header__scroll .my-tabs#prodCatTab0 li.active').outerWidth(),
 			'left': $('.container-module .tabs__header__scroll .my-tabs#prodCatTab0 li.active').offset().left - $('.container-module .tabs__header__scroll > .my-tabs#prodCatTab0').offset().left
+			
 		});
-	});
+	
 	
 	$('.container-module .tabs__header__scroll .my-tabs#prodCatTab0 li a').click(function () {
 		$('.container-module .tabs__active_line.mod_0').css({
 			'width': $(this).outerWidth(),
 			'left': $(this).parent().offset().left - $('.container-module .tabs__header__scroll > .my-tabs#prodCatTab0').offset().left
 		});
+		
 		let width_block = $('.container-module .tabs__header__scroll').width();
 		let li_width = $(this).outerWidth();
 		let li_left = $(this).parent().offset().left - $('.container-module .tabs__header__scroll > .my-tabs#prodCatTab0').offset().left;
@@ -37,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function (){
 					
 					for (let content of ctContents) {
 						content.classList.remove('tab-content--active');
-						console.log('123');
+						
 						const contentData = content.getAttribute('data-content');
 						if (contentData == thisData) {
 							content.classList.add('tab-content--active');

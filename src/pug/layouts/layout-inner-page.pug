@@ -1,0 +1,69 @@
+include _mixins-links.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+	
+		//======= owl carousel =============
+		link(rel="stylesheet" href="libs/OwlCarousel/owl.carousel.min.css" )
+		//======= slick carousel =============
+		link(rel="stylesheet" href="./libs/slick/slick.css" )
+		
+		//======= галерея magnific-popup =============
+		link(rel="stylesheet" href="./libs/magnific/magnific-popup.css" )
+		
+		//=======убрать перевод цифр в номер телефона на ios  и safari ======
+		meta(name="format-detection" content="telephone=no")
+		
+		link(rel="stylesheet", href="css/main.css")
+		title !{title}
+		style.
+			@font-face {
+				font-family: 'Montserrat';
+				src: url('./fonts/Montserrat-Regular.woff2') format('woff2');
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'Montserrat';
+				src: url('./fonts/Montserrat-SemiBold.woff2') format('woff2');
+				font-weight: 600;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'Montserrat';
+				src: url('./fonts/Montserrat-Bold.woff2') format('woff2');
+				font-weight: 700;
+				font-style: normal;
+			}
+	body(class=(bodyCl !=="" ? bodyCl : ''))
+		#overlay
+		.body-column
+			block content
+		
+		//=============== jquery ===================
+		script(src="./libs/jquery/jquery-3.0.0.min.js")
+		
+		//=============== slick slider ===================
+		script(src="./libs/slick/slick.min.js")
+		
+		//=============== magnific ===================
+		script(src="./libs/magnific/jquery.magnific-popup.min.js")
+		
+		//=============== owl ===================
+		script(src="./libs/OwlCarousel/owl.carousel.min.js")
+				
+		//=============== мои скрипты ===================
+		
+		script(src="./js/header.js")
+		
+		script(src="./js/rating-star.js")
+		script(src="./js/scroll-tabs-menu.js")
+		script(src="./js/slick-slider.js")
+		script(src="./js/counter-block.js")
+		script(src="./js/products-sliders.js")
+		//- script(src="./js/shop-categories-card.js")

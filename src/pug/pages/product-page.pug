@@ -1,4 +1,4 @@
-extends ../layouts/layout.pug
+extends ../layouts/layout-inner-page.pug
 
 block content
 	//======== каталог меню на мобильной версии ============
@@ -18,8 +18,145 @@ block content
 					{link: "cat-page.html", text: 'Новинки Apple Apple'},
 					{link: "#", text: 'iPhone 13 Pro 1TB Silver (MLVW3)'},
 					)
-				.product-page__tabs
+				.product-page__section
+					
+					h1.block-title Apple iPad 9 10.2" 256GB Wi-Fi (Silver) 2021
+					
+					//===== tabs ========
+					.container-module(custom-tabs)
+						.tabs__header.pct_nav
+							.tabs__header__scroll
+								ul#prodCatTab0.nav.nav-tabs.my-tabs
+									li.tabs__active_line.mod_0
+									li.active
+										a(data-tab="cat1" href='#!') Все о товаре
+									li
+										a( data-tab="cat2" href='#!') Отзывы
+											sup &nbsp; 0
+									li
+										a( data-tab="cat3" href='#!') Вопрос-ответ
+											sup &nbsp; 2
+									li
+										a( data-tab="cat4"  href='#!') Кастомная вкладка
+									
+						//====== tabs content ======
+						.tab-content__wrapper
+							.tab-content.tab-content--active(data-content="cat1")
+								.product-tabs__content
+
+									//====== левая часть со слайдерами =====
+									include ../sections/_product-page-slider
+									//====== правая часть с описанием =====
+									.product-info-card
+										include ../blocks/_offer-block
+										.product-info-body
+											.product-info-row
+												.pc__stock.pc__stock--icon.instock
+													span Есть в наличии
+												
+												//== если Нет в наличии ===
+													.pc__stock.outstock
+														span Нет в наличии
+												.pc__rating
+													.star-rating(data-rating="4")
+														span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+														span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+													.star-rating__val 4
+											
+											.pc__art 
+												span Код товара:
+												p 696681
+											
+											
+											a(href="#!").pc__brand-logo
+												span
+													img(src="./img/brand-logo.jpg", width="30" height="30" alt="logo")
+												span Apple
+							
+											.pc__price
+												.pc__price-actual 38 499 руб
+												//==== если есть старая цена
+													.pc__price-old 45 000 руб
+
+											button.cheaper-btn Нашли дешевле?
+											
+											.pc__buttons
+												//===counter ====
+												.counter-block
+													button.counter-decrease
+													input.counter-value(type="number" value="1" name="")
+													button.counter-increase
+												
+												//=== button ====
+												button.btn.btn--34.btn-add-cart
+													svg.svg-cart
+														use(href="./img/svgSprite.svg#svg-cart")
+													span Купить
+
+												button.btn-light.btn--34.btn-quick-bay
+													span.quick-bay
+													span Купить в 1 клик
+
+												
+												
+												button.btn-favorite.tooltip-box
+													
+													.tooltip-text В закладки
+													span.icon-favorite
+										
+										
+												button.btn-compare.tooltip-box
+													.tooltip-text В сравнение
+													span.icon-compare
+							
+										//======= description ========
+										.product-info-text
+											.text-bold Краткое описание
+											p Apple Watch Series 7 41mm Midnight Aluminum Case with Midnight Sport Band MKMX3UL/A Apple Watch Series 7 GPS Midnight — свежая версия «умных» часов от лидирующего бренда на рынке портативной электроники. Эта модель по... 
+												a(href="#").read-more Читать далее...
+							
+								//============== description block ============
+								.tab-content__description
+									.custom-text
+										p #[strong Теперь на iPhone] #[br] Новая сверхширокоугольная камера с обновленным объективом и мощной системой автофокуса теперь может снимать на расстоянии всего 2 см от объекта. Самые мелкие детали будут выглядеть масштабно - узор листа, лапки насекомого или капля росы.#[br]#[br] #[strong  И даже макровидео] #[br]Макрофотографии - это только начало. Теперь вы можете снимать и макровидео, даже замедленное или таймлапс. Приготовьтесь удивляться. #[br]#[br] #[strong Скорей бы ночь]#[br]iPhone 13 Pro создан для съемки при слабом освещении. Широкоугольная камера с увеличенной диафрагмой и нашей самой большой матрицей использует возможности сканера LiDAR для портретов в Ночном режиме. У сверхширокоугольной камеры с новым автофокусом диафрагма стала значительно больше, а матрица - быстрее. А у телефотокамеры появился Ночной режим.#[br]#[br]  У новой телефотокамеры фокусное расстояние 77 мм и трехкратный оптический зум - идеальные параметры для классических портретных кадров или съемки фото и видео издалека. А если объект находится вблизи, можно настраивать степень размытия фона и экспериментировать с эффектами студийного освещения в Портретном режиме.#[br]#[br] #[strong Фотографические стили] #[br]  Фотографические стили позволяют применить к вашим кадрам выбранные параметры тона и теплоты. При этом оттенки неба и кожи остаются естественными - достичь такого эффекта с обычными фильтрами не получится. Выберите шаблон Apple: Красочный, Насыщенный контрастный, Теплый или Прохладный. Если захотите, можно выставить более точные параметры для нужного стиля. Настроить стиль съемки по вашему вкусу достаточно один раз, и он будет применяться автоматически.#[br]#[br]  ProRes подразумевает высокую четкость изображения и низкую степень сжатия. Поэтому прямо на ходу вы можете создавать видеоконтент, готовый к публикациям и презентациям. Теперь проект в ProRes можно начать и закончить прямо на iPhone. Или открыть видео с iPhone в формате ProRes прямо в Final Cut Pro на Mac.#[br]#[br] #[strong Smart HDR 4 оптимизирует сцену по частям] #[br] Технология Smart HDR 4 использует вычислительную мощность Neural Engine для машинного обучения и настройки индивидуальных параметров для нескольких человек в кадре. Наше программное обеспечение совместно с процессором обработки сигнала изображения автоматически регулирует контрастность, освещение и оттенок кожи для каждого человека. Чтобы все получились просто идеально.
+									
+									//===== карточка товара , появляется при скролле, скрыта в моб версии ============
+									.product-tabs__sticky
+										+pc-special(1, 'Apple iPhone 13 Pro 1TB Silver (MLVW3)', 'out', '35 500')
+							
+							
+							//=======  content вкладки Отзывы ============
+							.tab-content(data-content="cat2")
+								.product-tabs__content
+									p tabs 2
 		
+		//=============== products-slider=================
+		section.products.products-slider
+			.container
+				h2.h2 Недавно просмотренные
+				.products-carousel.owl-carousel
+					.products-carousel-item
+						+pc('1', 11, 'Apple iPhone 13 Pro 1TB Silver (MLVW3) Apple iPhone 13 Pro 1TB Silver', 'in', '4.5')
+					.products-carousel-item
+						+pc('2', 22, 'Apple iPhone 12 64GB Purple (MJNM3)', 'out', '5')
+					.products-carousel-item
+						+pc('3', 33, 'Apple iPhone 13 Pro 1TB Graphite (MLVV3)', 'in', '4')
+					.products-carousel-item
+						+pc('1', 11, 'Apple iPhone 13 Pro 1TB Silver (MLVW3)', 'in', '4.5')
+					.products-carousel-item
+						+pc('2', 22, 'Apple iPhone 12 64GB Purple (MJNM3)', 'out', '5')
+					.products-carousel-item
+						+pc('3', 33, 'Apple iPhone 13 Pro 1TB Graphite (MLVV3)', 'in', '4')
+					.products-carousel-item
+						+pc('1', 11, 'Apple iPhone 13 Pro 1TB Silver (MLVW3)', 'in', '4.5')
+					.products-carousel-item
+						+pc('2', 22, 'Apple iPhone 12 64GB Purple (MJNM3)', 'out', '5')
+					.products-carousel-item
+						+pc('3', 33, 'Apple iPhone 13 Pro 1TB Graphite (MLVV3)', 'in', '4')
+					.products-carousel-item
+						+pc('1', 11, 'Apple iPhone 13 Pro 1TB Silver (MLVW3)', 'in', '4.5')
+					.products-carousel-item
+						+pc('2', 22, 'Apple iPhone 12 64GB Purple (MJNM3)', 'out', '5')
 
 	include ../sections/_footer
 
