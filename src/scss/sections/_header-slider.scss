@@ -1,4 +1,4 @@
-.banner-slider.owl-carousel{
+.banner-slider{
 	background-color: #000;
 	height: 600px;
 	
@@ -14,7 +14,7 @@
 	@media (max-width: 991px) {
 	   display: none;
 	}
-	.owl-dots{
+	.slick-dots{
 		bottom: 15px;
 		top: auto;
 		position: absolute;
@@ -27,7 +27,7 @@
 		padding-right: 10px;
 		left: 50%;
 		transform: translateX(-50%);
-		button.owl-dot span{
+		li{
 			display: inline-block;
 			width: 10px;
 			height: 10px;
@@ -39,16 +39,17 @@
 			border: 0px;
 			-webkit-transition: all .2s ease;
 			transition: all .2s ease;
-			box-shadow: none
+			box-shadow: none;
+			&>*{font-size: 0;}
 		}
-		button.owl-dot +button.owl-dot {margin-left: 10px;}
-		button.owl-dot.active span{
+		li +li {margin-left: 10px;}
+		li.slick-active {
 			 background: #00bc52;
     		width: 22px;
 		}
 	}
-	.owl-nav .owl-prev,
-	.owl-nav .owl-next{
+	.slick-prev,
+	.slick-next{
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
@@ -60,7 +61,9 @@
 		border-radius: 8px;
 		text-align: center;
 		background: #F8F9FA;
-		display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		box-shadow: 2px 2px 8px rgba(0,0,0,0.13);
 		font-size: 22px;
 		opacity: 0;
@@ -69,17 +72,18 @@
 			left: 5px;
 		}
 	}
-	.owl-nav .owl-next{
-		left: auto;
-		right: 15px;
+		.slick-next{
+			left: auto;
+			right: 15px;
 		@media(max-width:1439px){
 			right: 5px;
+			left: auto;
 		}
 	}
 }
-.banner-slider.owl-carousel:hover{
-	.owl-nav .owl-prev,
-	.owl-nav .owl-next{opacity: 1;}
+.banner-slider:hover{
+	.slick-prev,
+	.slick-next{opacity: 1;}
 }
 .banner-slide{
 	position: relative;
