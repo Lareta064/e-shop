@@ -43,19 +43,11 @@ block content
 						.tab-content__wrapper
 							.tab-content.tab-content--active(data-content="cat1")
 								.product-tabs__content
+
 									//====== левая часть со слайдерами =====
 									include ../sections/_product-page-slider
 									//====== правая часть с описанием =====
 									.product-info-card
-										//=====лейблы по ховеру ====
-										.label-block
-											.label.label-hit
-												span Топ
-											.label.label-pop
-												span Популярный
-											.label.label-new
-												span Новинка
-										
 										include ../blocks/_offer-block
 										.product-info-body
 											.product-info-row
@@ -96,12 +88,12 @@ block content
 													button.counter-increase
 												
 												//=== button ====
-												button.btn.btn--34
+												button.btn.btn--34.btn-add-cart
 													svg.svg-cart
 														use(href="./img/svgSprite.svg#svg-cart")
 													span Купить
 
-												button.btn-light.btn--34
+												button.btn-light.btn--34.btn-quick-bay
 													span.quick-bay
 													span Купить в 1 клик
 

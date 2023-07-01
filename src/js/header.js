@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function (){
 
-	
+	const bodyEl=document.querySelector('body');
 	/*======= скрипт, что бы отображить блок с результатми поиска */
 	const headerSearch = document.querySelector('.header-search-form');
 	if(headerSearch){

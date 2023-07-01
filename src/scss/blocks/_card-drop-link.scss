@@ -81,6 +81,12 @@
 			width: 22px;
 			height: 22px;
 			border-radius: 5px;
+			flex-shrink: 0;
+		}
+		span{
+			text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
 		}
 	}
 	.offer-block-next button{
