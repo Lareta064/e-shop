@@ -18,27 +18,32 @@ select:-webkit-autofill:focus {
   input, textarea{
     width: 100%;
     display: block;
-    height: 52px;
-    border-radius:12px;
-    border-width: 1px 0px 1px 1px;
-    border: 1px solid #f4f4f4;
+    height: 34px;
+    border-radius:4px;
+    
+    border: 1px solid #e9ecef;
     box-shadow: none;
     color: #000;
     font-size: 13px;
     padding-left: 12px;
     padding-right: 12px;
     font-family: inherit;
-   
+    outline: none;
   }
-  .form-item +.form-item{margin-top: 16px;}
-  .required-symbol{
+  
+  &+.form-item{margin-top: 16px;}
+  sup{
+    color: #F00;
+    font-size: 16px;
+    line-height: 1;
+  }
+  &>sup {
     position: absolute;
-    color: red;
-    top: 8px;
+    top: 12px;
     left: 8px;
     z-index: 2;
   }
-    .required-symbol +input, .required-symbol+ textarea{
+  sup +input, sup+ textarea{
       padding-left: 20px;
     }
     textarea{
@@ -69,10 +74,13 @@ select:-webkit-autofill:focus {
   }
    
 }
-.form-button{
+.form-button,.form-button-left{
   display: flex;
-  justify-content: flex-end;
   margin-top: 25px;
+}
+.form-button{ justify-content: flex-end;}
+.form-button-left{
+  justify-content: flex-start;
 }
 form{
  .error {
@@ -80,9 +88,18 @@ form{
       font-size: 12px;
       line-height: 1.6;
       color: red;
+      padding-bottom: 5px;
     }
 }
-label{position: relative;
+label{
+  position: relative;
+  
+}
+.form-item label{
+  padding-top: 7px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #000;display: inline-flex;
 }
 .help-input{
   width: 0.01em;
@@ -91,4 +108,15 @@ label{position: relative;
   top: 0;
   left: 0;
   z-index: -1;
+}
+.form-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:22px;
+  margin-top: 16px;
+  .form-item +.form-item{margin-top: 0;}
+  @media (max-width: 767px) {
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+  }
 }

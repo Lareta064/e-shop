@@ -13,7 +13,9 @@
 	display: flex;
 	.product-img-slider{width: 57%;}
 	.product-info-card {width: 42%;}
+	margin-bottom: 40px;
 	@media (max-width: 991px) {
+		margin-bottom: 30px;
 	flex-direction: column; 
 	row-gap:15px;
 	.product-img-slider,.product-info-card {

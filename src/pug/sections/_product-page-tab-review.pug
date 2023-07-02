@@ -1,0 +1,56 @@
+.tab-content__description
+	.border-wrapper
+		.customer-reviews-block.mb-20
+			p Нет отзывов об этом товаре.
+
+		form(action="")
+			.title-20 Написать отзыв
+			
+			.form-item
+				label  Ваше имя: #[sup *]
+				input(type="text" )
+			
+			//====== выставить рейтинг =========
+			.form-item
+				label  Рейтинг #[sup *]
+				.star-rating-group
+					label.star-rating-label
+						input(type="checkbox")
+						span &#9733;
+					label.star-rating-label
+						input(type="checkbox")
+						span &#9733;
+					label.star-rating-label
+						input(type="checkbox")
+						span &#9733;
+					label.star-rating-label
+						input(type="checkbox")
+						span &#9733;
+					label.star-rating-label
+						input(type="checkbox")
+						span &#9733;					
+			
+			//======комментарий ============	
+			.form-item
+				.form-item
+					label  Ваш отзыв #[sup *]
+					textarea(type="text" )
+			
+			
+			//====== строка с двумя полями ============
+			.form-row
+				.form-item
+					label  Достоинства
+					textarea(type="text" )
+
+				.form-item
+					label  Недостатки #[sup *]
+					textarea(type="text" )
+			
+			//==== form btn ===================
+			.form-button-left
+				button.btn(type="submit") Оставить отзыв
+	
+	//===== карточка товара , появляется при скролле, скрыта в моб версии ============
+	.product-tabs__sticky
+		+pc-special(1, 'Apple iPhone 13 Pro 1TB Silver (MLVW3)', 'out', '35 500')

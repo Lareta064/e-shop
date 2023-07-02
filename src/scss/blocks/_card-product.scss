@@ -384,21 +384,25 @@
 		}
 	}
 }
-.tab-content .custom-text{
+.border-wrapper{
 	border: 1px solid #e9e9e9;
-	padding: 30px 50px;
+	padding: 30px;
 	border-radius: 10px;
+	flex-grow: 1;
 	@media (max-width: 991px) {
-	padding: 10px 15px;
+		padding: 15px;
 	}
 }
-.tab-content__description {
-	margin-top: 40px;
-	.product-tabs__sticky{display: none;}
-	.custom-text{flex-grow: 1;}
+.custom-text.border-wrapper{
+	padding: 30px 50px;
 	@media (max-width: 991px) {
-	margin-top: 30px;
+		padding: 15px;
 	}
+}
+.tab-content__description{
+	
+	.product-tabs__sticky{display: none;}
+
 }
 .tab-content__description{
 	display: flex;
