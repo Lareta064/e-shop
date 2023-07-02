@@ -51,14 +51,15 @@
 	background: #fff;
 	width: 100%;
 	
-	 border: 1px solid #e9e9e9;
+	
 	&>*{min-width: 50%;}
 	
 	&>*+*{width: 50%;flex-shrink: 0;}
 	.offer-block-next button, .offer-block-prev button{
 		background: #fff;
+		border: 1px solid #e9e9e9;
 		height: 42px;
-	    border-radius: 12px;
+	   
 		text-align: center;
 		white-space: nowrap;
 		cursor: pointer;
@@ -91,10 +92,16 @@
 	}
 	.offer-block-next button{
 		justify-content: flex-end;
+		border-radius: 0  12px 12px 0;
+		border-left: none;
 		.squre-icon{margin-left: auto;
+			
 		}
 	}
-	
+	.offer-block-prev button{
+		border-radius: 12px 0 0  12px;
+		
+	}
 	.preview-card-wrapper{
 		position: absolute;
 		left: 50%;
@@ -112,14 +119,17 @@
 		}
 		
 	}
-	.offer-block-next:before {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 7px;
-		bottom: 7px;
-		width: 1px;
-		background-color: #e9e9e9;
-
+	.offer-block-prev+.offer-block-next{
+		border-left:0px;
 	}
+	// .offer-block-prev +.offer-block-next:before {
+	// 	content: '';
+	// 	position: absolute;
+	// 	left: 0;
+	// 	top: 7px;
+	// 	bottom: 7px;
+	// 	width: 1px;
+	// 	background-color: #e9e9e9;
+
+	// }
 }
