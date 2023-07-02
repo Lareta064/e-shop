@@ -1,39 +1,58 @@
 .product-tabs__content
 	//====== левая часть со слайдерами =====
-	include ../sections/_product-page-slider
+	include ../sections/_product-page-slider2
 	//====== правая часть с описанием =====
 	.product-info-card
-		include ../blocks/_offer-block
+		//===== плашка с выпадающей карточкой по наведению =====
+		.offer-block
+			//======= элемент наведения слева =====
+			.offer-block-prev
+				button
+					span.squre-icon
+						svg.svg-chevron-left
+							use(href="../img/svgSprite.svg#svg-chevron-left")
+					span Product name
+				//==== выпадающая карточка ====
+				.preview-card-wrapper
+					a(href="product-page.html").preview-card
+						img(src="../img/products/phone1.jpg", width="100" height="100" alt="")
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						.preview-card__footer
+							//=== actual price ====
+							.preview-card__price-new
+								span 15000
+								span руб
+							//=== old price =====
+							.preview-card__price-old
+								span 25000
+								span руб
 		.product-info-body
 			.product-info-row
-				.pc__stock.pc__stock--icon.instock
+				//== если Есть в наличии ===
+					.pc__stock.pc__stock--icon.outstock
 					span Есть в наличии
 				
 				//== если Нет в наличии ===
-					.pc__stock.outstock
-						span Нет в наличии
+				.pc__stock.outstock
+					span Нет в наличии
 				.pc__rating
-					.star-rating(data-rating="4")
+					.star-rating(data-rating="0")
 						span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
 						span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
-					.star-rating__val 4
+					.star-rating__val 0
 			
+			//=== код и артикул
 			.pc__art 
 				.pc__art-item
 					span Код товара:
-					p 696681
-				//==== если есть артикул =====
+					p 34453-01
 				.pc__art-item
 					span Артикул:
 					p 254477
 			
-			a(href="#!").pc__brand-logo
-				span
-					img(src="./img/brand-logo.jpg", width="30" height="30" alt="logo")
-				span Apple
-
+			
 			.pc__price
-				.pc__price-actual 38 499 руб
+				.pc__price-actual 238 499 руб
 				//==== если есть старая цена
 					.pc__price-old 45 000 руб
 
