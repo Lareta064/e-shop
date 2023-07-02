@@ -167,6 +167,13 @@
 		}
 	}
 }
+
 .inner-page .catalog-menu-wrapper.catalog-menu--visible{display: none;}
 .inner-page .header-grid .catalog-menu-wrapper{padding-top: 0;}
-	
+.grid-page .header-grid .catalog-menu-wrapper {	padding-top: 20px;}
+.grid-page .header-grid .catalog-menu ul {
+	@media(min-width:1200px){
+		max-height: 491px;
+		height: 491px;
+	}
+}

@@ -3,6 +3,8 @@
 	width: 100%;
 	overflow-x: auto;
 	scrollbar-width: none;
+	margin-bottom: 15px;
+	&+*{padding-top: 5px;}
 	&::-webkit-scrollbar{display: none;}
 	
 	ul{

@@ -1,0 +1,35 @@
+extends ../layouts/layout-inner-page.pug
+
+block content
+	//======== каталог меню на мобильной версии ============
+	include ../blocks/_multi-level-menu
+
+	//======== user modal mobile ============
+	include ../blocks/_user-menu-mobile
+	
+	//======== header ============
+	include ../sections/_header-new
+	main.main.main--inner
+		.container
+			.category-list__content.grid-wrapper
+				.grid-wrapper-aside
+				.grid-wrapper-body
+					+breadcrumbs(
+						{link: "index.html", text: 'Главная'},
+						{link: "category-page.html", text: 'Аудио техника'},
+					)
+					.category-list__cards
+						h2.h2 Аудио техника
+						.category-list__grid
+							+category-card('1', 'AV ресиверы')
+							+category-card('2', 'MP3 плееры')
+							+category-card('3', 'Акустические системы (колонки)')
+							+category-card('4', 'Музыкальные центры')
+							+category-card('5', 'Наушники и гарнитуры')
+							+category-card('6', 'Системы домашнего кинотеатра' )
+							+category-card('7', 'Усилители')
+							
+
+block variables
+	-var title = "Страница категорий";
+	-var bodyCl = "grid-page";

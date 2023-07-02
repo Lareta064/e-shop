@@ -262,3 +262,10 @@ mixin shop-card(img, name)
 			.shop-card__btn
 				svg.svg-chevron-right
 					use(href="./img/svgSprite.svg#svg-chevron-right")
+
+mixin category-card(img, name)
+	a(href="single-category.html").category-card
+		//==== картинка ===
+		.category-card__img
+			img(src="./img/category-list/cat"+img+".png", width="130" height="130" alt="img")
+		p !{name}

@@ -55,7 +55,7 @@ a:hover {
 	text-decoration: none;
 	color: inherit;
 }
-
+a:hover{color: #0f4b82;}
 ul {
 	margin: 0;
 	padding: 0;
@@ -79,6 +79,7 @@ img {
 	max-width: 100%;
 	height: auto;
 	vertical-align: middle;
+	display: block;
 }
 
 input,
@@ -121,7 +122,12 @@ section{
 .main.main--inner{
 	padding-top: 15px;
 }
-
+.grid-wrapper{
+	display: flex;
+	column-gap: 20px;
+	&-aside{width: 264px; flex-shrink:0}
+	&-body{flex-grow:1}
+}
 .flex-title,.flex-wrapper, .flex-justify,.svg-btn,.btn-wrapper, .flex-center{
 	display: flex;
 	align-items: center;
