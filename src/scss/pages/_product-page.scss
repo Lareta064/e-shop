@@ -241,9 +241,13 @@
 	@media(max-width:424px){margin: 0 auto;}
 }
 .product-info-text{
+	&:first-child{margin-top: 0;}
 	padding-top: 35px;
 	font-size: 14px;
 	color: #333;
+	.text-bold{
+		margin-top: 15px;
+	}
 	p{
 		-webkit-line-clamp: 4;
 		display: -webkit-box;
@@ -251,7 +255,12 @@
 		-webkit-box-orient: vertical;
 		font-size: 13px;
 		line-height: 20px;
+		margin-top: 15px;
+		margin-bottom: 5px;
+	}
+	ul{
 		padding-top: 15px;
+		padding-bottom: 15px;
 	}
 }
 .product-options__item{
