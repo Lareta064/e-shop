@@ -1,13 +1,13 @@
 /*блок со слайдерами в колонках===========*/
 .multi-sliders-grid{
 	display: flex;
-	column-gap: 30px;
+	column-gap: 20px;
 	@media(max-width:1499px) {
 			column-gap: 16px;
 		}
 	@media(max-width:1199px) {
 		flex-wrap: wrap;
-		row-gap: 30px;
+		row-gap: 20px;
 	}
 	@media(max-width:991px) {
 		column-gap: 4%;

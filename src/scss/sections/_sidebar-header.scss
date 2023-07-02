@@ -32,10 +32,9 @@
 		grid-area: 3 / 2 / 4 / 6;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		gap:30px;
-		@media(max-width:1599px) {
-			grid-column-gap:  20px;
-		}
+		
+		gap: 20px;
+
 
 	}
 	.benefit-card{

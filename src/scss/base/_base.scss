@@ -125,8 +125,31 @@ section{
 .grid-wrapper{
 	display: flex;
 	column-gap: 20px;
-	&-aside{width: 264px; flex-shrink:0}
-	&-body{flex-grow:1}
+	&-aside{
+		width: 264px; flex-shrink:0;
+		&>*+*{margin-top: 30px;}
+		.false-column{
+			height: 504px;
+		}
+		@media (max-width: 1199px) {
+			width: 0;
+			display: none;
+		}
+	}
+	&-body{flex-grow:1;
+		@media (max-width: 1199px) {
+			width: 100%;
+			flex-grow: 0;
+		}
+	}
+}
+.scroll-horizontal{
+	@media(max-width:767px){
+		overflow: hidden;
+		width: calc(50% + 50vw);
+		overflow-x: auto;
+	}
+	
 }
 .flex-title,.flex-wrapper, .flex-justify,.svg-btn,.btn-wrapper, .flex-center{
 	display: flex;
