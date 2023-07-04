@@ -19,7 +19,7 @@ mixin benefitCard(svg, title, text)
 
 mixin pc(img,img2, title, stock, stars, price)
 	//=== карточка продукта =======
-	.product-card
+	.product-card&attributes(attributes)
 		.pc__header
 			//=====лейблы по ховеру ====
 			.label-block
@@ -76,9 +76,73 @@ mixin pc(img,img2, title, stock, stars, price)
 									.tooltip-text В сравнение
 									span.icon-compare
 					
-					.btn
+					button.btn
 						svg.svg-cart
 							use(href="./img/svgSprite.svg#svg-cart")
+
+mixin pc-trf(img,img2, title, stock, stars, price)
+	//=== карточка продукта со страницы категорий. Она трансформируется, в зависимости выбранного отображения  =======
+	.product-card&attributes(attributes)
+		.pc__header
+			//=====лейблы по ховеру ====
+			.label-block
+				.label.label-hit
+					span Топ
+				.label.label-pop
+					span Популярный
+				.label.label-new
+					span Новинка
+			
+			//=====картинки: одна видна сразу, втора\ появляется по ховеру на карточку ====
+			.pc__img
+				img.main-img(src="./img/products/phone"+ img +".jpg", width="200" height="200" alt="alt")
+				
+				img.hover-img(src="./img/products/phone"+ img2 +".jpg", width="200" height="200" alt="alt")
+				
+		.pc__info
+
+			.pc__body
+				a(href="product-page.html").pc__name !{title}
+				if stock == 'in'
+					.pc__stock.instock
+						span Есть в наличии
+				else
+					.pc__stock.outstock
+						span Нет в наличии
+				.pc__art 696681
+				.pc__rating
+					//=== красные звездочки рейтинга закрашиваются по скрипту в main.js , который задает им ширину в соответствии с атрибутом data-rating========
+					.star-rating(data-rating=""+ stars)
+						span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+						span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+					.star-rating__val #{stars}
+			//===== футер карточки ======
+			.pc__footer
+				.pc__price-box
+					.pc__price 38 499 руб
+				
+				.pc__btn
+					//===== блок с иконками быстрых действий ============
+					.pc__links-wrapper
+						object
+							.pc__links
+								a(href="#!").btn-quick-view
+									span.quick-view
+								if stock == 'in'
+									a(href="#!").tooltip-box.btn-quick-bay
+										.tooltip-text Купить в 1 клик
+										span.quick-bay
+								a(href="#!").tooltip-box.btn-favorite
+									.tooltip-text В закладки
+									span.icon-favorite
+								a(href="#!").tooltip-box.btn-compare
+									.tooltip-text В сравнение
+									span.icon-compare
+					
+					button.btn
+						svg.svg-cart
+							use(href="./img/svgSprite.svg#svg-cart")
+						span Купить
 
 mixin pc-special(img, title, stock, price)
 	//=== карточка продукта =======
