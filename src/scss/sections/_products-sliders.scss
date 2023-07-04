@@ -5,6 +5,16 @@
 	
 	.slick-track{display: flex!important; align-items:stretch; padding-bottom: 2px;padding-top: 2px;}
 }
+.fancybox-image{
+	border-radius: 20px;
+	@media (max-width: 767px) {
+	border-radius: 10px;
+	}
+}
+.fancybox__viewport{
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
 .products-carousel-item{
 		height: auto;
 		padding-left: 10px;

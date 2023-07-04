@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function (){
-	
+if ($('.container-module').length>0){
+	console.log($('.container-module'));
 		$('.container-module .tabs__active_line.mod_0').css({
 			'width': $('.container-module .tabs__header__scroll .my-tabs#prodCatTab0 li.active').outerWidth(),
 			'left': $('.container-module .tabs__header__scroll .my-tabs#prodCatTab0 li.active').offset().left - $('.container-module .tabs__header__scroll > .my-tabs#prodCatTab0').offset().left
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			$('.container-module .tabs__header__scroll').animate({ scrollLeft: 0 })
 		}
 	});
-	
+}	
 	/*переключение контента у табов*/
 	const customTabs = document.querySelectorAll('[custom-tabs]');
 	if (customTabs.length > 0) {
