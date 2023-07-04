@@ -110,8 +110,8 @@ section.store-reviews
 
 				.store-card__btn
 					button.btn-light(frame-btn="store-review") Написать отзыв
-				//===== модальное окно Оставить отзыв. Открывается по скрипту, сравнивающим атрибуты frame-btn и frame-modal=======
 				
+				//===== модальное окно Оставить отзыв. Открывается по скрипту, сравнивающим атрибуты frame-btn и frame-modal=======
 				.modal-frame.modal-frame--center(frame-modal="store-review")
 					.modal-frame-content
 						.modal-frame__header
@@ -122,8 +122,8 @@ section.store-reviews
 						.modal-frame___body
 							form(action="" method="method")
 								.form-item
-									//===== спан со звездочкой для обязательных полей =====
-									span.required-symbol *
+									
+									sup *
 									input(type="text" placeholder="Ваше имя")
 									//===== элемент с классом error  появляется, когда форма при отправке не проходит валидацию ======
 									.error Текст ошибки
@@ -132,8 +132,8 @@ section.store-reviews
 								
 								//==== поле для комментария ==========
 								.form-item
-									//===== спан со звездочкой для обязательных полей =====
-									span.required-symbol *
+									
+									sup *
 									textarea(type="text" placeholder="Ваш комментарий")
 									
 									.form-icon

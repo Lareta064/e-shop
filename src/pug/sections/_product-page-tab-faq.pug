@@ -1,0 +1,27 @@
+.tab-content__description
+	.border-wrapper
+		.customer-faq-block.mb-20
+			p Нет вопросов об этом товаре.
+
+		form(action="")
+			.form-item
+				label  Ваше имя: #[sup *]
+				input(type="text" placeholder="Ваше имя" )
+			.form-item
+				label  Телефон: #[sup *]
+				input(type="text" placeholder="Телефон")
+				
+			.form-item
+				.form-item
+					label  E-mail #[sup *]
+					textarea(type="text" placeholder="E-mail")
+			.form-item
+				label  Ваш вопрос: #[sup *]
+				textarea(type="text" )
+			//==== form btn ===================
+			.form-button-left
+				button.btn(type="submit") Отправить
+	
+	//===== карточка товара , появляется при скролле, скрыта в моб версии ============
+	.product-tabs__sticky
+		+pc-special(1, 'Apple iPhone 13 Pro 1TB Silver (MLVW3)', 'out', '35 500')

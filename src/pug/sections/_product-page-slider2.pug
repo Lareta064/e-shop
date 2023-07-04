@@ -1,0 +1,27 @@
+mixin thumb-slider(srcName)
+	.double-slider-thumb
+		img(src="./img/product-page-slider/"+ srcName +".jpg", alt="")
+
+mixin main-slide(srcName)
+	a(href="./img/product-page-slider/"+ srcName +".jpg" data-fancybox="product1").double-slider-item
+		img(src="./img/product-page-slider/"+ srcName +".jpg", alt="alt")
+
+.product-img-slider.double-slider
+	//=====лейблы по ховеру на десктопе ====
+	.label-block
+		.label.label-hit
+			span Топ
+		.label.label-pop
+			span Популярный
+	
+	//======= слайдер с маленькими картинками ====
+	.double-slider-nav
+		+thumb-slider("mac1-thumb")
+		+thumb-slider("mac2-thumb")
+		+thumb-slider("mac3-thumb")
+		
+	//===== большой слайдер =========
+	.double-slider-frame#product-gallery
+		+main-slide("mac1")
+		+main-slide("mac2")
+		+main-slide("mac3")

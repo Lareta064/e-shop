@@ -31,38 +31,33 @@ block content
 									li.active
 										a(data-tab="cat1" href='#!') Все о товаре
 									li
-										a( data-tab="cat2" href='#!') Отзывы
+										a(data-tab="cat2" href='#!') Характеристики
+									li
+										a( data-tab="cat3" href='#!') Отзывы
 											sup &nbsp; 0
 									li
-										a( data-tab="cat3" href='#!') Вопрос-ответ
+										a( data-tab="cat4" href='#!') Вопрос-ответ
 											sup &nbsp; 0
-									li
-										a( data-tab="cat4"  href='#!') Кастомная вкладка
+
 									
 						//====== tabs content ======
 						.tab-content__wrapper
 							//=======  content для вкладки Все о товаре ============
 							.tab-content.tab-content--active(data-content="cat1")
-								include ../sections/_product-page-tab-descrip
+								include ../sections/_product-page-tab-descrip2
 							
+							//=======  content для вкладки  Характеристики ============
+							.tab-content(data-content="cat2")
+								include ../sections/_product-page-tab-options
 							
 							//=======  content для вкладки Отзывы ============
-							.tab-content(data-content="cat2")
+							.tab-content(data-content="cat3")
 								include ../sections/_product-page-tab-review
 		
 							//=======  content для вкладки Вопрос-ответ ============
-							.tab-content(data-content="cat3")
+							.tab-content(data-content="cat4")
 								include ../sections/_product-page-tab-faq
 							
-							//=======  content для вкладки Кастомная ============
-							.tab-content(data-content="cat4")
-								.tab-content__description
-									.border-wrapper
-										p Кастомный контент
-									
-									//===== карточка товара , появляется при скролле, скрыта в моб версии ============
-									.product-tabs__sticky
-										+pc-special(1, 'Apple iPhone 13 Pro 1TB Silver (MLVW3)', 'out', '35 500')
 		
 		+product-slider('Недавно просмотренные')
 

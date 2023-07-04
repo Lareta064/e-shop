@@ -1,0 +1,116 @@
+.product-tabs__content
+	//====== левая часть со слайдерами =====
+	include ../sections/_product-page-slider2
+	//====== правая часть с описанием =====
+	.product-info-card
+		//===== плашка с выпадающей карточкой по наведению =====
+		.offer-block
+			//======= элемент наведения слева =====
+			.offer-block-prev
+				button
+					span.squre-icon
+						svg.svg-chevron-left
+							use(href="../img/svgSprite.svg#svg-chevron-left")
+					span Product name
+				//==== выпадающая карточка ====
+				.preview-card-wrapper
+					a(href="product-page.html").preview-card
+						img(src="../img/products/phone1.jpg", width="100" height="100" alt="")
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						.preview-card__footer
+							//=== actual price ====
+							.preview-card__price-new
+								span 15000
+								span руб
+							//=== old price =====
+							.preview-card__price-old
+								span 25000
+								span руб
+		.product-info-body
+			.product-info-row
+				//== если Есть в наличии ===
+					.pc__stock.pc__stock--icon.outstock
+					span Есть в наличии
+				
+				//== если Нет в наличии ===
+				.pc__stock.outstock
+					span Нет в наличии
+				.pc__rating
+					.star-rating(data-rating="0")
+						span.stars-passive &#9733;&#9733;&#9733;&#9733;&#9733;
+						span.stars-active &#9733;&#9733;&#9733;&#9733;&#9733;
+					.star-rating__val 0
+			
+			//=== код и артикул
+			.pc__art 
+				.pc__art-item
+					span Код товара:
+					p 34453-01
+				.pc__art-item
+					span Артикул:
+					p 254477
+			
+			
+			.pc__price
+				.pc__price-actual 238 499 руб
+				//==== если есть старая цена
+					.pc__price-old 45 000 руб
+
+			button.cheaper-btn Нашли дешевле?
+			
+			.pc__buttons
+				//===counter ====
+				.counter-block
+					button.counter-decrease
+					input.counter-value(type="number" value="1" name="")
+					button.counter-increase
+				
+				//=== button ====
+				button.btn.btn--34.btn-add-cart
+					svg.svg-cart
+						use(href="./img/svgSprite.svg#svg-cart")
+					span Купить
+
+				button.btn-light.btn--34.btn-quick-bay
+					span.quick-bay
+					span Купить в 1 клик
+
+				
+				
+				button.btn-favorite.tooltip-box
+					
+					.tooltip-text В закладки
+					span.icon-favorite
+		
+		
+				button.btn-compare.tooltip-box
+					.tooltip-text В сравнение
+					span.icon-compare
+
+		//======= description ========
+		.product-info-text
+			.text-bold Краткое описание
+			p Купить Apple MacBook Pro 15 Space Gray (Z0V0000KQ) 2018 в Киеве и в ХарьковеОчень долго верхнюю строку клавиатуры занимали функциональные клавиши. Пришло время заменить их более универсальным и удобным элементом управлен...
+			a(href="#").read-more Читать далее...
+			
+			.text-bold Общие характеристики
+			ul
+				li Количество SIM-карт 1,83 кг 
+				li Максимальное разрешение видеосъёмки 2880x1800
+				li
+			a(href="#").read-more Все характеристики
+
+//============== description block ============
+.tab-content__description
+	.custom-text.border-wrapper
+		h2 Купить Apple MacBook Pro 15 Space Gray (Z0V0000KQ) 2018 в Москве
+		img(src="./img/product-page/custom-img1.jpg", width="500" alt="")
+		p Невероятно тонкий и лёгкий MacBook Pro стал ещё быстрее и мощнее. У него самый яркий экран и лучшая цветопередача среди всех ноутбуков Mac. В клавиатуру встроена выполненная из стекла сенсорная панель Touch Bar, которая поддерживает жесты Multi?Touch и обеспечивает быстрый и удобный доступ к тем функциям, которые нужны вам именно сейчас. MacBook Pro создан на основе самых передовых идей. И у него есть всё для воплощения ваших. Купить Apple MacBook Pro 15 Space Gray (Z0V0000KQ) 2018 в Киеве и в Харькове по низкой цене.
+		img(src="./img/product-page/custom-img2.jpg", width="500" alt="")
+		p Очень долго верхнюю строку клавиатуры занимали функциональные клавиши. Пришло время заменить их более универсальным и удобным элементом управления — сенсорной панелью Touch Bar.2 В зависимости от того, чем вы занимаетесь, на ней автоматически отображаются те или иные инструменты — например, знакомые вам регуляторы громкости и яркости, функции управления фото и видео, предиктивного ввода текста и многие другие. На Mac появилась технология Touch ID. С ней вы можете мгновенно входить в свои учётные записи, а также оплачивать покупки с помощью Apple Pay — быстро и безопасно.
+		img(src="./img/product-page/custom-img3.jpg", width="500" alt="")
+		p Во всех конфигурациях 15?дюймовый MacBook Pro оснащается мощным дискретным графическим процессором Radeon Pro. Он создан с применением передовой 14?нанометровой технологии производства и представляет собой уникальное сочетание производительности и энергоэффективности. Теперь на всех моделях старшей конфигурации по умолчанию установлены 4 ГБ памяти GDDR5. Она создана для плавной работы в режиме реального времени даже при решении таких сложных профессиональных задач, как рендеринг 3D?титров в Final Cut Pro X. Кроме того, во все 15?дюймовые модели встроен графический процессор с 64 МБ интегрированной памяти DRAM — для дополнительного ускорения обработки графики. А значит, у вас останется ещё больше времени, чтобы творить и воплощать.
+	
+	//===== карточка товара , появляется при скролле, скрыта в моб версии ============
+	.product-tabs__sticky
+		+pc-special(1, 'Apple iPhone 13 Pro 1TB Silver (MLVW3)', 'out', '35 500')
