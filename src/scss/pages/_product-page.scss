@@ -246,7 +246,7 @@
 	font-size: 14px;
 	color: #333;
 	.text-bold{
-		margin-top: 15px;
+		margin-top: 10px;
 	}
 	p{
 		-webkit-line-clamp: 4;
@@ -255,7 +255,7 @@
 		-webkit-box-orient: vertical;
 		font-size: 13px;
 		line-height: 20px;
-		margin-top: 15px;
+		margin-top: 10px;
 		margin-bottom: 5px;
 	}
 	ul{
@@ -283,3 +283,7 @@
 	
 }
 .product-options__row +.product-options__row{margin-top: 10px;}
+#read-more-info{
+	padding-top: 110px;
+	margin-top: -110px;
+}
