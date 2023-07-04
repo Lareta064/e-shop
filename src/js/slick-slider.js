@@ -1,11 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-	$('#product-gallery').magnificPopup({
-		delegate: 'a', // child items selector, by clicking on it popup will open
-		type: 'image'
-		// other options
+	/* галерея на странице одного товара */
+	Fancybox.bind('[data-fancybox]', {
+		Toolbar: {
+			display: {
+				left: [""],
+				middle: [""],
+				right: ["close"],
+			},
+		},
+		wheel: "slide",
 	});
-    /* слайдер  на странице одного продукта*/
+    
+	/* слайдер  на странице одного продукта*/
 	$('.double-slider-frame').slick({
 		draggable: true,
 		centerMode: true,

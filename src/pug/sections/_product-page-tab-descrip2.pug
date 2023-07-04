@@ -91,17 +91,20 @@
 		.product-info-text
 			.text-bold Краткое описание
 			p Купить Apple MacBook Pro 15 Space Gray (Z0V0000KQ) 2018 в Киеве и в ХарьковеОчень долго верхнюю строку клавиатуры занимали функциональные клавиши. Пришло время заменить их более универсальным и удобным элементом управлен...
-			a(href="#").read-more Читать далее...
+			a(href="#read-more-info").read-more Читать далее...
 			
 			.text-bold Общие характеристики
 			ul
 				li Количество SIM-карт 1,83 кг 
 				li Максимальное разрешение видеосъёмки 2880x1800
 				li
-			a(href="#").read-more Все характеристики
-
+			a(href="#!" onclick="showOptionTab()").read-more Все характеристики
+			script.
+				function showOptionTab(){
+					document.getElementById('tab-options').click();
+				}
 //============== description block ============
-.tab-content__description
+.tab-content__description#read-more-info
 	.custom-text.border-wrapper
 		h2 Купить Apple MacBook Pro 15 Space Gray (Z0V0000KQ) 2018 в Москве
 		img(src="./img/product-page/custom-img1.jpg", width="500" alt="")
