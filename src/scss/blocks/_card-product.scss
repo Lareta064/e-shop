@@ -535,6 +535,9 @@
 			text-align: center;
 			border-left: 1px solid #e9e9e9;
 			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 	.pc__btn,.pc__footer{
@@ -558,5 +561,12 @@
 	.btn-quick-view{display: none;}
 	.pc__links-wrapper{
        white-space: nowrap;
+	}
+	.pc__name{
+		padding: 10px;
+		height: 100%;
+		border-left: 1px solid #e9e9e9;
+		border-right: 1px solid #e9e9e9;
+		margin-bottom: 0;
 	}
 }
