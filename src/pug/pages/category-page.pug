@@ -77,11 +77,34 @@ block content
 									+category-card('5', 'Наушники и гарнитуры')
 									+category-card('6', 'Системы домашнего кинотеатра' )
 									+category-card('7', 'Усилители')
+						
+						
+						.category-products-block
+							//======= строка с фильтрами =============	
+							.filters-group
+								.filters-group__type
+									+mySelect({addClass: 'mySelect--absolute', val:'По умолчанию', itemsArr:['По умолчанию', 'По имени (A - Я)','По имени (Я - A)', 'По цене (возрастанию)', 'По цене (убыванию)', 'По рейтингу (возрастанию)', 'По рейтингу (убыванию)',  'По модели (A - Я)', 'По модели (Я - A)']})
+								
+								.filters-group__count
+									+mySelect({addClass: 'mySelect--absolute', val:'15', itemsArr:['25', '50','75', '100']})
+								
+								
+								//===== переключение отображения карточек ============
+								.filters-group__display
+									.btn-display-row
+										svg.svg-display-row
+											use(href="./img/svgSprite.svg#svg-display-row")
+									.btn-display-grid
+										svg.svg-display-grid
+											use(href="./img/svgSprite.svg#svg-display-grid")
+									.btn-display-table.active
+										svg.svg-display-table
+											use(href="./img/svgSprite.svg#svg-display-table")
 							
-						.category-products.wrapper-column.wrapper-table
-							+pc-trf('1', 11, 'Apple iPhone 13 Pro 1TB Silver (MLVW3) Apple iPhone 13 Pro 1TB Silver', 'in', '4.5')
-							+pc-trf('1', 11, 'Apple iPhone 13 Pro 1TB Silver (MLVW3) Apple iPhone 13 Pro 1TB Silver', 'in', '4.5')
-							+pc-trf('1', 11, 'Apple iPhone 13 Pro 1TB Silver (MLVW3) Apple iPhone 13 Pro 1TB Silver', 'in', '4.5')
+							.category-products.wrapper-column.wrapper-table
+								+pc-trf('1', 11, 'Apple iPhone 13 Pro 1TB Silver (MLVW3) Apple iPhone 13 Pro 1TB Silver', 'in', '4.5')
+								+pc-trf('1', 11, 'Apple iPhone 13 Pro 1TB Silver (MLVW3) Apple iPhone 13 Pro 1TB Silver', 'in', '4.5')
+								+pc-trf('1', 11, 'Apple iPhone 13 Pro 1TB Silver (MLVW3) Apple iPhone 13 Pro 1TB Silver', 'in', '4.5')
 block variables
 	-var title = "Страница категорий";
 	-var bodyCl = "grid-page";

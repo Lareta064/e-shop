@@ -198,4 +198,12 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www
 		
 	}
 }
-
+.svg-display-grid, 
+.svg-display-row,
+.svg-display-table{
+	width: 18px;
+	height: 18px; 
+	fill: transparent; 
+	cursor:pointer;
+	stroke: #333;
+}

@@ -498,6 +498,14 @@
 		transform: translateX(-80%);
 	}
 }
+.wrapper-column{
+.product-card +.product-card{margin-top: 20px;}
+}
+.wrapper-column.wrapper-table{
+	.product-card+.product-card {
+			margin-top: 0;
+		}
+}
 .wrapper-column.wrapper-table  .product-card{
 	overflow: unset;
 	min-height:75px;

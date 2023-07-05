@@ -3,6 +3,6 @@ mixin mySelect(arr)
 		.mySelect-input
 			input.selectValue.form-input(type='text' readonly='' value=''+ arr.val)
 			
-		.mySelect-drop.scroll-vertical
+		.mySelect-drop.scroll-y
 			each item in arr.itemsArr
 				input.mySelect-options(type='text' readonly='' value=''+ item)
