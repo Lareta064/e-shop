@@ -102,7 +102,8 @@ mixin pc-trf(img,img2, title, stock, stars, price)
 		.pc__info
 
 			.pc__body
-				a(href="product-page.html").pc__name !{title}
+				a(href="product-page.html").pc__name
+					span !{title}
 				if stock == 'in'
 					.pc__stock.instock
 						span Есть в наличии
