@@ -498,14 +498,8 @@
 		transform: translateX(-80%);
 	}
 }
-.wrapper-column{
-.product-card +.product-card{margin-top: 20px;}
-}
-.wrapper-column.wrapper-table{
-	.product-card+.product-card {
-			margin-top: 0;
-		}
-}
+
+
 .wrapper-column.wrapper-table  .product-card{
 	overflow: unset;
 	min-height:75px;
@@ -540,6 +534,7 @@
 			margin-left: 10px;
 			margin-right: 10px;
 			flex-shrink: 0;
+			width: 109px;
 		}
 		.pc__art{
 			width: 90px;
