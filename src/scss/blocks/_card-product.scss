@@ -503,6 +503,9 @@
 .wrapper-column.wrapper-table  .product-card{
 	overflow: unset;
 	min-height:75px;
+	&:hover{
+		box-shadow: rgb(233, 233, 233) 0px 0px 0px 1px;
+	}
 	.pc__info{padding: 0;}
 	.label-block, .product-card:hover .label-block{
 		display: none;
@@ -575,9 +578,12 @@
 	.btn-quick-view{display: none;}
 	.pc__links-wrapper{
        white-space: nowrap;
+	   flex-grow:1;
+	   margin-right: 8px;
 	}
 	.pc__links{
 		column-gap:6px;
+		justify-content: flex-end;
 		a{
 			box-shadow: none;
 			background-color: #f8f9fa;

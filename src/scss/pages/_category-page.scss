@@ -1,5 +1,4 @@
 .category-products-block{
-	padding-top: 20px;
 	.filters-group{
 		@media(max-width:1199px) {
 			width: 100%;
@@ -51,8 +50,13 @@
 		column-gap: 20px;
 	}
 	@media(max-width: 991px) {grid-template-columns: repeat(2, 1fr);}
-	@media(max-width: 599px) {
+	@media(max-width: 767px){
+		.product-card .btn span{display: none;}
+	}
+
+	@media(max-width: 424px) {
 		grid-template-columns: repeat(1, 1fr);
+		
 		
 	}
 }
