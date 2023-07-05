@@ -71,12 +71,12 @@ block content
 							.scroll-horizontal
 								.category-list__grid
 									+category-card('1', 'AV ресиверы')
-									+category-card('2', 'MP3 плееры')
-									+category-card('3', 'Акустические системы (колонки)')
-									+category-card('4', 'Музыкальные центры')
+									+category-card('2', 'MP3 плееры', 'empty')
+									+category-card('3', 'Акустические системы (колонки)', 'empty')
+									+category-card('4', 'Музыкальные центры', 'empty')
 									+category-card('5', 'Наушники и гарнитуры')
 									+category-card('6', 'Системы домашнего кинотеатра' )
-									+category-card('7', 'Усилители')
+									+category-card('7', 'Усилители', 'empty')
 						
 						
 						.category-products-block.filtered-block
@@ -94,10 +94,10 @@ block content
 									.btn-display-row(data-display="row")
 										svg.svg-display-row
 											use(href="./img/svgSprite.svg#svg-display-row")
-									.btn-display-grid(data-display="grid")
+									.btn-display-grid.active(data-display="grid")
 										svg.svg-display-grid
 											use(href="./img/svgSprite.svg#svg-display-grid")
-									.btn-display-table.active(data-display="table")
+									.btn-display-table(data-display="table")
 										svg.svg-display-table
 											use(href="./img/svgSprite.svg#svg-display-table")
 							

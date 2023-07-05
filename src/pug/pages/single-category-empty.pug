@@ -66,48 +66,14 @@ block content
 							{link: "index.html", text: 'Главная'},
 							{link: "category-page.html", text: 'Аудио техника'},
 						)
-						.category-list__cards
-							h2.h2 Аудио техника
-							.scroll-horizontal
-								.category-list__grid
-									+category-card('1', 'AV ресиверы')
-									+category-card('2', 'MP3 плееры')
-									+category-card('3', 'Акустические системы (колонки)')
-									+category-card('4', 'Музыкальные центры')
-									+category-card('5', 'Наушники и гарнитуры')
-									+category-card('6', 'Системы домашнего кинотеатра' )
-									+category-card('7', 'Усилители')
-						
-						
+						h2.h2 Аудио техника
 						.category-products-block.filtered-block
-							//======= строка с фильтрами =============	
-							.filters-group
-								.filters-group__type
-									+mySelect({addClass: 'mySelect--absolute', val:'По умолчанию', itemsArr:['По умолчанию', 'По имени (A - Я)','По имени (Я - A)', 'По цене (возрастанию)', 'По цене (убыванию)', 'По рейтингу (возрастанию)', 'По рейтингу (убыванию)',  'По модели (A - Я)', 'По модели (Я - A)']})
-								
-								.filters-group__count
-									+mySelect({addClass: 'mySelect--absolute', val:'15', itemsArr:['25', '50','75', '100']})
-								
-								
-								//===== переключение отображения карточек ============
-								.filters-group__display.filtered-block-buttons
-									.btn-display-row(data-display="row")
-										svg.svg-display-row
-											use(href="./img/svgSprite.svg#svg-display-row")
-									.btn-display-grid(data-display="grid")
-										svg.svg-display-grid
-											use(href="./img/svgSprite.svg#svg-display-grid")
-									.btn-display-table.active(data-display="table")
-										svg.svg-display-table
-											use(href="./img/svgSprite.svg#svg-display-table")
-							
-							.category-products.filtered-block-content
-								+pc-trf('1', 11, 'Apple iPhone 13 Pro 1TB ', 'in', '4.5')
-								+pc-trf('2', 22, 'Apple iPhone 13 Pro 1TB Silver', 'in', '4.5')
-								+pc-trf('3', 33, 'Apple iPhone 13 Pro 1TB Silver (MLVW3) Apple iPhone 13 Pro 1TB Silver', 'out', '4.5')
-								+pc-trf('1', 11, 'Apple iPhone ', 'in', '4.5')
-								+pc-trf('2', 22, 'Apple iPhone 13 Pro 1TB Silver (MLVW3) Apple iPhone 13 Pro 1TB Silver Apple iPhone 13 Pro 1TB Silver (MLVW3) Apple iPhone 13 Pro 1TB Silver', 'out', '4.5')
-								+pc-trf('3', 33, 'Apple iPhone 13 Pro 1TB Silver (MLVW3) Apple iPhone 13 Pro 1TB Silver', 'in', '4.5')
+							//====== когда нет товаров в категории =========
+							.category-products-empty
+								img(src="./img/category-list/cat2.png", width="100" height="100" alt="img")
+								p В этой категории нет товаров.
+								.button-wrapper
+									a(href="main_2.html").btn Продолжить
 block variables
 	-var title = "Страница категорий";
 	-var bodyCl = "grid-page";

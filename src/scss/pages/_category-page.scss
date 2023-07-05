@@ -66,3 +66,18 @@
 .category-products.wrapper-column.wrapper-table{
 	row-gap: 0;
 }
+.category-products-empty{
+	img{
+		width: 80px;
+		height: 80px;
+		object-fit: contain;
+		margin-bottom: 40px;
+	}
+	p{
+		margin-bottom: 10px;
+	}
+	.button-wrapper{
+		display: flex;
+		justify-content: flex-end;
+	}
+}
