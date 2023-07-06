@@ -474,6 +474,7 @@
 		flex-direction: column;
 		align-items: flex-end;
 		
+		
 	}
 	.pc__links-wrapper{
 		position: relative;
@@ -493,6 +494,7 @@
 		row-gap:25px;
 		padding: 0;
 		padding-left: 20px;
+		padding-top: 10px;
 	}
 	.tooltip-box.btn-compare .tooltip-text{
 		transform: translateX(-80%);
@@ -559,7 +561,7 @@
         flex-shrink: 0;
 		
 	}
-	.pc__footer{width: 335px;}
+	.pc__footer{width: 335px; padding-top: 0;}
 	.pc__price-box{
 		white-space: nowrap; width: 120px;
 		.pc__price{ font-size: 14px;}

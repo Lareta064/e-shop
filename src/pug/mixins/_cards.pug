@@ -10,9 +10,7 @@ mixin card-light(link, imgSrc, title, price)
 mixin benefitCard(svg, title, text)
 	.benefit-card
 		.benefit-card__icon
-			svg(class="svg-ben"+ svg)
-				use(href="./img/svgSprite.svg#svg-ben"+ svg)
-
+			img(src="./img/benefit"+ svg+".svg", width="55" height="55" alt="")
 		.benefit-card__text
 			.text-bold !{title}
 			p !{text}

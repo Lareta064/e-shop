@@ -18,7 +18,7 @@
 		flex-shrink: 0; margin-right: 15px;
 		width: 55px;
 		height: 55px;
-		svg{width: 100%; height: 100%;}
+		svg, img{width: 100%; height: 100%; object-fit: contain;}
 		
 	}
 	&__text .text-bold{
@@ -58,10 +58,16 @@
 		column-gap: 10px;
 		row-gap:15px;
 	}
-	@media (max-width: 991px) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	@media (max-width: 599px) {
-		grid-template-columns: repeat(1, 1fr);
+	
+}
+.benefits.benefits--wrap{
+	.benefit-wrapper{
+		.benefit-card{width: 100%;}
+		@media (max-width: 991px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: 599px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 }

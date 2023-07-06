@@ -11,8 +11,7 @@ mixin catalog-menu(obj)
 					each item in obj
 						li
 							a(href="#!"+ item.link) 
-								svg(class="svg-"+ item.svg)
-									use(href="./img/svgSprite.svg#svg-"+ item.svg +"")
+								img(src="./img/category-icons/"+item.svg +".svg", width="20" height="20"  alt="icon")
 								span !{item.text}
 							if item.menuArr
 								//==== меню Уровень #2 =====
@@ -142,7 +141,7 @@ mixin catalog-menu(obj)
 			{link:'', text: 'Умный дом'}
 			]
 	},
-	{link:'', text:'Детский мир', svg:'cat4',
+	{link:'', text:'Детский мир', svg:'cat33',
 		menuArr: [
 			{link:'', text: 'Игрушки'},
 			{link:'', text: 'Коляски и велокресла'},
@@ -150,7 +149,7 @@ mixin catalog-menu(obj)
 			
 		]
 	},
-	{link:'', text:'Компьютеры', svg:'cat5',
+	{link:'', text:'Компьютеры', svg:'cat6',
 		menuArr: [
 			{link:'', text: 'IP-телефония'},
 			{link:'', text: 'USB Flash'},
@@ -172,7 +171,7 @@ mixin catalog-menu(obj)
 			{link:'', text: 'Сетевое оборудование'},
 			]
 	},
-	{link:'', text:'Apple Store', svg:'cat6',
+	{link:'', text:'Apple Store', svg:'cat5',
 		menuArr: [
 			{link:'', text: 'Apple TV'},
 			{link:'', text: 'Apple Watch'},
@@ -197,7 +196,7 @@ mixin catalog-menu(obj)
 			{link:'', text: 'Устройства ввода'},
 			]
 	},
-	{link:'', text:'ТВ, Видео, Фото', svg:'cat7',
+	{link:'', text:'ТВ, Видео, Фото', svg:'cat4',
 		menuArr: [
 			{link:'', text: 'Видеокамеры'},
 			{link:'', text: 'Настенные крепления для телевизоров'},
@@ -219,7 +218,7 @@ mixin catalog-menu(obj)
 			{link:'', text: 'Экшн-камеры'},
 			]
 	},
-	{link:'', text:'Ноутбуки и планшеты', svg:'cat8',
+	{link:'', text:'Ноутбуки и планшеты', svg:'cat6',
 		menuArr: [
 			{link:'', text: 'Аккумуляторы для ноутбуков'},
 			{link:'', text: 'Аксессуары'},
@@ -234,7 +233,7 @@ mixin catalog-menu(obj)
 			{link:'', text: 'Электронные книги'},
 			]
 	},
-	{link:'', text:'Спорт', svg:'cat9',
+	{link:'', text:'Спорт', svg:'cat7',
 		menuArr: [
 			{link:'', text: 'AV ресиверы'},
 			{link:'', text: 'MP3 плееры'},
@@ -245,7 +244,7 @@ mixin catalog-menu(obj)
 			{link:'', text: 'Усилители'},
 			]
 	},
-	{link:'', text:'Телефоны', svg:'cat10',
+	{link:'', text:'Телефоны', svg:'cat8',
 		menuArr: [
 			{link:'', text: 'AV ресиверы'},
 			{link:'', text: 'MP3 плееры'},
@@ -256,7 +255,7 @@ mixin catalog-menu(obj)
 			{link:'', text: 'Усилители'},
 			]
 	},
-	{link:'', text:'Game Zone', svg:'cat11',
+	{link:'', text:'Game Zone', svg:'cat9',
 		menuArr: [
 			{link:'', text: 'AV ресиверы'},
 			{link:'', text: 'MP3 плееры'},
