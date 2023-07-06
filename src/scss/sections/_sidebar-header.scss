@@ -6,7 +6,7 @@
 	}
 }
 .benefits-mobile{
-	display: none;
+	// display: none;
 	@media (max-width: 1199px) {
 	display: grid;
 	}
@@ -175,4 +175,27 @@
 		max-height: 491px;
 		height: 491px;
 	}
+}
+@media(max-width:1199px){
+	.header-slider-grid{
+		grid-template-columns: 1fr;
+		grid-template-rows: 250px 100px 145px;
+		.header-slider-column{
+			grid-area: unset;
+			display: none;
+			width: 0;
+		}
+		.banner-slider{grid-area: 1 / 1 / 2 / 2;}
+		.banner-sidebar{
+			grid-area: 2 / 1 / 3 / 2;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows:  100px;
+			width: 100%;
+			column-gap:20px;
+		}
+		.header-benefits{grid-area: 3 / 1 / 4 / 2;}
+	}
+
+// .benefits-mobile{display: none;}
+.header-slider{display: block;}	
 }

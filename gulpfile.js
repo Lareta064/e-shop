@@ -57,11 +57,11 @@ gulp.task("scss", function(callback) {
         .pipe(sass({
             outputStyle: 'expanded',
         }))
-        .pipe(
-            autoprefixer({
-                overrideBrowserslist: ["last 4 versions"]
-            })
-        )
+        // .pipe(
+        //     autoprefixer({
+        //         overrideBrowserslist: ["last 4 versions"]
+        //     })
+        // )
         .pipe(gcmq())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest("./build/css/"))
