@@ -1,7 +1,10 @@
 .banner-slider{
 	background-color: #000;
 	height: 600px;
-	
+	.banner-slide .container {
+		padding-left: 60px;
+		
+	}
 	@media(max-width:1599px){
 		height: 399px;
 	}
@@ -12,7 +15,14 @@
 	  height:250px;
 	}
 	@media (max-width: 991px) {
-	   display: none;
+		.slick-dots{display: none;}
+
+	}
+	@media (max-width: 767px) {
+		.banner-slide .container {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
 	}
 	.slick-dots{
 		bottom: 15px;

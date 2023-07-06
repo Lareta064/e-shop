@@ -19,9 +19,9 @@
 @import "blocks/_header-bottom.scss";
 @import "blocks/_catalog-menu.scss";
 .header-slider{
-	@media (max-width: 1199px) {
-	display: none;
-	}
+	// @media (max-width: 1199px) {
+	// display: none;
+	// }
 }
 .header-top-banner{
 	display: block;
