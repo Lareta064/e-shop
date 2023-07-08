@@ -34,33 +34,36 @@ document.addEventListener("DOMContentLoaded", function (){
 	 /*  для второй версии шапки отслеживать пока слайдер не прокрутится */
 	window.addEventListener('scroll', function () {
 		const headerFixLong = document.getElementById('header-fix');
-		const headerFixLongCatalogy = document.querySelector('.catalog-menu-wrapper');
-		if (window.innerWidth >= 1440) {
-			
+		if (headerFixLong){
+			const headerFixLongCatalogy = document.querySelector('.catalog-menu-wrapper');
+			if (window.innerWidth >= 1440 ) {
+				
 
-			if (window.pageYOffset > 800) {
-				headerFixLong.classList.add('header-fixed');
-				headerFixLongCatalogy.classList.remove('catalog-menu--visible');
-				catalogMenu.classList.add('cat-menu--scroll');
+				if (window.pageYOffset > 800) {
+					headerFixLong.classList.add('header-fixed');
+					
+					headerFixLongCatalogy.classList.remove('catalog-menu--visible');
+					catalogMenu.classList.add('cat-menu--scroll');
+				}
+				else { 
+					headerFixLong.classList.remove('header-fixed'); 
+					headerFixLongCatalogy.classList.add('catalog-menu--visible');
+					catalogMenu.classList.remove('cat-menu--scroll');
+				}
 			}
-			else { 
-				headerFixLong.classList.remove('header-fixed'); 
-				headerFixLongCatalogy.classList.add('catalog-menu--visible');
-				catalogMenu.classList.remove('cat-menu--scroll');
-			}
-		}
-		if (window.innerWidth >= 992) {
-			
+			if (window.innerWidth >= 992) {
+				
 
-			if (window.pageYOffset > 500) {
-				headerFixLong.classList.add('header-fixed');
-				headerFixLongCatalogy.classList.remove('catalog-menu--visible');
-				catalogMenu.classList.add('cat-menu--scroll');
-			}
-			else {
-				headerFixLong.classList.remove('header-fixed');
-				headerFixLongCatalogy.classList.add('catalog-menu--visible');
-				catalogMenu.classList.remove('cat-menu--scroll');
+				if (window.pageYOffset > 500) {
+					headerFixLong.classList.add('header-fixed');
+					headerFixLongCatalogy.classList.remove('catalog-menu--visible');
+					catalogMenu.classList.add('cat-menu--scroll');
+				}
+				else {
+					headerFixLong.classList.remove('header-fixed');
+					headerFixLongCatalogy.classList.add('catalog-menu--visible');
+					catalogMenu.classList.remove('cat-menu--scroll');
+				}
 			}
 		}
 	});
