@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			if(window.innerWidth >=992){
 				
 				
-				if(window.pageYOffset > 170){
+				if(window.pageYOffset > 100){
 					headerFix.classList.add('header-fixed');
 				}
 				else{headerFix.classList.remove('header-fixed');}

@@ -1,8 +1,23 @@
-extends ../layouts/layout.pug
+extends ../layouts/layout-inner-page.pug
 
 block content
-	.container
-		h1 Отзывы о магазине
-		a(href="main.html") На Главную
+	//======== каталог меню на мобильной версии ============
+	include ../blocks/_multi-level-menu
+
+	//======== user modal mobile ============
+	include ../blocks/_user-menu-mobile
+	
+	//======== header ============
+	include ../sections/_header
+	main.main.main--inner
+		.product-page__content
+			.container
+				//====== breadcrumbs ======
+				+breadcrumbs(
+					{link: "index.html", text: 'Главная'},
+					{link: "category-page.html", text: 'отзывы о магаазине'},)
+				.review-cards
+					
+					.title-20.text-upper ОТЗЫВЫ о магазине
 block variables
-	-var title = "Page";
+	-var title = "отзывы о магаазине";

@@ -1,0 +1,37 @@
+extends ../layouts/layout-inner-page.pug
+
+block content
+	//======== каталог меню на мобильной версии ============
+	include ../blocks/_multi-level-menu
+
+	//======== user modal mobile ============
+	include ../blocks/_user-menu-mobile
+	
+	//======== header ============
+	include ../sections/_header
+	main.main.main--inner
+		.product-page__content
+			.container
+				//====== breadcrumbs ======
+				+breadcrumbs(
+					{link: "index.html", text: 'Главная'},
+					{link: "category-page.html", text: 'отзывы'},)
+				
+				.title-20.text-upper ОТЗЫВЫ ПОКУПАТЕЛЕЙ
+				.review-cards
+					.large-card
+						.large-card__img
+							img(src="./img/products/phone1.jpg", alt="alt")
+						.large-card__content
+							a(href="product-page.html").h2 Apple Watch Edition Series 3 GPS + Cellular 42mm White Ceramic w. Soft White/Pebble Sport B. (MQKD2)
+							figure
+								blockquote Прочные, водонепроницаемые, удобная синхронизация, можно разговаривать, писать и читать почту и сообщения, долго держит заряд
+
+								figcaption Василий
+								time 03.01.2020
+
+					
+
+		
+block variables
+	-var title = "Отзывы";

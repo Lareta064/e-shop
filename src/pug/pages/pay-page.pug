@@ -1,8 +1,35 @@
 extends ../layouts/layout.pug
 
 block content
-	.container
-		h1 Оплата
-		a(href="main.html") На Главную
+	//======== каталог меню на мобильной версии ============
+	include ../blocks/_multi-level-menu
+
+	//======== user modal mobile ============
+	include ../blocks/_user-menu-mobile
+	
+	//======== header ============
+	include ../sections/_header
+	main.main.main--inner
+		.container
+			+breadcrumbs(
+				{link: "index.html", text: 'Главная'},
+				{link: "#!", text: 'Доставка'},
+			)
+			.grid-wrapper
+				//====== левая колонка ======
+				.grid-wrapper-aside
+					.aside-menu
+						a(href="blog.html") Блог
+							span 4
+						
+						a(href="news.html") Новости
+							span 4
+				
+				//====== основной контент ======
+				.grid-wrapper-body
+					h2.h2 Оплата
+					.info-text-wrapper
+						p Информация об оплате
+						
 block variables
-	-var title = "Page";
+	-var title = "Оплата";
