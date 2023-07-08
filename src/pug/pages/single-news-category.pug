@@ -13,7 +13,8 @@ block content
 		.container
 			+breadcrumbs(
 				{link: "index.html", text: 'Главная'},
-				{link: "#!", text: 'Блог'},
+				{link: "blog.html", text: 'Новости'},
+				{link: "#!", text: 'Новости 1 подкатегория'},
 			)
 			.grid-wrapper
 				//====== левая колонка ======
@@ -22,13 +23,22 @@ block content
 						li
 							a(href="blog.html") Блог
 								span 4
+						
 						li
-							a(href="news.html") Новости
+							p Новости
 								span 4
-					
+							ul
+								li
+									a(href="news-category.html") Новости 1 подкатегория
+										span 3
+								li
+									a(href="news-category.html") Новости 2 подкатегория
+										span 1
+				
 				//====== основной контент ======
 				.grid-wrapper-body
-					h2.h2 Блог
+					h2.h2 Новости 1 подкатегория
+					
 					.filtered-block
 						//======= строка с фильтрами =============	
 						.filters-group
@@ -44,7 +54,7 @@ block content
 							.article-card__img
 								img(src="./img/products/phone1.jpg", alt="img")
 							.article-card__title
-								a(href="single-blog.html" target="_blank").light-head Обзор Sony PlayStation 5. Все особенности, игры, геймпад и сравнение с Xbox Series X
+								a(href="single-news.html" target="_blank").light-head Обзор Sony PlayStation 5. Все особенности, игры, геймпад и сравнение с Xbox Series X
 								.article-flex__row
 									.article-card__date
 										.icon-clock
@@ -80,7 +90,7 @@ block content
 							.article-card__img
 								img(src="./img/products/phone1.jpg", alt="img")
 							.article-card__title
-								a(href="single-blog.html" target="_blank").light-head Обзор Sony PlayStation 5. Все особенности, игры, геймпад и сравнение с Xbox Series X
+								a(href="single-news.html" target="_blank").light-head Обзор Sony PlayStation 5. Все особенности, игры, геймпад и сравнение с Xbox Series X
 								.article-flex__row
 									.article-card__date
 										.icon-clock
@@ -117,7 +127,7 @@ block content
 							.article-card__img
 								img(src="./img/products/phone1.jpg", alt="img")
 							.article-card__title
-								a(href="single-blog.html" target="_blank").light-head Обзор Sony PlayStation 5. Все особенности, игры, геймпад и сравнение с Xbox Series X
+								a(href="single-news.html" target="_blank").light-head Обзор Sony PlayStation 5. Все особенности, игры, геймпад и сравнение с Xbox Series X
 								.article-flex__row
 									.article-card__date
 										.icon-clock
