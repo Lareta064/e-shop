@@ -1,3 +1,7 @@
+
+
+
+
 document.addEventListener("DOMContentLoaded", function (){
 	
 	const starBlock = document.querySelectorAll('[data-rating]');
