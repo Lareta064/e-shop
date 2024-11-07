@@ -1,7 +1,11 @@
 /*
-#00BC52;
+
 #04A349;
 */
+:root{
+  --accentColor: #00BC52;
+  --accentColorHover: #04A349;
+}
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -45,7 +49,7 @@ textarea,
 button {
   outline: none;
 }
-button{border: none;}
+
 .w-100{width: 100%;}
 .container {
   width: 100%;
@@ -589,13 +593,14 @@ button{border: none;}
 .btn-link a {
   font-size: 16px;
   line-height: 1;
-  color: #FC778D;
-  border-bottom: 1px solid #FC778D;
+  color: var(--accentColor);
+  border-bottom: 1px solid var(--accentColor);
   font-family: 'Montserrat';
   font-weight: 700;
+ transition: 0.3s;
 }
 .btn-link a:hover {
-  color: #ee3264;
+  color: var(--accentColorHover);
 }
 .btn-link.btn-link--dark {
   padding-left: 30px;
@@ -798,6 +803,7 @@ button{border: none;}
   padding-left: 10px;
   padding-right: 10px;
   position: relative;
+  border: 1px solid transparent;
 }
 @media (max-width: 767px) {
   .btn {
@@ -946,3 +952,17 @@ button.disable.btn:hover span {
 .authorization-form .btn.btn-icon {
   width: 100%;
 }
+.row-grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap:60px;
+}
+.col-grid-md-6{
+  grid-column: span 6;
+}
+@media (max-width: 1199px) {
+.row-grid{gap: 30px;}
+}
+ @media (max-width: 991px) {
+  .row-grid{grid-template-columns: repeat(6, 1fr);}
+ }

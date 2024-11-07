@@ -1,0 +1,86 @@
+extends ../layouts/layout-lk.pug
+
+block content
+	section.edit-profile.lk-frame
+		.container
+			.edit-profile__content
+				.lk-title.lk-title--flex
+					h1 Редактирование профиля
+					.lk-title__buttons
+						.btn-link.btn-link--dark
+							a(href='account-page.html') Назад
+						.btn-link
+							a(href='#!') Выход
+				.edit-profile__wrapper
+					.row-grid
+						.col-grid-md-6
+							.edit-user-info
+								form.form-edit-info(action)
+									.form-item
+										span.form-item__label Имя
+										.form-item__group
+											.error-icon
+											input(type=' text' name placeholder=' Константин Константинопольский')
+											p.error-message Введите корректные значения
+									.form-item
+										span.form-item__label Номер телефона
+										.form-item__group
+											.error-icon
+											input(type=' text' name placeholder=' +7 999 888 77 66')
+											p.error-message Введите корректные значения
+									.form-item
+										span.form-item__label Улица
+										.form-item__group
+											.error-icon
+											input(type=' text' name placeholder=' Комсомольская')
+											p.error-message Введите корректные значения
+									.form-item
+										span.form-item__label Дом
+										.form-item__group
+											.error-icon
+											input(type=' text' name placeholder=' 28/4')
+											p.error-message Введите корректные значения
+									.form-item
+										span.form-item__label Подъезд
+										.form-item__group
+											.error-icon
+											input(type=' text' name placeholder=' 3')
+									.form-item
+										span.form-item__label Этаж
+										.form-item__group
+											.error-icon
+											input(type=' text' name placeholder=' 12')
+									.form-item
+										span.form-item__label Квартира
+										.form-item__group
+											.error-icon
+											input(type=' text' name placeholder=' 552')
+									.form-item.form-item--btn
+										button.btn(type='submit')
+											span Сохранить изменения
+						.col-grid-md-6
+							.edit-user-pass
+								form.form-edit-info(action)
+									.form-item
+										span.form-item__label Старый пароль
+										.form-item__group
+											.error-icon
+											input(type=' password' name placeholder=' Старый пароль')
+											p.error-message Не совпадает
+									.form-item
+										span.form-item__label Новый пароль
+										.form-item__group
+											.error-icon
+											input(type=' password' name placeholder=' Новый пароль')
+									.form-item
+										span.form-item__label Новый пароль еще раз
+										.form-item__group
+											.error-icon
+											input(type=' password' name placeholder=' Новый пароль')
+											p.error-message Не совпадает
+									.form-item.form-item--btn
+										button.btn(type='submit')
+											span Сохранить изменения
+										
+block variables
+	-var title = "Профиль. Редактирование";
