@@ -11,20 +11,11 @@ block content
 						button.tabs__nav-item.active(data-tab='1') Личный кабинет
 						button.tabs__nav-item(data-tab='2') История заказов
 					.custom-tabs__content
+						//====Личный кабинет===
 						.custom-tab__box.custom-tab__one.active(data-content='1')
-							.row
-								.col-xl-6.order-xl-2
-									.account-info__reward
-										.form-badge__group
-											p Бонусы:
-											.form-badge 2920
-										.form-badge__group
-											p Уровень:
-											.form-badge 3 (10%)
-										.form-badge__group
-											p Заказов:
-											.form-badge 63
-								.col-xl-6.order-xl-1
+							.row-grid
+								//====USER INFO====
+								.col-grid-xl-6.order-xl-1
 									.account-info__list
 										ul
 											li
@@ -40,12 +31,26 @@ block content
 												p Адрес доставки:
 												p ул. Комсомольская, д. 28/4, кв. 552 Подъезд 3, Этаж 12
 									.form-item.form-item--btn
-										a.btn(href='lk-profile-edit.html')
+										a.btn.xs-100(href='lk-profile-edit.html')
 											span Редактировать
+								//====BONUS====
+								.col-grid-xl-6.order-xl-2
+									.account-info__reward
+										.form-badge__group
+											p Бонусы:
+											.form-badge 2920
+										.form-badge__group
+											p Уровень:
+											.form-badge 3 (10%)
+										.form-badge__group
+											p Заказов:
+											.form-badge 63
+						
+						//====История заказов===
 						.custom-tab__box.custom-tab__two(data-content='2')
 							.order-history
-								.row
-									.col-xl-6
+								.row-grid
+									.col-grid-xl-6
 										.order-history-table
 											h3.section-title История:
 											.custom-accordion
@@ -143,7 +148,7 @@ block content
 																		td 1
 																		td 250 руб
 																		td 250 руб
-									.col-xl-6
+									.col-grid-xl-6
 										.order-history-last
 											h3.section-title Последний заказ:
 											.order-last__content

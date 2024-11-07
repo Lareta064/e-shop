@@ -49,8 +49,25 @@ textarea,
 button {
   outline: none;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
 
-.w-100{width: 100%;}
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  box-shadow: 0 0 0px 1000px #fff inset;
+}
+.w-100{width: 100%!important;}
+
+@media (max-width: 767px) {
+.xs-100 {width: 100%!important;}
+}
+
 .container {
   width: 100%;
   padding-left: 15px;
@@ -187,7 +204,9 @@ button {
   background-color: #fff;
 }
 .form-badge {
-  width: 170px;
+  min-width: 160px;
+  padding-left: 15px;
+  padding-right: 15px;
   text-align: center;
   height: 50px;
   border-radius: 50px;
@@ -263,20 +282,26 @@ button {
   border-bottom: 4px solid #00BC52;
   color: #313131;
 }
-.tabs__nav-item + .tabs__nav-item {
-  margin-left: 70px;
-}
+ .custom-tabs__nav {
+   display: flex;
+   column-gap: 70px;
+ }
+ .custom-tabs__nav .tabs__nav-item {
+   flex-shrink: 0;
+ }
+
 @media (max-width: 991px) {
-  .tabs__nav-item + .tabs__nav-item {
-    margin-left: 40px;
-  }
+  .custom-tabs__nav{column-gap: 20px;}
+  .custom-tabs__nav .tabs__nav-item{font-size: 20px;}
 }
 @media (max-width: 767px) {
-  .tabs__nav-item + .tabs__nav-item {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-  }
+  .custom-tabs__nav {overflow: hidden;
+  overflow-x: auto;
+scrollbar-width: none;}
+ .custom-tabs__nav::-webkit-scrolbar{display: none;}
+ .custom-tabs__nav .tabs__nav-item {
+   font-size: 18px;
+ }
 }
 .custom-tabs__content {
   padding-top: 43px;
@@ -342,7 +367,7 @@ button {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  color: #ee3264;
+  color: var(--accentColor);
 }
 .accordion-card__content {
   height: 0;
@@ -435,7 +460,7 @@ button {
   }
   .table-wrapp::-webkit-scrollbar-thumb {
     border-radius: 2px;
-    background-color: #FC778D;
+    background-color: var(--accentColor);
   }
 }
 .account-info__list ul li {
@@ -548,6 +573,8 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  flex-wrap:wrap;
+  gap:30px;
 }
 @media (max-width: 1199px) {
   .account-info__reward {
@@ -568,15 +595,7 @@ button {
     align-items: center;
   }
 }
-.account-info__reward .form-badge__group + .form-badge__group {
-  margin-left: 30px;
-}
-@media (max-width: 767px) {
-  .account-info__reward .form-badge__group + .form-badge__group {
-    margin: 0;
-    margin-top: 30px;
-  }
-}
+
 .account-info__content {
   position: relative;
 }
@@ -716,7 +735,7 @@ button {
 .order-last__list .account-info__list ul li:last-child p:last-child {
   font-size: 20px;
   line-height: 24px;
-  color: #ee3264;
+  color: var(--accentColor);
   font-family: 'Montserrat';
   font-weight: 700;
 }
@@ -769,11 +788,11 @@ button {
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
-  border-bottom: 1px solid #3DBEE3;
+  border-bottom: 1px solid var(--accentColor);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  color: #3DBEE3;
+  color: var(--accentColor);
 }
 @media (max-width: 767px) {
   .history-item__deskrip {
@@ -786,7 +805,12 @@ button {
   }
 }
 .btn {
-  display: inline-block;
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  column-gap:10px;
   color: #fff;
   font-family: Montserrat;
   font-style: normal;
@@ -957,33 +981,23 @@ button.disable.btn:hover span {
   grid-template-columns: repeat(12, 1fr);
   column-gap:60px;
 }
-.col-grid-md-6{
+.col-grid-md-6, .col-grid-xl-6{
   grid-column: span 6;
 }
-/*
-.account-info__reward,
-.account-info__list,
-.order-history-table,
-.order-history-last {
-  flex-grow: 1;
-}
 
-.order-history-table .order-history-last {
-  width: 100%;
-}
-
-@media (max-width: 1024px) {
-  .account-info__reward {
-    order: 2
-  }
-
-  .account-info__list {
-    order: 1;
-  }
-}*/
 @media (max-width: 1199px) {
-.row-grid{gap: 30px;}
+  .order-xl-1 {order: 2; }
+  .order-xl-2 {order: 1;}
+   
+  .row-grid{gap: 30px;}
+  .col-grid-xl-6 {
+    grid-column: span 12;
+  }
+.account-info__reward{margin-bottom: 60px; gap:20px;}
 }
  @media (max-width: 991px) {
   .row-grid{grid-template-columns: repeat(6, 1fr);}
+    .col-grid-xl-6 {
+      grid-column: span 6;
+    }
  }
