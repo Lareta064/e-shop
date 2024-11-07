@@ -1,0 +1,62 @@
+extends ../layouts/layout-lk.pug
+
+block content
+	section.authorization-frame.lk-frame
+		.container
+			.authorization-frame__content
+				.custom-tabs
+					.custom-tabs__nav
+						button.tabs__nav-item.active(data-tab='1') Авторизация
+						button.tabs__nav-item(data-tab='2') Регистрация
+					.custom-tabs__content
+						.custom-tab__box.custom-tab__one.active(data-content='1')
+							form.authorization-form(action)
+								.form-item
+									span.form-item__label Email:
+									.incorrect.form-item__group
+										.error-icon
+										input(type=' text' name placeholder=' Введите Email')
+										p.error-message Введите корректный email
+								.form-item
+									span.form-item__label Пароль:
+									.form-item__group
+										.error-icon
+										input(type=' password' name placeholder=' Введите пароль')
+								.form-item.form-item--btn
+									button.btn.btn-icon(type='submit')
+										| Вход
+										i.fas.fa-caret-right
+									.form-item__text
+										a(href='recover.html') Забыли пароль?
+						.custom-tab__box.custom-tab__two(data-content='2')
+							form.registration-form(action)
+								.form-item
+									span.form-item__label Имя:
+									.form-item__group
+										.error-icon
+										input(type=' text' name placeholder=' Введите Имя')
+										p.error-message Введите корректное значение
+								.form-item
+									span.form-item__label Email:
+									.form-item__group
+										.error-icon
+										input(type=' text' name placeholder=' Введите Email')
+										p.error-message Введите корректное значение
+								.form-item
+									span.form-item__label Телефон:
+									.form-item__group
+										.error-icon
+										input(type=' text' name placeholder=' Введите телефон')
+										p.error-message Введите корректное значение
+								.form-item
+									span.form-item__label Пароль:
+									.form-item__group
+										.error-icon
+										input(type=' password' name placeholder=' Введите пароль')
+										p.error-message Введите корректное значение
+								.form-item.form-item--btn
+									button.btn.btn-icon(type='submit')
+										| Вход
+										i.fas.fa-caret-right
+block variables
+	-var title = "Авторизация";
