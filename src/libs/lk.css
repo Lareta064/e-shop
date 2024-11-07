@@ -194,7 +194,7 @@ button {
   line-height: 50px;
   background-color: #f5f5f5;
   font-size: 25px;
-  color: #ee3264;
+  color: var(--accentColor);
   font-family: 'Montserrat';
   font-weight: 700;
 }
@@ -960,6 +960,27 @@ button.disable.btn:hover span {
 .col-grid-md-6{
   grid-column: span 6;
 }
+/*
+.account-info__reward,
+.account-info__list,
+.order-history-table,
+.order-history-last {
+  flex-grow: 1;
+}
+
+.order-history-table .order-history-last {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .account-info__reward {
+    order: 2
+  }
+
+  .account-info__list {
+    order: 1;
+  }
+}*/
 @media (max-width: 1199px) {
 .row-grid{gap: 30px;}
 }

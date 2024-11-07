@@ -1,0 +1,181 @@
+extends ../layouts/layout-lk.pug
+
+block content
+	section.account-info.lk-frame
+		.container
+			.account-info__content
+				.btn-link
+					a(href='#!') Выход
+				.account-info__tabs.custom-tabs
+					.custom-tabs__nav
+						button.tabs__nav-item.active(data-tab='1') Личный кабинет
+						button.tabs__nav-item(data-tab='2') История заказов
+					.custom-tabs__content
+						.custom-tab__box.custom-tab__one.active(data-content='1')
+							.row
+								.col-xl-6.order-xl-2
+									.account-info__reward
+										.form-badge__group
+											p Бонусы:
+											.form-badge 2920
+										.form-badge__group
+											p Уровень:
+											.form-badge 3 (10%)
+										.form-badge__group
+											p Заказов:
+											.form-badge 63
+								.col-xl-6.order-xl-1
+									.account-info__list
+										ul
+											li
+												p Имя:
+												p Константин Константинопольский
+											li
+												p Номер телефона:
+												p +7 999 888 77 66
+											li
+												p E-mail:
+												p name@gmail.com
+											li
+												p Адрес доставки:
+												p ул. Комсомольская, д. 28/4, кв. 552 Подъезд 3, Этаж 12
+									.form-item.form-item--btn
+										a.btn(href='lk-profile-edit.html')
+											span Редактировать
+						.custom-tab__box.custom-tab__two(data-content='2')
+							.order-history
+								.row
+									.col-xl-6
+										.order-history-table
+											h3.section-title История:
+											.custom-accordion
+												.accordion-card
+													button.accordion-card__btn(data-state='show')
+														| Заказ № 2007/640 от 21.07.2020 10:23:37 1500 руб.
+
+														.accordion-card-icon.rotate ←
+													article.accordion-card__content.show
+														.table-wrapp
+															.history-item
+																.history-item__img
+																	img(src='img/history/1.jpg' width='177' alt='img')
+																a.history-item__deskrip(href='#!')
+																	h3 Заголовок с названием урока в 2 или даже 3 строки с подробностями
+																	p Смотреть
+												.accordion-card
+													button.accordion-card__btn(data-state='hide')
+														| Заказ № 2007/640 от 21.07.2020 10:23:37 1500 руб.
+
+														.accordion-card-icon ←
+													article.accordion-card__content
+														.table-wrapp
+															table
+																tbody
+																	tr
+																		td 1.
+																		td Наименование товара, описание/размер
+																		td 1
+																		td 250 руб
+																		td 250 руб
+																	tr
+																		td 1.
+																		td Наименование товара, описание/размер
+																		td 1
+																		td 250 руб
+																		td 250 руб
+																	tr
+																		td 1.
+																		td Наименование товара, описание/размер
+																		td 1
+																		td 250 руб
+																		td 250 руб
+												.accordion-card
+													button.accordion-card__btn(data-state='hide')
+														| Заказ № 2007/640 от 21.07.2020 10:23:37 1500 руб.
+
+														.accordion-card-icon ←
+													article.accordion-card__content
+														.table-wrapp
+															table
+																tbody
+																	tr
+																		td 1.
+																		td Наименование товара, описание/размер
+																		td 1
+																		td 250 руб
+																		td 250 руб
+																	tr
+																		td 1.
+																		td Наименование товара, описание/размер
+																		td 1
+																		td 250 руб
+																		td 250 руб
+																	tr
+																		td 1.
+																		td Наименование товара, описание/размер
+																		td 1
+																		td 250 руб
+																		td 250 руб
+												.accordion-card
+													button.accordion-card__btn(data-state='hide')
+														| Заказ № 2007/640 от 21.07.2020 10:23:37 1500 руб.
+
+														.accordion-card-icon ←
+													article.accordion-card__content
+														.table-wrapp
+															table
+																tbody
+																	tr
+																		td 1.
+																		td Наименование товара, описание/размер
+																		td 1
+																		td 250 руб
+																		td 250 руб
+																	tr
+																		td 1.
+																		td Наименование товара, описание/размер
+																		td 1
+																		td 250 руб
+																		td 250 руб
+																	tr
+																		td 1.
+																		td Наименование товара, описание/размер
+																		td 1
+																		td 250 руб
+																		td 250 руб
+									.col-xl-6
+										.order-history-last
+											h3.section-title Последний заказ:
+											.order-last__content
+												.order-last__head
+													p Заказ № 2007/640 от 21.07.2020
+												.order-last__list
+													.account-info__list
+														ul
+															li
+																p Адрес доставки:
+																p ул. Комсомольская, д. 28/4, кв. 552 Подъезд 3, Этаж 12
+															li
+																p Способ оплаты:
+																p Наличными
+															li
+																p Стоимость доставки:
+																p Бесплатно
+															li
+																p Оплачено бонусами:
+																p 250 руб
+															li
+																p Начислено бонусов:
+																p 25
+															li
+																p Сдача с суммы:
+																p Без сдачи
+															li
+																p Сумма заказа:
+																p 250 руб
+															li
+																p Оплачено:
+																p 250 руб
+										
+block variables
+	-var title = "Профиль. Редактирование";
