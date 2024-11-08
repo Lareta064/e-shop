@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function(){
 let accordionBlock = document.querySelector('.custom-accordion');
 
 if(accordionBlock){
@@ -39,3 +40,4 @@ if(accordionBlock){
 		});
 	}
 }
+})

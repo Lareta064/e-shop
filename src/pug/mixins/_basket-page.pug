@@ -38,7 +38,7 @@ mixin basketItem-grid(imgSrc, text1, text2, oldPrice)
 		.grid-row
 			.basket-item__img
 				if imgSrc
-					img(src="img/main/products/"+ imgSrc +".webp", alt="product" width='170')
+					img(src="img/products/"+imgSrc+".jpg", alt="product" width='170')
 				else
 					img(src="img/main/products/nofoto.jpg", alt="product" width='170')
 			
@@ -49,9 +49,9 @@ mixin basketItem-grid(imgSrc, text1, text2, oldPrice)
 		
 			.basket-item__descrip.text-16
 				.basic-descrip
-					p Урожай 2020 года
+					p Победитель номинации Товар года
 				.addition-set
-					p Шелковица – небольшие мясистые плоды, которые имеют форму костянок 2-3 см. Ягоды сочные, сладкие и имеют приятный аромат.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 			
 			.basket-item__calc
@@ -65,15 +65,10 @@ mixin basketItem-grid(imgSrc, text1, text2, oldPrice)
 						.basket-item__cost-dim руб
 						
 mixin counter
-	.product-counter&attributes(attributes)
-		button.product-counter--minus
-			svg.svg-minus
-				use( href='../img/svgSprite.svg#svg-minus')
-		span.product-counter--num 1
-		button.product-counter--plus
-			svg.svg-plus
-				use( href='../img/svgSprite.svg#svg-plus')
-		input(type="hidden" name="product_count" value='1')
+	.counter-block
+		button.counter-decrease
+		input.counter-value(type="number" value="1" name="")
+		button.counter-increase
 
 mixin times(wid, hei)
 	svg(width= wid height= hei viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")

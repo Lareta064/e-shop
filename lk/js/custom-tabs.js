@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function(){
 let pageTabs = document.querySelector('.custom-tabs');
 if(pageTabs){
 	let tabsButtons = pageTabs.querySelectorAll('.tabs__nav-item');
@@ -22,3 +23,4 @@ if(pageTabs){
 
 	}
 }
+})
