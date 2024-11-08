@@ -11,10 +11,10 @@ section.basket.pt-30
 			h2 В корзине нет товаров
 		.basket-content
 			.basket-table#basket-table
-				+basketItem('product1', 'Шелковица', 'Армения')
-				+basketItem('product2','Крыжовник', 'Россия')
-				+basketItem('product3','Бананы', 'отборные','500')
-				+basketItem('product4','Вешенки')
+				+basketItem-grid('1', 'Шелковица', 'Армения')
+				+basketItem-grid('2','Крыжовник', 'Россия')
+				+basketItem-grid('3','Бананы', 'отборные','500')
+				+basketItem-grid('','Вешенки')
 			.basket-result
 				.row
 					.col-md-6.col-lg-4.offset-lg-2.col-xl-4.offset-xl-3.order-md-2

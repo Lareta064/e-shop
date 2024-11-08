@@ -212,3 +212,11 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www
 	height: 17px;
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16ZM8.5 17C13.1944 17 17 13.1944 17 8.5C17 3.80558 13.1944 0 8.5 0C3.80558 0 0 3.80558 0 8.5C0 13.1944 3.80558 17 8.5 17Z' fill='black'%3e%3c/path%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.5 3.36896C8.77614 3.36896 9 3.59282 9 3.86896V8.2603L12.013 10.6807C12.2283 10.8537 12.2626 11.1684 12.0896 11.3837C11.9167 11.5989 11.602 11.6333 11.3867 11.4603L8 8.73968V3.86896C8 3.59282 8.22386 3.36896 8.5 3.36896Z' fill='black'%3e%3c/path%3e%3c/svg%3e");
 }
+.svg-minus, .svg-plus{
+	width: 18px;
+	height: 18px;
+	color: #333;
+}
+.svg-minus{
+	height: 2px;
+}
