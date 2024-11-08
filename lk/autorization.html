@@ -1,0 +1,89 @@
+
+<!--form input-->
+<!--form badge-->
+<!-- список с горизонтальными полями--><!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Page</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="fonts/fonts.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<section class="authorization-frame lk-frame">
+			<div class="container">
+				<div class="authorization-frame__content">
+					<div class="custom-tabs">
+						<div class="custom-tabs__nav">
+							<button class="tabs__nav-item active" data-tab="1">Авторизация</button>
+							<button class="tabs__nav-item" data-tab="2">Регистрация</button>
+						</div>
+						<div class="custom-tabs__content">
+							<div class="custom-tab__box custom-tab__one active" data-content="1">
+								<form class="authorization-form" action="">
+									<div class="form-item"><span class="form-item__label">Email:</span>
+										<div class=" incorrect form-item__group">
+											<div class="error-icon"></div>
+											<input type=" text" name="" placeholder=" Введите Email"/>
+											<p class="error-message">Введите корректный email</p>
+										</div>
+									</div>
+									<div class="form-item"><span class="form-item__label">Пароль:</span>
+										<div class=" form-item__group">
+											<div class="error-icon"></div>
+											<input type=" password" name="" placeholder=" Введите пароль"/>
+										</div>
+									</div>
+									<div class="form-item form-item--btn">
+										<button class="btn btn-icon" type="submit">Вход<i class="fas fa-caret-right"></i></button>
+										<div class="form-item__text"><a href="recover.html">Забыли пароль?</a></div>
+									</div>
+								</form>
+							</div>
+							<div class="custom-tab__box custom-tab__two" data-content="2">
+								<form class="registration-form" action="">
+									<div class="form-item"><span class="form-item__label">Имя:</span>
+										<div class=" form-item__group">
+											<div class="error-icon"></div>
+											<input type=" text" name="" placeholder=" Введите Имя"/>
+											<p class="error-message">Введите корректное значение</p>
+										</div>
+									</div>
+									<div class="form-item"><span class="form-item__label">Email:</span>
+										<div class=" form-item__group">
+											<div class="error-icon"></div>
+											<input type=" text" name="" placeholder=" Введите Email"/>
+											<p class="error-message">Введите корректное значение</p>
+										</div>
+									</div>
+									<div class="form-item"><span class="form-item__label">Телефон:</span>
+										<div class=" form-item__group">
+											<div class="error-icon"></div>
+											<input type=" text" name="" placeholder=" Введите телефон"/>
+											<p class="error-message">Введите корректное значение</p>
+										</div>
+									</div>
+									<div class="form-item"><span class="form-item__label">Пароль:</span>
+										<div class=" form-item__group">
+											<div class="error-icon"></div>
+											<input type=" password" name="" placeholder=" Введите пароль"/>
+											<p class="error-message">Введите корректное значение</p>
+										</div>
+									</div>
+									<div class="form-item form-item--btn">
+										<button class="btn btn-icon" type="submit">Вход<i class="fas fa-caret-right"></i></button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="js/main.js"></script>
+	</body>
+</html>
