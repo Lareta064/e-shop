@@ -1,0 +1,77 @@
+mixin basketItem(imgSrc, text1, text2, oldPrice)
+	.basket-item
+		button.remove-item.remove-basket-item
+			+times(30, 30)
+		.row
+			.col-4.col-md-3.col-lg-2
+				.basket-item__img
+					if imgSrc
+						img(src="img/main/products/"+ imgSrc +".png", alt="product" width='170')
+					else
+						img(src="img/main/products/nofoto.jpg", alt="product" width='170')
+			.col-8.col-md-3.col-lg-3
+				.basket-item__head
+					a(href="product-card.html").title-34
+						span #{text1}
+						span #{text2}
+			.col-md-6.col-lg-3.border-col
+				.basket-item__descrip.text-16
+					.basic-descrip
+						p Урожай 2020 года
+					.addition-set
+						p Шелковица – небольшие мясистые плоды, которые имеют форму костянок 2-3 см. Ягоды сочные, сладкие и имеют приятный аромат.
+
+			.col-lg-4
+				.basket-item__calc
+					.basket-item__addInfo Вес: 550 гр
+					.basket-item__summ
+						+counter(class="product-counter--big")
+						.basket-item__cost
+							.basket-item__cost-val.title-34 650
+							.basket-item__cost-dim руб
+							if oldPrice
+								.basket-item__old-price 500 руб
+mixin basketItem-grid(imgSrc, text1, text2, oldPrice)
+	.basket-item
+		button.remove-item.remove-basket-item
+			+times(30, 30)
+		.grid-row
+			.basket-item__img
+				if imgSrc
+					img(src="img/products/"+imgSrc+".jpg", alt="product" width='170')
+				else
+					img(src="img/main/products/nofoto.jpg", alt="product" width='170')
+			
+			.basket-item__head
+				a(href="product-card.html").block-title
+					| #{text1}
+					span #{text2}
+		
+			.basket-item__descrip.text-16
+				.basic-descrip
+					p Победитель номинации Товар года
+				.addition-set
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+			
+			.basket-item__calc
+				.basket-item__addInfo Вес: 550 гр
+				.basket-item__summ
+					+counter(class="product-counter--big")
+					.basket-item__cost
+						if oldPrice
+							.basket-item__old-price 500 руб
+						.basket-item__cost-val.title-34 650
+						.basket-item__cost-dim руб
+						
+mixin counter
+	.counter-block
+		button.counter-decrease
+		input.counter-value(type="number" value="1" name="")
+		button.counter-increase
+
+mixin times(wid, hei)
+	svg(width= wid height= hei viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+		path(fill-rule="evenodd" clip-rule="evenodd" d="M8.707 8L12 4.707L11.293 4L8 7.293L4.707 4L4 4.707L7.293 8L4 11.293L4.707 12L8 8.707L11.293 12L12 11.293L8.707 8Z" fill="#D7001A")
+		mask#mask0(mask-type="alpha" maskunits="userSpaceOnUse" x="4" y="4" width="8" height="8")
+			path(fill-rule="evenodd" clip-rule="evenodd" d="M8.707 8L12 4.707L11.293 4L8 7.293L4.707 4L4 4.707L7.293 8L4 11.293L4.707 12L8 8.707L11.293 12L12 11.293L8.707 8Z" fill="white")

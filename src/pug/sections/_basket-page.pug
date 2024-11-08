@@ -1,0 +1,31 @@
+
+section.basket.pt-30
+	.container
+		h1.h1 Корзина
+		.basket-state.d-none
+			h2.h2 В корзине нет товаров
+		.basket-content
+			.basket-table#basket-table
+				+basketItem-grid('1', 'Акустическая система', 'колонки')
+				+basketItem-grid('2','Усилитель', 'УК-1251')
+				+basketItem-grid('3','Наушники', 'беспроводные','500')
+				
+			
+			.basket-result
+				.basket-btn
+					a(href="checkout-order.html").btn Перейти к оформлению
+					button.basket-clean.btn-border
+						span Очистить корзину
+						span
+							svg(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+								path(fill-rule="evenodd" clip-rule="evenodd" d="M10 1H6V2H10V1ZM2 4V3H14V4H13V14C13 14.5523 12.5523 15 12 15H4C3.44772 15 3 14.5523 3 14V4H2ZM6 6H7V12H6V6ZM9 6H10V12H9V6ZM4 14V4H12V14H4Z" fill="#1F1F1F")
+								mask(id="mask-del" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="1" width="12" height="14")
+									path(fill-rule="evenodd" clip-rule="evenodd" d="M10 1H6V2H10V1ZM2 4V3H14V4H13V14C13 14.5523 12.5523 15 12 15H4C3.44772 15 3 14.5523 3 14V4H2ZM6 6H7V12H6V6ZM9 6H10V12H9V6ZM4 14V4H12V14H4Z" fill="white")
+				.total-amount
+					span.total-amount-title Итого:
+					span 14&nbsp;шт на сумму 
+					.basket-item__cost
+						.basket-item__cost-val.title-34 1650
+						.basket-item__cost-dim руб
+				
+				

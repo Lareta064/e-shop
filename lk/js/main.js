@@ -1,4 +1,4 @@
-
+document.addEventListener('DOMContentLoaded', function(){
 	// CUSTOM TABS
 	let pageTabs = document.querySelector('.custom-tabs');
 	if(pageTabs){
@@ -65,4 +65,4 @@
 			});
 		}
 	}
-
+})
