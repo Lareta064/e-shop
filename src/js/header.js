@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		for(let drop of dropOpen){
 			const dropContent = drop.querySelector('.drop-block');
 			drop.addEventListener('click', (e)=>{
-				e.preventDefault();
+				// e.preventDefault();
 				if(!drop.classList.contains('drop-open--active')){
 					dropContent.classList.add('visible');
 					drop.classList.add('drop-open--active');
