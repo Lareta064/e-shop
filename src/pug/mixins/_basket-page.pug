@@ -75,3 +75,22 @@ mixin times(wid, hei)
 		path(fill-rule="evenodd" clip-rule="evenodd" d="M8.707 8L12 4.707L11.293 4L8 7.293L4.707 4L4 4.707L7.293 8L4 11.293L4.707 12L8 8.707L11.293 12L12 11.293L8.707 8Z" fill="#D7001A")
 		mask#mask0(mask-type="alpha" maskunits="userSpaceOnUse" x="4" y="4" width="8" height="8")
 			path(fill-rule="evenodd" clip-rule="evenodd" d="M8.707 8L12 4.707L11.293 4L8 7.293L4.707 4L4 4.707L7.293 8L4 11.293L4.707 12L8 8.707L11.293 12L12 11.293L8.707 8Z" fill="white")
+
+mixin inputCheckbox(inpuName, text)
+	label.form-label
+		input.form-checkbox(type="checkbox" name=''+ inpuName )
+		span.custom-checkbox
+		| #{text}
+
+mixin radioBlock( itemId,text1,text2, radioName,  text3, check, addPrice)
+	.form-group&attributes(attributes)
+		if check
+			input(type="radio" id= itemId name= radioName checked)
+		else
+			input(type="radio" id= itemId name= radioName )
+		label.custom-radio-label(for= itemId)
+			span.custom-radio-name !{text1}
+			span !{text2}
+			span !{text3}
+		if addPrice
+			span.addprice !{addPrice}

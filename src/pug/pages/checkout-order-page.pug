@@ -1,0 +1,21 @@
+extends ../layouts/layout.pug
+
+block content
+	//======== каталог меню на мобильной версии ============
+	include ../blocks/_multi-level-menu
+
+	//======== user modal mobile ============
+	include ../blocks/_user-menu-mobile
+	
+	//======== header ============
+	include ../sections/_header
+	main.main.main--inner
+		.container
+			+breadcrumbs(
+				{link: "index.html", text: 'Главная'},
+				{link: "#!", text: 'Оформление заказа'},
+			)
+			include ../sections/_checkout-order-page
+	include ../sections/_footer
+block variables
+	-var title = "Доставка";
