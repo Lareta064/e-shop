@@ -21,6 +21,19 @@
 		padding-bottom: 12px;
 		padding-right: 20px;
 	}
+	.form-item .form-checkbox {
+		width: 0.01px;
+		height: 0.01px;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		border:0;
+		margin: 0;
+		padding: 0;
+	}
 	.checkout-form-grid{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -49,7 +62,7 @@
 		grid-template-columns: repeat(12, 1fr);
 		gap: 30px;
 	}
-	.form-item-label, .custom-input-label{
+	.form-item-label, .custom-checkbox-label{
 		padding: 0;
 		margin: 0;
 		font-size: 12px;
@@ -58,10 +71,10 @@
 		align-items: center;
 		column-gap:5px;
 	}
-	.custom-radio-label,.custom-input-label{font-size: 12px; 
+	.custom-radio-label,.custom-checkbox-label{font-size: 12px; 
 	}
 	.form-group{position: relative;}
-	.checkout-form .form-block>*+*{margin-top: 0;}
+	.form-block>*+*{margin-top: 0;}
 	.form-delivery-info,
 	.form-addition-info {
 		grid-column: span 6;
@@ -72,6 +85,11 @@
 		flex-direction: column;
 		row-gap:20px;
 		&>*{width: 100%;}
+	}
+	.form-item--promo{
+		position: relative;
+		
+		&>*+*{margin-top: 15px;}
 	}
 	.custom-radio-label .custom-radio-name{font-weight: 600; margin-bottom: 5px;}
 	.custom-radio-label .custom-radio-name ~*{color: #878787;}
@@ -123,11 +141,11 @@
 		color: $darkBg;
 	}
 }
-.form-group--setTime input.setTime {
+.form-group--open input.hide-input {
 	display: none;
 }
-
-.form-group--setTime input[type="radio"]:checked + label input {
+.form-group--open input[type="checkbox"]:checked ~ input.hide-input,
+.form-group--open input[type="radio"]:checked + label input.hide-input {
 	display: block;
 }
 span.addprice {
@@ -363,11 +381,6 @@ span.addprice {
 
 }
 
-.form-group--checkbox {
-	p {
-		color: #1f1f1f;
-	}
-}
 
 .sale-text {
 	margin-top: 5px;

@@ -25,7 +25,7 @@ section.checkout-page.pt-30
 							label.form-item-label Дом #[span *]
 							input(type="text" name="addressHouse")
 						.form-item
-							label.custom-input-label Частный дом
+							label.custom-checkbox-label Частный дом
 								input.form-checkbox(type="checkbox" name='privateHouse')
 								span.custom-checkbox
 					.form-contacts-appart
@@ -69,42 +69,42 @@ section.checkout-page.pt-30
 							.form-block
 								+radioBlock('rad7', 'Как можно скорее', 'Мы доставляем заказ в течении 40 мин.', 'radio-gr3','', 'check')
 							.form-block
-								.form-group.form-group--setTime
+								.form-group.form-group--open
 									input#rad8(type='radio' name='radio-gr3')
 									label.custom-radio-label(for='rad8')
 										span.custom-radio-name Доставка на определенное время
 										
-										input.setTime(type='text' name='DeliveryTime' placeholder='Введите время доставки')
-										
+										input.hide-input(type='text' name='DeliveryTime' placeholder='Введите время доставки')
 								
-								.form-item.form-group--check
-									label(class="form-label")
+								.form-item.form-item--promo
+									label.custom-checkbox-label
 										input(class="form-checkbox" type="checkbox" name="promoCheck")
 										span.custom-checkbox
-										| У меня есть промокод
-									.set-promo
-										input(type="text" name="promoCode" placeholder="Введите промокод")
+										span У меня есть промокод
 										
-										p.sale-text  Скидка по промокоду 10% 
-										.tooltip-group
-											span.tooltip-icon ?
-											.tooltip-div
-												button.close-toooltip
-													span
-														+times(16, 16)
-												p Найдите промокод на наших страницах ВКонтакте, в Facebook или Твиттере, где мы иногда будем их публиковать.
+									input(type="text" name="promoCode" placeholder="Введите промокод")
+									p.promo-text  Скидка по промокоду 10% 
 									
-									.subscribes-block
-										.subscribes-block__top
-											p Согласен на отправку:
-											.subscribes-block__inputs
-												label.form-label sms
-													input.form-checkbox(type="checkbox" name='smsCheck' checked)
-													span.custom-checkbox
-												label.form-label Email
-													input.form-checkbox(type="checkbox" name='smsCheck')
-													span.custom-checkbox
-										p Мы не рассылаем спам. Вы будете получать только актуальную информацию о наших акциях.
+									//====TOOLTIP==
+									.tooltip-group
+										span.tooltip-icon ?
+										.tooltip-div
+											button.close-toooltip
+												span
+													+times(16, 16)
+											p Найдите промокод на наших страницах ВКонтакте, в Facebook или Твиттере, где мы иногда будем их публиковать.
+								
+								.subscribes-block
+									.subscribes-block__top
+										p Согласен на отправку:
+										.subscribes-block__inputs
+											label.form-label sms
+												input.form-checkbox(type="checkbox" name='smsCheck' checked)
+												span.custom-checkbox
+											label.form-label Email
+												input.form-checkbox(type="checkbox" name='smsCheck')
+												span.custom-checkbox
+									p Мы не рассылаем спам. Вы будете получать только актуальную информацию о наших акциях.
 
 
 					.total-amount
