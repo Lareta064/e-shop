@@ -775,7 +775,7 @@ scrollbar-width: none;}
   opacity: .7;
 }
 .history-item .history-item__deskrip h3 {
-  font-family: Rubik;
+  
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1002,4 +1002,24 @@ button.disable.btn:hover span {
     .col-grid-xl-6 {
       grid-column: span 6;
     }
+ }
+
+
+ .container{
+  width: 320px;
+  margin-inline: auto;
+  padding-inline:15px;
+
+  @media (min-width: 768px) {
+    width: 730px;
+  }
+
+  @media (min-width: 992px) {
+    width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+
  }

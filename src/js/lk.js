@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		let tabsContents = pageTabs.querySelectorAll('.custom-tab__box');
 		for(let i =0; i < tabsButtons.length; i++ ){
 			tabsButtons[i].addEventListener('click', function(){
+				
 				for(let item of tabsButtons){
 					item.classList.remove('active');
 				}
