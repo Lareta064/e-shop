@@ -1,3 +1,4 @@
+/** */
 const displayToggleBlock = document.querySelectorAll(".filtered-block");
 
 if (displayToggleBlock.length >0){

@@ -1,3 +1,4 @@
+/* */
 document.addEventListener("DOMContentLoaded", function (){
 if ($('.container-module').length>0){
 	console.log($('.container-module'));

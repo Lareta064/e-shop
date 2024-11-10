@@ -20,3 +20,18 @@ minusBtn.on('click', function (e) {
 
 	}
 });
+/*----ВСПЛЫВАЮЩАЯ ПОДСКАЗКА TOOLTIP СТРАНИЦА ОФОРМЛЕНИЯ ЗАКАЗА----*/
+const tooltip = document.querySelector('.tooltip-div');
+const tooltipShowIcon = document.querySelector('.tooltip-icon');
+
+if (tooltip) {
+	const tooltipCloseIcon = tooltip.querySelector('.close-toooltip');
+	tooltipShowIcon.addEventListener('click', function (e) {
+		e.preventDefault();
+		tooltip.classList.toggle('active');
+	});
+	tooltipCloseIcon.addEventListener('click', function (e) {
+		e.preventDefault();
+		tooltip.classList.remove('active');
+	});
+}
