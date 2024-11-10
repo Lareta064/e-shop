@@ -37,7 +37,12 @@
 		margin: 0;
 		padding: 0;
 	}
-	&__title{margin-bottom: 10px;font-size: 18px;}
+	&__title{
+		font-size: 18px;
+		@media (max-width: 767px) {
+		margin-bottom: 10px;
+		}
+	}
 	.checkout-form-grid{
 		grid-column: span 12;
 		display: grid;
@@ -79,6 +84,7 @@
 			}
 		
 	}
+	.form-item-label span{color: red;}
 	.form-item-label, .custom-checkbox-label{
 		padding: 0;
 		margin: 0;
@@ -140,31 +146,14 @@
 		align-items: center;
 		gap:20px;
 		margin-top: 15px;
-		a {
-			white-space: nowrap;
-			position: relative;
-			display: block;
-			color: $text;
-			height: 40px;
-			line-height: 38px;
-			border-radius: 100px;
-			border: 1px solid transparent;
-			padding-left: 30px;
-			padding-right: 30px;
-			transition: 0.3s;
-
-			&:hover {
-				border: 1px solid $accent;
-				color: $accent;
-			}
-
-		}
+		
 		input.btn,.btn{
 			color: white; 
 			padding-left: 40px;
 		   padding-right: 40px;
 		   width: fit-content;
 		   height: 40px;
+		   border-radius: 8px;
 		   display: flex;
 		   justify-content: center;
 		   align-items: center;
@@ -173,7 +162,7 @@
 	.fake-placeholder {
 		color: $darkBg;
 	}
-
+	a.txt-accent{color: $accent;}
 	.form-group--open input.hide-input {
 		display: none;
 	}
