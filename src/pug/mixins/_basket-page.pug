@@ -90,7 +90,9 @@ mixin radioBlock( itemId,text1,text2, radioName,  text3, check, addPrice)
 			input(type="radio" id= itemId name= radioName )
 		label.custom-radio-label(for= itemId)
 			span.custom-radio-name !{text1}
-			span !{text2}
-			span !{text3}
+			if text2 && text2 !=''
+				span !{text2}
+			if text3 && text3 !=''
+				span !{text3}
 		if addPrice
 			span.addprice !{addPrice}
