@@ -239,6 +239,7 @@ select:-webkit-autofill:focus {
   margin-bottom: 0;
   line-height: 48px;
 }
+
 .custom-tab__box {
   display: none;
 }

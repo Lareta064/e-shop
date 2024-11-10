@@ -388,7 +388,6 @@ document.addEventListener("DOMContentLoaded", function (){
 		for (item of displayToggleBlock){
 			const mainCardWrapper = item.querySelector(".filtered-block-content");
 			const displayToggleButtons = item.querySelectorAll("[data-display]");
-			console.log(displayToggleButtons);
 			
 			for (let i = 0; i < displayToggleButtons.length; i++){
 				displayToggleButtons[i].addEventListener('click', function(){
