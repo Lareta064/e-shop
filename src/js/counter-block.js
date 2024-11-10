@@ -28,7 +28,7 @@ if (tooltip) {
 	const tooltipCloseIcon = tooltip.querySelector('.close-toooltip');
 	tooltipShowIcon.addEventListener('click', function (e) {
 		e.preventDefault();
-		tooltip.classList.add('active');
+		tooltip.classList.toggle('active');
 	});
 	tooltipCloseIcon.addEventListener('click', function (e) {
 		e.preventDefault();

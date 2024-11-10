@@ -1,6 +1,6 @@
 section.checkout-page.pt-30
 	.container
-		h1.h1 Оформление заказа
+		h1.block-title Оформление заказа
 		form.checkout-form
 			//===FORM===
 			.checkout-form-grid
@@ -39,7 +39,7 @@ section.checkout-page.pt-30
 							label.form-item-label Этаж #[span *]
 							input(type="text" name="addressNumber")
 						.form-item
-							label.form-item-label Код домофона #[span *]
+							label.form-item-label Домофон #[span *]
 							input(type="text" name="addressNumber")
 						
 					
@@ -81,10 +81,6 @@ section.checkout-page.pt-30
 										input(class="form-checkbox" type="checkbox" name="promoCheck")
 										span.custom-checkbox
 										span У меня есть промокод
-										
-									input(type="text" name="promoCode" placeholder="Введите промокод")
-									p.promo-text  Скидка по промокоду 10% 
-									
 									//====TOOLTIP==
 									.tooltip-group
 										span.tooltip-icon ?
@@ -92,37 +88,37 @@ section.checkout-page.pt-30
 											button.close-toooltip
 												span
 													+times(16, 16)
-											p Найдите промокод на наших страницах ВКонтакте, в Facebook или Твиттере, где мы иногда будем их публиковать.
-								
-								.subscribes-block
-									.subscribes-block__top
+											p Найдите промокод на наших страницах ВКонтакте, в Facebook или Твиттере, где мы иногда будем их публиковать.	
+									
+									
+									input(type="text" name="promoCode" placeholder="Введите промокод")
+									p.promo-text  Скидка по промокоду 10% 
+								//===== notify types===
+								.notify-message
+									.notify-message__types
 										p Согласен на отправку:
-										.subscribes-block__inputs
-											label.form-label sms
-												input.form-checkbox(type="checkbox" name='smsCheck' checked)
-												span.custom-checkbox
-											label.form-label Email
-												input.form-checkbox(type="checkbox" name='smsCheck')
-												span.custom-checkbox
+										label.custom-checkbox-label sms
+											input.form-checkbox(type="checkbox" name='smsCheck' checked)
+											span.custom-checkbox
+										label.custom-checkbox-label Email
+											input.form-checkbox(type="checkbox" name='smsCheck')
+											span.custom-checkbox
 									p Мы не рассылаем спам. Вы будете получать только актуальную информацию о наших акциях.
-
-
 					.total-amount
 						span.total-amount__title Сумма #[span.hide-mob заказа]:
 						span 14&nbsp;шт на сумму 
 						.basket-item__cost
 							.basket-item__cost-val 1650
 							.basket-item__cost-dim руб
-				
-				
-			.col-grid-xl-6
-				.checkout-content__footer
-					.form-group.agree-text
-						label(class="form-label")
-								input(class="form-checkbox" type="checkbox" name="agreePolitic")
-								span.custom-checkbox
-								| Принимаю  #[a(href="#") условия обработки] моих данных.
-					.form-group.form-group--btn
-						input.btn(type="submit" value="Отправить")
-						a(href="basket-page.html")
-							| Назад к заказам
+			
+			//=====FORM FOOTER ====
+			.checkout-content__footer
+				.form-group.agree-text
+					label.form-item-label
+						input(class="form-checkbox" type="checkbox" name="agreePolitic")
+						span.custom-checkbox
+						| Принимаю  #[a(href="#") условия обработки] моих данных.
+				.form-group.form-group--btn
+					input.btn(type="submit" value="Отправить")
+					a(href="basket-page.html")
+						| Назад к заказам
