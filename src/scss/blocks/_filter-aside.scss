@@ -1,0 +1,55 @@
+.hint{ 
+	position: relative;	
+	cursor: pointer;
+    height: 20px;
+    width: 20px;
+	display: inline-block;
+ .hint__btn{
+    height: 20px;
+    width: 20px;
+	display: inline-block;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M10 18.75C14.8325 18.75 18.75 14.8325 18.75 10C18.75 5.16751 14.8325 1.25 10 1.25C5.16751 1.25 1.25 5.16751 1.25 10C1.25 14.8325 5.16751 18.75 10 18.75Z' fill='%23122538'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.7124 12.3438V10.7812H10.6999C12.2453 10.6921 13.4469 9.4026 13.4268 7.85476C13.4067 6.30693 12.1721 5.049 10.6249 5H9.6999C8.1066 4.99999 6.81303 6.28796 6.80615 7.88125V8.28125H8.1999V7.8875C8.20334 7.06842 8.86831 6.40624 9.6874 6.40625H10.6249C11.4074 6.45705 12.016 7.10651 12.016 7.89062C12.016 8.67474 11.4074 9.3242 10.6249 9.375H9.30615V12.3438H10.7124ZM10.9374 14.6875C10.9374 15.2053 10.5177 15.625 9.9999 15.625C9.48213 15.625 9.0624 15.2053 9.0624 14.6875C9.0624 14.1697 9.48213 13.75 9.9999 13.75C10.5177 13.75 10.9374 14.1697 10.9374 14.6875Z' fill='white'/%3e%3cmask id='mask0_311_6313' style='mask-type:luminance' maskUnits='userSpaceOnUse' x='6' y='5' width='8' height='11'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.7124 12.3438V10.7812H10.6999C12.2453 10.6921 13.4469 9.4026 13.4268 7.85476C13.4067 6.30693 12.1721 5.049 10.6249 5H9.6999C8.1066 4.99999 6.81303 6.28796 6.80615 7.88125V8.28125H8.1999V7.8875C8.20334 7.06842 8.86831 6.40624 9.6874 6.40625H10.6249C11.4074 6.45705 12.016 7.10651 12.016 7.89062C12.016 8.67474 11.4074 9.3242 10.6249 9.375H9.30615V12.3438H10.7124ZM10.9374 14.6875C10.9374 15.2053 10.5177 15.625 9.9999 15.625C9.48213 15.625 9.0624 15.2053 9.0624 14.6875C9.0624 14.1697 9.48213 13.75 9.9999 13.75C10.5177 13.75 10.9374 14.1697 10.9374 14.6875Z' fill='white'/%3e%3c/mask%3e%3cg mask='url(%23mask0_311_6313)'%3e%3c/g%3e%3c/svg%3e");
+   }
+	.hint__txt{
+		position: absolute;
+		border: 1px solid #e7e8ea;
+		position: absolute;
+		line-height: 18px;
+		min-width: 250px;
+		width: 100%;
+		margin-top: 8px;
+		font-size: 13px;
+		cursor: default;
+		display: none;
+		padding: 16px;
+		z-index: 3;
+		top: 100%;
+		display: none;
+		
+	}
+	.hint__close{
+		color: #122538;
+		text-decoration: none;
+		position: absolute;
+		font-size: 14px;
+		cursor: pointer;
+		z-index: 2;
+		right: 6px;
+		top: 6px;
+	}
+	&.active .hint__txt{display: block;}
+}
+.filters-box{
+	&-hasDrop__title{
+		display: flex;
+		column-gap:10px;
+	}
+	&-drop{
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height .3s; 
+	}
+	
+	
+	
+}
