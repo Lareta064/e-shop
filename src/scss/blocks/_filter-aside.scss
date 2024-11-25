@@ -40,9 +40,22 @@
 	&.active .hint__txt{display: block;}
 }
 .filters-box{
+	&-title{
+		min-height: 40px;
+		color: white;
+		background-color: #122538;
+		padding: 13px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	&-hasDrop__title{
 		display: flex;
 		column-gap:10px;
+	}
+	&-item{
+		padding: 4px 8px;
+        min-height: 40px;
 	}
 	&-drop{
 		max-height: 0;
