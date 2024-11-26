@@ -579,7 +579,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		const filterBoxBlock = filtersBox.querySelectorAll('.filters-box-hasDrop');
 		
 		 for(let item of filterBoxBlock){
-			const btnOpenDrop = item.querySelector('.filters-box-btn');
+			const btnOpenDrop = item.querySelector('.filters-box-link');
 			const dropList = item.querySelector('.filters-box-drop');
 			btnOpenDrop.addEventListener('click', ()=>{
 				if(btnOpenDrop.classList.contains('active')){
@@ -604,4 +604,31 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	}
+	const slider = document.getElementById('slider');
+	if(slider){
+		const minValue = document.getElementById('minValue');
+		const maxValue = document.getElementById('maxValue');
+
+		noUiSlider.create(slider, {
+			start: [20000, 80000],
+			connect: true,
+			range: {
+				min: 0,
+				max: 100000
+			}
+		});
+		// Синхронизация ползунка с полями
+		slider.noUiSlider.on('update', (values) => {
+			minValue.value = Math.round(values[0]);
+			maxValue.value = Math.round(values[1]);
+		});
+		// Синхронизация полей с ползунком
+		minValue.addEventListener('change', () => {
+			slider.noUiSlider.set([minValue.value, null]);
+		});
+		maxValue.addEventListener('change', () => {
+			slider.noUiSlider.set([null, maxValue.value]);
+		});
+	}
+		
 });

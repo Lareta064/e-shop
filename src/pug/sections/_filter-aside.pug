@@ -4,21 +4,28 @@
 		.filters-box-title Уточнить раздел
 		.filters-box-list
 			.filters-box-item
-				a(href="#!") Телефоны
+				a(href="#!").filters-box-link Телефоны
+				span.filters-cnt 60
 			.filters-box-item
-				a(href="#!") Ноутбуки
+				a(href="#!").filters-box-link Ноутбуки
+				span.filters-cnt 40
 			.filters-box-item
-				a(href="#!") Техника для дома
+				a(href="#!").filters-box-link Техника для дома
+				span.filters-cnt 30
 			.filters-box-item
-				a(href="#!") Фото и видео
+				a(href="#!").filters-box-link Фото и видео
+				span.filters-cnt 20
 			.filters-box-item
-				a(href="#!") Телефоны
+				a(href="#!").filters-box-link Телефоны
+				span.filters-cnt 10
 			.filters-box-item
-				a(href="#!") Гаджеты
+				a(href="#!").filters-box-link Гаджеты
+				span.filters-cnt 50
 	.filters-box-group
 		.filters-box-title Фильтр по параметрам
 		.filters-box-list.filters-box-hasDrop
-			.filters-box-item
+			//=====single parametrs ====
+			.filters-box-param
 				.filters-box-hasDrop__title
 					//===подсказка по клику на ? ===
 					.hint
@@ -27,12 +34,44 @@
 							span.hint__close &#10006;
 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 					
-					.filters-box-btn
+					.filters-box-link
 						span Телефоны
+						i.rotate-icon
+				//===drop-filters-list
+				.filters-box-drop
+					label.custom-checkbox-label
+						input.form-checkbox(type="checkbox" name='privateHouse')
+						span.custom-checkbox
+						span Apple (24)
+				
+					label.custom-checkbox-label
+						input.form-checkbox(type="checkbox" name='privateHouse')
+						span.custom-checkbox
+						span Apple (24)
+				
+					label.custom-checkbox-label
+						input.form-checkbox(type="checkbox" name='privateHouse')
+						span.custom-checkbox
+						span Apple (24)
+				
+					label.custom-checkbox-label
+						input.form-checkbox(type="checkbox" name='privateHouse')
+						span.custom-checkbox
+						span Apple (24)
+		
+		.filters-box-list.filters-box-hasDrop
+			//=====single parametrs ====
+			.filters-box-param
+				.filters-box-hasDrop__title
+					.filters-box-link
+						span Розничная цена
+						i.rotate-icon
 				
 				//===drop-filters-list
 				.filters-box-drop
-					p filters-list
-					p filters-list
-					p filters-list
-					p filters-list
+					.price-slider-wrapper
+						#slider.price-slider
+						div.price-slider-out
+							input#minValue(type='number' min='0' max='100000')
+							input#maxValue(type='number' min='0' max='100000')
+						
