@@ -572,45 +572,62 @@ document.addEventListener("DOMContentLoaded", function (){
 		]
 	});
 	/*=======FILTERS ASIDE ===== */
-	const filtersBox = document.querySelector('.filters-box');
+	const filtersBox = document.querySelectorAll('.filters-box');
 	const hintItems = document.querySelectorAll('.hint');
 
-	if(filtersBox){
-		const filterBoxBlock = filtersBox.querySelectorAll('.filters-box-hasDrop');
-		const filterShowMore = filtersBox.querySelectorAll('.filters-show-more');
+	if(filtersBox.length > 0){
+		for(let box of filtersBox){
+			const filterBoxGroup = box.querySelectorAll('.filters-box-group');
+			const filterBoxBlock = box.querySelectorAll('.filters-box-hasDrop');
+			const filterShowMore = box.querySelectorAll('.filters-show-more');
 
-		
-		 for(let item of filterBoxBlock){
-			const btnOpenDrop = item.querySelector('.filters-box-link');
-			const dropList = item.querySelector('.filters-box-drop');
-			btnOpenDrop.addEventListener('click', ()=>{
-				if(btnOpenDrop.classList.contains('active')){
-					btnOpenDrop.classList.remove('active');
-					item.classList.remove('active');
-					dropList.classList.remove('active');
-
-				}else{
-					btnOpenDrop.classList.add('active');
-					item.classList.add('active');
-					dropList.classList.add('active');
-				}
-			});
-
-			for(let btn of filterShowMore){
-			   btn.addEventListener('click', ()=>{
-					if(dropList.classList.contains('full-list')){
-
-						dropList.classList.remove('full-list');
-						btn.querySelector('.btn-more-text').textContent="Показать еще";
+			for(let grp of filterBoxGroup ){
+				const filterBoxTitle = grp.querySelector('.filters-box-title');
+				const filterBoxList = grp.querySelector('.filters-box-list');
+				
+				filterBoxTitle.addEventListener('click', ()=>{
+					
+					if(filterBoxList.classList.contains('hide-filters')){
+						filterBoxList.classList.remove('hide-filters')
 					}else{
-						dropList.classList.add('full-list');
-						btn.querySelector('.btn-more-text').textContent ="Скрыть";
-						
+						filterBoxList.classList.add('hide-filters')
 					}
-			   });
+				});
 			}
-		 }
+			for(let item of filterBoxBlock){
+				
+				const btnOpenDrop = item.querySelector('.filters-box-link');
+				const dropList = item.querySelector('.filters-box-drop');
+				btnOpenDrop.addEventListener('click', ()=>{
+					if(btnOpenDrop.classList.contains('active')){
+						btnOpenDrop.classList.remove('active');
+						item.classList.remove('active');
+						dropList.classList.remove('active');
+
+					}else{
+						btnOpenDrop.classList.add('active');
+						item.classList.add('active');
+						dropList.classList.add('active');
+					}
+				});
+
+				for(let btn of filterShowMore){
+					btn.addEventListener('click', ()=>{
+							if(dropList.classList.contains('full-list')){
+
+								dropList.classList.remove('full-list');
+								btn.querySelector('.btn-more-text').textContent="Показать еще";
+							}else{
+								dropList.classList.add('full-list');
+								btn.querySelector('.btn-more-text').textContent ="Скрыть";
+								
+							}
+					});
+				}
+			}
+		}
 	}
+
 	if(hintItems.length>0){
 		for(let el of hintItems){
 			

@@ -110,6 +110,10 @@
 		
 		&.active{padding-top: 12px;padding-bottom: 12px;max-height: 252px;}		
 	}
+	.filters-box-list.hide-filters{
+		height: 0;
+		overflow:hidden;
+	}
 	&-drop.active .filters-box-drop__list{max-height: 180px;overflow: hidden; }
 	&-drop.active.full-list{
 		max-height: unset;
@@ -185,6 +189,12 @@
 		}
 	input:checked + .color-checkbox{
 		outline: 1px solid #00BC52;
+	}
+	.filters-buttons{
+		display: flex;
+		column-gap:16px;
+		padding: 12px;
+		&>*{flex-grow:1;}
 	}
 }
 i.rotate-icon{
