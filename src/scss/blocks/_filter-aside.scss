@@ -13,6 +13,7 @@
 	.hint__txt{
 		position: absolute;
 		border: 1px solid #e7e8ea;
+		background-color: #fff;
 		position: absolute;
 		line-height: 18px;
 		min-width: 250px;
@@ -58,9 +59,10 @@
 		display: flex;
 		column-gap:10px;
 		padding: 12px;
+		cursor:pointer;
 	}
-	&-list{
-		// box-shadow: 6px 6px 19px rgba(0, 0, 0, 0.06);
+	&-group{
+		box-shadow: 6px 6px 19px rgba(0, 0, 0, 0.06);
 	}
 	&-hasDrop__title, &-item{
 		
@@ -78,12 +80,14 @@
 		text-align: center;
 		display: inline-block;
 	}
+	
 	&-link{
 		flex-grow: 1;
-		padding-block: 12px;
+		padding: 12px;
 		display: flex;
 		align-items: center;
-		column-gap: 12px;
+		column-gap:10px;
+		
 	}
 	*+&-link, &-link+*{
 		flex-shrink: 0;
@@ -96,19 +100,16 @@
 	&-drop{
 		max-height: 0;
 		overflow: hidden;
-		transition: max-height .3s;
-		// &>*:first-child{
-		// 	padding-top: 12px;
-		// }
-		// &>*:last-child{
-		// 	padding-bottom: 12px;
-		// }
+		transition: height .3s;
+		box-sizing: content-box;
+		
+		&.active{padding-top: 12px;padding-bottom: 12px;max-height: 252px;}		
 	}
 	.price-slider.noUi-target{
 		padding-top: 0!important;
 	}
 	.price-slider-wrapper{
-		padding: 24px 12px;
+		padding: 24px 12px 12px;
 		
 	}
 	.price-slider-wrapper{

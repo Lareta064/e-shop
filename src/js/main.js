@@ -577,6 +577,8 @@ document.addEventListener("DOMContentLoaded", function (){
 
 	if(filtersBox){
 		const filterBoxBlock = filtersBox.querySelectorAll('.filters-box-hasDrop');
+		const filterShowMore = filtersBox.querySelectorAll('.filters-show-more');
+
 		
 		 for(let item of filterBoxBlock){
 			const btnOpenDrop = item.querySelector('.filters-box-link');
@@ -584,12 +586,29 @@ document.addEventListener("DOMContentLoaded", function (){
 			btnOpenDrop.addEventListener('click', ()=>{
 				if(btnOpenDrop.classList.contains('active')){
 					btnOpenDrop.classList.remove('active');
-					dropList.style.maxHeight = 0;
+					// dropList.style.maxHeight = 0;
+					dropList.classList.remove('active');
+
 				}else{
 					btnOpenDrop.classList.add('active');
-					dropList.style.maxHeight = dropList.scrollHeight + 'px';
+					// dropList.style.maxHeight = dropList.scrollHeight + 'px';
+					dropList.classList.add('active');
 				}
 			});
+
+			for(let btn of filterShowMore){
+			   btn.addEventListener('click', ()=>{
+					if(dropList.classList.contains('full-list')){
+
+						dropList.classList.remove('full-list');
+						btn.querySelector('.btn-more-text').textContent="Показать еще";
+					}else{
+						dropList.classList.add('full-list');
+						btn.querySelector('.btn-more-text').textContent ="Скрыть";
+						
+					}
+			   });
+			}
 		 }
 	}
 	if(hintItems.length>0){
@@ -604,31 +623,6 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	}
-	const slider = document.getElementById('slider');
-	if(slider){
-		const minValue = document.getElementById('minValue');
-		const maxValue = document.getElementById('maxValue');
-
-		noUiSlider.create(slider, {
-			start: [20000, 80000],
-			connect: true,
-			range: {
-				min: 0,
-				max: 100000
-			}
-		});
-		// Синхронизация ползунка с полями
-		slider.noUiSlider.on('update', (values) => {
-			minValue.value = Math.round(values[0]);
-			maxValue.value = Math.round(values[1]);
-		});
-		// Синхронизация полей с ползунком
-		minValue.addEventListener('change', () => {
-			slider.noUiSlider.set([minValue.value, null]);
-		});
-		maxValue.addEventListener('change', () => {
-			slider.noUiSlider.set([null, maxValue.value]);
-		});
-	}
+	
 		
 });
