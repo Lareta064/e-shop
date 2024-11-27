@@ -586,12 +586,12 @@ document.addEventListener("DOMContentLoaded", function (){
 			btnOpenDrop.addEventListener('click', ()=>{
 				if(btnOpenDrop.classList.contains('active')){
 					btnOpenDrop.classList.remove('active');
-					// dropList.style.maxHeight = 0;
+					item.classList.remove('active');
 					dropList.classList.remove('active');
 
 				}else{
 					btnOpenDrop.classList.add('active');
-					// dropList.style.maxHeight = dropList.scrollHeight + 'px';
+					item.classList.add('active');
 					dropList.classList.add('active');
 				}
 			});
