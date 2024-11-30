@@ -14,7 +14,7 @@ block content
 			.container
 				.category-list__content.grid-wrapper
 					//====== левая колонка ======
-					.grid-wrapper-aside
+					.grid-wrapper-aside#aside-filters
 						.false-column
 						.aside-column
 							include ../sections/_filter-aside
@@ -26,6 +26,39 @@ block content
 							{link: "category-page.html", text: 'Аудио техника'},
 						)
 						h1.h2 Аудио техника
+						//=== Блок с сылками на категории. В нем есть скрытые элементы. Сейчас они скрыты за счет класса  .hide-item, а отображаются по клику на кнопку с id #show-more через скрипт. Отображаются за счет добавления класса hide-item--visible.  Для скрипта так же задан класс  .has-hide-items. Если этот функционал будет реализован по другому, то все эти классы можно удалить ===
+						.category-labels.has-hide-items.mb-20
+							a(href="#!").grey-btn Ноутбук для работы
+ 
+							a(href="#!").grey-btn Смартфон с большим экраном
+							
+							a(href="#!").grey-btn Смартфон на android
+							
+							a(href="#!").grey-btn Недорогой смартфон
+							
+							a(href="#!").grey-btn Компактный ноутбук
+							
+							a(href="#!").grey-btn Домашний компьютер
+							
+							a(href="#!").grey-btn Айпад
+							
+							a(href="#!").grey-btn Компактный планшет
+							
+							a(href="#!").grey-btn Домашний ноутбук
+							
+							a(href="#!").grey-btn Макбук
+							
+							a(href="#!").grey-btn.hide-item Айпад
+							
+							a(href="#!").grey-btn.hide-item Компактный планшет
+							
+							a(href="#!").grey-btn.hide-item Домашний ноутбук
+							
+							a(href="#!").grey-btn.hide-item  Макбук
+
+							a(href="#!").grey-btn#show-more Показать все
+						
+						//==== карточки категорий =====
 						.category-list__cards
 							.scroll-horizontal
 								.category-list__grid
@@ -37,13 +70,19 @@ block content
 									+category-card('6', 'Системы домашнего кинотеатра' )
 									+category-card('7', 'Усилители', 'empty')
 						
-						//======конттент с карточками ======
+						//======контент с карточками ======
 						.category-products-block.filtered-block
 							//======= строка с фильтрами =============	
 							.filters-group
+								//=== кнопка Показать Фильтр-меню на моб версии =======
+								button.btn#show-aside-filters
+									svg.svg-filter
+										use(href='./img/svgSprite.svg#svg-filter')
+									span Фильтры
+								//==== выпадашка ====
 								.filters-group__type
 									+mySelect({addClass: 'mySelect--absolute', val:'По умолчанию', itemsArr:['По умолчанию', 'По имени (A - Я)','По имени (Я - A)', 'По цене (возрастанию)', 'По цене (убыванию)', 'По рейтингу (возрастанию)', 'По рейтингу (убыванию)',  'По модели (A - Я)', 'По модели (Я - A)']})
-								
+								//==== выпадашка ====
 								.filters-group__count
 									+mySelect({addClass: 'mySelect--absolute', val:'15', itemsArr:['25', '50','75', '100']})
 								

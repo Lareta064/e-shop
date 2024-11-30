@@ -572,6 +572,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		]
 	});
 	/*=======FILTERS ASIDE ===== */
+	
 	const filtersBox = document.querySelectorAll('.filters-box');
 	const hintItems = document.querySelectorAll('.hint');
 
@@ -627,7 +628,40 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		}
 	}
+	const asideFilters = document.getElementById('aside-filters');
+	if (asideFilters) {
+		const asideFiltersShow = document.getElementById('show-aside-filters');
+		const asideFiltersClose = document.querySelectorAll('.close-aside-filters');
+	
+		// Закрытие меню при клике на кнопку закрытия
+		for(btn of asideFiltersClose){
 
+			btn.addEventListener('click', (e) => {
+				e.preventDefault();
+				asideFilters.classList.remove('aside-filters--visible');
+			});
+		}
+	
+		// Открытие меню при клике на кнопку
+		asideFiltersShow.addEventListener('click', (e) => {
+			e.preventDefault();
+			asideFilters.classList.add('aside-filters--visible');
+		});
+	
+		// Закрытие меню при клике непосредственно по asideFilters (не по его дочерним элементам)
+		asideFilters.addEventListener('click', (event) => {
+			if (event.target === event.currentTarget) {
+				asideFilters.classList.remove('aside-filters--visible');
+			}
+		});
+	
+		// Закрытие меню при клике вне блока asideFiltersShow
+		document.addEventListener('click', (event) => {
+			if (!asideFiltersShow.contains(event.target) && !asideFilters.contains(event.target)) {
+				asideFilters.classList.remove('aside-filters--visible');
+			}
+		});
+	}
 	if(hintItems.length>0){
 		for(let el of hintItems){
 			
@@ -640,6 +674,25 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	}
-	
+	// кнопка Показать еще на стр Категорий с фильтрами
+	const hasHiddenItems = document.querySelectorAll('.has-hide-items');
+	if(hasHiddenItems.length > 0){
+		for(let box of hasHiddenItems){
+			const boxHideElements = box.querySelectorAll('.hide-item');
+			const boxShowMoreBtn = box.querySelector('#show-more');
+			boxShowMoreBtn.addEventListener('click', ()=>{
+				boxHideElements.forEach((el)=>{
+					if(el.classList.contains('hide-item--visible')){
+						el.classList.remove('hide-item--visible');
+					    boxShowMoreBtn.textContent=" Показать все";
+					}else{
+						el.classList.add('hide-item--visible');
+					    boxShowMoreBtn.textContent="Скрыть";
+					}
+					
+				});
+			});
+		}
+	}
 		
 });

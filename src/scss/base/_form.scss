@@ -122,6 +122,16 @@ label{
   row-gap: 16px;
   }
 }
+/* Убираем стрелочки у input[type="number"] */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 /*КАСТОМНЫЕ РАДИОКНОПКИ*/
 // .checkout-content [type="checkbox"]:checked,
 // .checkout-content [type="checkbox"]:not(:checked),

@@ -1,6 +1,6 @@
 .filters-box
 	//====== отдельный РАЗДЕЛ фильтра 
-	.filters-box-group
+	.filters-box-group.filters-category-group
 		.filters-box-title Уточнить раздел
 		.filters-box-list
 			.filters-box-item
@@ -23,8 +23,12 @@
 				span.filters-cnt 50
 	
 	//====== отдельный РАЗДЕЛ фильтра 
-	form.filters-box-group
+	
+	form.filters-box-group.filters-aside-form
 		.filters-box-title Фильтр по параметрам
+			button.btn-close.close-aside-filters
+				svg.svg-close
+					use(href='./img/svgSprite.svg#svg-close')
 		//=========фильтр Телефоны ====
 		.filters-box-list
 			.filters-box-hasDrop
@@ -234,4 +238,4 @@
 			//==== buttons ========
 			.filters-buttons
 				button(type="reset").btn-dark Сбросить
-				button(type="reset").btn Показать
+				button(type="reset").btn.close-aside-filters Показать
