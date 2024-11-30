@@ -1,0 +1,241 @@
+.filters-box
+	//====== отдельный РАЗДЕЛ фильтра 
+	.filters-box-group.filters-category-group
+		.filters-box-title Уточнить раздел
+		.filters-box-list
+			.filters-box-item
+				a(href="#!").filters-box-link Телефоны
+				span.filters-cnt 60
+			.filters-box-item
+				a(href="#!").filters-box-link Ноутбуки
+				span.filters-cnt 40
+			.filters-box-item
+				a(href="#!").filters-box-link Техника для дома
+				span.filters-cnt 30
+			.filters-box-item
+				a(href="#!").filters-box-link Фото и видео
+				span.filters-cnt 20
+			.filters-box-item
+				a(href="#!").filters-box-link Телефоны
+				span.filters-cnt 10
+			.filters-box-item
+				a(href="#!").filters-box-link Гаджеты
+				span.filters-cnt 50
+	
+	//====== отдельный РАЗДЕЛ фильтра 
+	
+	form.filters-box-group.filters-aside-form
+		.filters-box-title Фильтр по параметрам
+			button.btn-close.close-aside-filters
+				svg.svg-close
+					use(href='./img/svgSprite.svg#svg-close')
+		//=========фильтр Телефоны ====
+		.filters-box-list
+			.filters-box-hasDrop
+				//=====single parametrs ====
+				.filters-box-param
+					.filters-box-hasDrop__title
+						//===подсказка по клику на ? ===
+						.hint
+							span.hint__btn
+							.hint__txt
+								span.hint__close &#10006;
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						
+						.filters-box-link
+							span Телефоны
+							i.rotate-icon
+					//===drop-filters-list
+					.filters-box-drop
+						//==== по умолчанию отображается пять элементов label. Если есть кнопка Показать еще, то через скрипт удаляется ограничение по высоте для .filters-box-drop
+						.filters-box-drop__list
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.custom-checkbox
+								span Apple (24)
+						
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.custom-checkbox
+								span Apple (24)
+						
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.custom-checkbox
+								span Apple (24)
+						
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.custom-checkbox
+								span Apple (24)
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.custom-checkbox
+								span Apple (24)
+							//=======скрытые элементы label
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.custom-checkbox
+								span Apple (24)
+						
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.custom-checkbox
+								span Apple (24)
+						
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.custom-checkbox
+								span Apple (24)
+						
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.custom-checkbox
+								span Apple (24)
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.custom-checkbox
+								span Apple (24)
+						
+						//====кнопка Показать еще ====
+						a(href="#!").filters-show-more 
+							span.btn-more-text Показать еще
+							span.btn-more-count (24)
+			
+			//=========фильтр- Множественный фильтр, без кнопки Показать еще ====
+			.filters-box-hasDrop
+				//=====single parametrs ====
+				.filters-box-param
+					.filters-box-hasDrop__title
+						
+						.filters-box-link
+							span Диагональ экрана
+							i.rotate-icon
+					//===drop-filters-list
+					.filters-box-drop
+						.filters-box-drop__list
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.custom-checkbox
+								span  7" -  12"
+						
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.custom-checkbox
+								span  12" -  15"
+						
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.custom-checkbox
+								span 15" -  27"
+			
+			//========= фильтр ЦЕНА====
+			.filters-box-hasDrop
+				//=====single parametrs ====
+				.filters-box-param
+					.filters-box-hasDrop__title
+						.filters-box-link
+							span Розничная цена
+							i.rotate-icon
+					
+					//===drop-filters-list
+					.filters-box-drop
+						.price-slider-wrapper
+							#slider.price-slider
+							div.price-slider-out
+								input#minValue(type='number' min='0' max='100000')
+								input#maxValue(type='number' min='0' max='100000')
+							
+							//=============== custom input range ===================
+							script(src="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.js")
+							script.
+								
+								const slider = document.getElementById('slider');
+								const minValue = document.getElementById('minValue');
+								const maxValue = document.getElementById('maxValue');
+
+								noUiSlider.create(slider, {
+									start: [20000, 80000],
+									connect: true,
+									range: {
+										min: 0,
+										max: 100000
+									}
+								});
+								// Синхронизация ползунка с полями
+								slider.noUiSlider.on('update', (values) => {
+									minValue.value = Math.round(values[0]);
+									maxValue.value = Math.round(values[1]);
+								});
+								// Синхронизация полей с ползунком
+								minValue.addEventListener('change', () => {
+									slider.noUiSlider.set([minValue.value, null]);
+								});
+								maxValue.addEventListener('change', () => {
+									slider.noUiSlider.set([null, maxValue.value]);
+								});
+
+			//========= фильтр ЦВЕТ====
+			.filters-box-hasDrop
+				//=====single parametrs ====
+				.filters-box-param
+					.filters-box-hasDrop__title
+						.filters-box-link
+							span Цвет
+							i.rotate-icon
+					
+					//===drop-filters-list
+					.filters-box-drop
+						.color-select-wrapper
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.color-checkbox(style="background: #eeeeee")
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.color-checkbox(style="background: yellow")
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.color-checkbox(style="background: green")
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.color-checkbox(style="background: red")
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.color-checkbox(style="background: purple")
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.color-checkbox(style="background: linear-gradient(#a0a079, orange)")
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.color-checkbox(style="background: #5db2af")
+							label.custom-checkbox-label
+								input.form-checkbox(type="checkbox" name='custom_name')
+								span.color-checkbox(style="background:gold")
+			
+			//========= фильтр Выбор одного из группы====
+			.filters-box-hasDrop
+				//=====single parametrs ====
+				.filters-box-param
+					.filters-box-hasDrop__title
+						.filters-box-link
+							span Выбор одного из группы
+							i.rotate-icon
+					//===drop-filters-list
+					.filters-box-drop
+						label.custom-checkbox-label
+							input.form-radio(type="radio" name='custom_name')
+							span.custom-radiobox
+							span Один радио-фильтр
+						label.custom-checkbox-label
+							input.form-radio(type="radio" name='custom_name')
+							span.custom-radiobox
+							span Один радио-фильтр
+						label.custom-checkbox-label
+							input.form-radio(type="radio" name='custom_name')
+							span.custom-radiobox
+							span Один радио-фильтр
+			
+			//==== buttons ========
+			.filters-buttons
+				button(type="reset").btn-dark Сбросить
+				button(type="reset").btn.close-aside-filters Показать
