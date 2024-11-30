@@ -646,12 +646,14 @@ document.addEventListener("DOMContentLoaded", function (){
 		asideFiltersShow.addEventListener('click', (e) => {
 			e.preventDefault();
 			asideFilters.classList.add('aside-filters--visible');
+			bodyEl.classList.add('lock');
 		});
 	
 		// Закрытие меню при клике непосредственно по asideFilters (не по его дочерним элементам)
 		asideFilters.addEventListener('click', (event) => {
 			if (event.target === event.currentTarget) {
 				asideFilters.classList.remove('aside-filters--visible');
+				bodyEl.classList.remove('lock');
 			}
 		});
 	
@@ -659,6 +661,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		document.addEventListener('click', (event) => {
 			if (!asideFiltersShow.contains(event.target) && !asideFilters.contains(event.target)) {
 				asideFilters.classList.remove('aside-filters--visible');
+				bodyEl.classList.remove('lock');
 			}
 		});
 	}
